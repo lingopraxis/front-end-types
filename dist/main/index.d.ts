@@ -58,6 +58,26 @@ export interface IPaginationParams {
     /** @format int32 */
     limit: number;
 }
+export interface IJoinMeetingResponse {
+    isJoined: boolean;
+}
+export interface IJoinMeetingRequest {
+    /** @format int64 */
+    userId: number;
+    /** @format int64 */
+    meetingId: number;
+}
+export interface IGetMeetingDatesRequest {
+    languageId: string;
+    languageLevel: LanguageLevel;
+    /** @format date-time */
+    from: string;
+    /** @format int64 */
+    userId: number;
+}
+export interface ISearchTopicsRequest {
+    page: IPaginationParams;
+}
 export interface IUpdateUserRequest {
     /** @format int64 */
     userId: number;

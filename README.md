@@ -1,12 +1,14 @@
-# frontend-types
+# Lingo Practices Frontend Types
 
-Generates frontend types for api service using swager files
+Generates frontend types for api Lingo Pracrices API using swager files
+
+### Install dependencies
 
 ```sh
 yarn
 ```
 
-To generate types from <http://localhost:5270> run:
+### Generate types from swagger:
 
 ```sh
 yarn start

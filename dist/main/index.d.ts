@@ -75,6 +75,21 @@ export interface IGetMeetingDatesRequest {
     /** @format int64 */
     userId: number;
 }
+export interface ICreateMeetingResponse {
+    isCreated: boolean;
+}
+export interface ICreateMeetingRequest {
+    /** @format int64 */
+    userCreatorId: number;
+    languageId: string;
+    languageLevel: LanguageLevel;
+    /** @format date-time */
+    meetingAt: string;
+    /** @format int64 */
+    topicId: number;
+    /** @format int32 */
+    peopleNumber: number;
+}
 export interface ISearchTopicsRequest {
     page: IPaginationParams;
 }

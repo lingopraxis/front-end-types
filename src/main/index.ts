@@ -96,6 +96,9 @@ export interface IGetMeetingDatesRequest {
 }
 
 export interface ICreateMeetingResponse {
+  /** @format int64 */
+  id: number;
+  googleMeetLink: string;
   isCreated: boolean;
 }
 

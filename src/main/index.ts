@@ -86,7 +86,7 @@ export interface IJoinMeetingRequest {
 
 export interface IGetMeetingDatesRequest {
   languageId: string;
-  languageLevel: LanguageLevel;
+  languageLevel?: LanguageLevel | null;
 
   /** @format date-time */
   from: string;

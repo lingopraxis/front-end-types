@@ -59,6 +59,9 @@ export interface IGetMeetingsRequest {
   /** @format date-time */
   from?: string | null;
 
+  /** @format date-time */
+  to?: string | null;
+
   /** @format int64 */
   userId?: number | null;
   page: IPaginationParams;
@@ -73,7 +76,13 @@ export interface IPaginationParams {
 }
 
 export interface IJoinMeetingResponse {
-  isJoined: boolean;
+  result: JoinMeetingResult;
+}
+
+export enum JoinMeetingResult {
+  Success = 1,
+  AllSeatsAreTaken = 2,
+  HasMeetingSameTime = 3,
 }
 
 export interface IJoinMeetingRequest {

@@ -61,9 +61,6 @@ export interface IGetMeetingsRequest {
 
   /** @format date-time */
   to?: string | null;
-
-  /** @format int64 */
-  userId?: number | null;
   page: IPaginationParams;
 }
 
@@ -88,9 +85,6 @@ export enum JoinMeetingResult {
 
 export interface IJoinMeetingRequest {
   /** @format int64 */
-  userId: number;
-
-  /** @format int64 */
   meetingId: number;
 }
 
@@ -100,9 +94,6 @@ export interface IGetMeetingDatesRequest {
 
   /** @format date-time */
   from: string;
-
-  /** @format int64 */
-  userId: number;
 }
 
 export interface ICreateMeetingResponse {
@@ -113,8 +104,6 @@ export interface ICreateMeetingResponse {
 }
 
 export interface ICreateMeetingRequest {
-  /** @format int64 */
-  userCreatorId: number;
   languageId: string;
   languageLevel: LanguageLevel;
 

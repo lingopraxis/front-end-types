@@ -81,7 +81,14 @@ export interface ICreateMeetingResponse {
     /** @format int64 */
     id: number;
     googleMeetLink: string;
-    isCreated: boolean;
+    createMeetingResult: CreateMeetingResult;
+}
+export declare enum CreateMeetingResult {
+    Success = 1,
+    TokenHasBeenExpiredOrRevoked = 2,
+    CouldNotCreateGoogleMeetLink = 3,
+    HasMeetingSameTime = 4,
+    UnknownError = 5
 }
 export interface ICreateMeetingRequest {
     languageId: string;

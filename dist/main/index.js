@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JoinMeetingResult = exports.LanguageLevel = exports.Gender = void 0;
+exports.CreateMeetingResult = exports.JoinMeetingResult = exports.LanguageLevel = exports.Gender = void 0;
 var Gender;
 (function (Gender) {
     Gender[Gender["NotSet"] = 1] = "NotSet";
@@ -23,3 +23,11 @@ var JoinMeetingResult;
     JoinMeetingResult[JoinMeetingResult["HasMeetingSameTime"] = 3] = "HasMeetingSameTime";
     JoinMeetingResult[JoinMeetingResult["AlreadyInProgressOrEnded"] = 4] = "AlreadyInProgressOrEnded";
 })(JoinMeetingResult = exports.JoinMeetingResult || (exports.JoinMeetingResult = {}));
+var CreateMeetingResult;
+(function (CreateMeetingResult) {
+    CreateMeetingResult[CreateMeetingResult["Success"] = 1] = "Success";
+    CreateMeetingResult[CreateMeetingResult["TokenHasBeenExpiredOrRevoked"] = 2] = "TokenHasBeenExpiredOrRevoked";
+    CreateMeetingResult[CreateMeetingResult["CouldNotCreateGoogleMeetLink"] = 3] = "CouldNotCreateGoogleMeetLink";
+    CreateMeetingResult[CreateMeetingResult["HasMeetingSameTime"] = 4] = "HasMeetingSameTime";
+    CreateMeetingResult[CreateMeetingResult["UnknownError"] = 5] = "UnknownError";
+})(CreateMeetingResult = exports.CreateMeetingResult || (exports.CreateMeetingResult = {}));

@@ -9,12 +9,13 @@ var Gender;
 })(Gender = exports.Gender || (exports.Gender = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
+    LanguageLevel[LanguageLevel["None"] = 0] = "None";
     LanguageLevel[LanguageLevel["Beginner"] = 1] = "Beginner";
     LanguageLevel[LanguageLevel["PreIntermediate"] = 2] = "PreIntermediate";
-    LanguageLevel[LanguageLevel["Intermediate"] = 3] = "Intermediate";
-    LanguageLevel[LanguageLevel["UpperIntermediate"] = 4] = "UpperIntermediate";
-    LanguageLevel[LanguageLevel["Advanced"] = 5] = "Advanced";
-    LanguageLevel[LanguageLevel["Proficiency"] = 6] = "Proficiency";
+    LanguageLevel[LanguageLevel["Intermediate"] = 4] = "Intermediate";
+    LanguageLevel[LanguageLevel["UpperIntermediate"] = 8] = "UpperIntermediate";
+    LanguageLevel[LanguageLevel["Advanced"] = 16] = "Advanced";
+    LanguageLevel[LanguageLevel["Proficiency"] = 32] = "Proficiency";
 })(LanguageLevel = exports.LanguageLevel || (exports.LanguageLevel = {}));
 var JoinMeetingResult;
 (function (JoinMeetingResult) {

@@ -44,12 +44,13 @@ export interface ILanguage {
 }
 
 export enum LanguageLevel {
+  None = 0,
   Beginner = 1,
   PreIntermediate = 2,
-  Intermediate = 3,
-  UpperIntermediate = 4,
-  Advanced = 5,
-  Proficiency = 6,
+  Intermediate = 4,
+  UpperIntermediate = 8,
+  Advanced = 16,
+  Proficiency = 32,
 }
 
 export interface IGetMeetingsRequest {
@@ -137,4 +138,23 @@ export interface IUpdateUserRequest {
   practiceLanguageId: string;
   interfaceLanguageId: string;
   languageLevel: LanguageLevel;
+}
+
+export interface INotificationPreferenceDto {
+  /** @format int64 */
+  id?: number;
+  languageId?: string;
+  languageLevel?: LanguageLevel;
+}
+
+export interface ICreateNotificationPreference {
+  languageId?: string;
+  languageLevels?: LanguageLevel;
+}
+
+export interface IUpdateNotificationPreference {
+  /** @format int64 */
+  id: number;
+  languageId: string;
+  languageLevels?: LanguageLevel[];
 }

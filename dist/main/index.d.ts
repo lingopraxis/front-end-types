@@ -72,6 +72,10 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
+export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
     languageLevel?: LanguageLevel | null;
@@ -120,12 +124,12 @@ export interface INotificationPreferenceDto {
     languageLevel?: LanguageLevel;
 }
 export interface ICreateNotificationPreference {
-    languageId?: string;
-    languageLevels?: LanguageLevel;
+    languageId: string;
+    languageLevel: LanguageLevel;
 }
 export interface IUpdateNotificationPreference {
     /** @format int64 */
     id: number;
     languageId: string;
-    languageLevels?: LanguageLevel[];
+    languageLevel: LanguageLevel;
 }

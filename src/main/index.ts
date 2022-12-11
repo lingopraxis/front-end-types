@@ -147,9 +147,9 @@ export interface IUpdateUserRequest {
 
 export interface INotificationPreferenceDto {
   /** @format int64 */
-  id?: number;
-  languageId?: string;
-  languageLevel?: LanguageLevel;
+  id: number;
+  languageId: string;
+  languageLevel: LanguageLevel;
 }
 
 export interface ICreateNotificationPreference {

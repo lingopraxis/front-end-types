@@ -82,6 +82,7 @@ export enum JoinMeetingResult {
   AllSeatsAreTaken = 2,
   HasMeetingSameTime = 3,
   AlreadyInProgressOrEnded = 4,
+  Canceled = 5,
 }
 
 export interface IJoinMeetingRequest {

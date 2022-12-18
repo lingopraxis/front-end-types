@@ -23,6 +23,7 @@ var JoinMeetingResult;
     JoinMeetingResult[JoinMeetingResult["AllSeatsAreTaken"] = 2] = "AllSeatsAreTaken";
     JoinMeetingResult[JoinMeetingResult["HasMeetingSameTime"] = 3] = "HasMeetingSameTime";
     JoinMeetingResult[JoinMeetingResult["AlreadyInProgressOrEnded"] = 4] = "AlreadyInProgressOrEnded";
+    JoinMeetingResult[JoinMeetingResult["Canceled"] = 5] = "Canceled";
 })(JoinMeetingResult = exports.JoinMeetingResult || (exports.JoinMeetingResult = {}));
 var CreateMeetingResult;
 (function (CreateMeetingResult) {

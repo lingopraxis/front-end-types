@@ -66,7 +66,8 @@ export declare enum JoinMeetingResult {
     Success = 1,
     AllSeatsAreTaken = 2,
     HasMeetingSameTime = 3,
-    AlreadyInProgressOrEnded = 4
+    AlreadyInProgressOrEnded = 4,
+    Canceled = 5
 }
 export interface IJoinMeetingRequest {
     /** @format int64 */

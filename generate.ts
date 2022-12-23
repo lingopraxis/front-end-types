@@ -9,7 +9,7 @@ generateApi({
   name: "index.ts",
   output: path.resolve(process.cwd(), "./src/main/"),
   // url: "http://localhost:5270/swagger/v1/swagger.json",
-  url: "https://shark-app-2zmo7.ondigitalocean.app/swagger/v1/swagger.json",
+  url: "https://api-development-plha2.ondigitalocean.app/swagger/v1/swagger.json",
   enumNamesAsValues: false,
   generateClient: false,
   hooks: {

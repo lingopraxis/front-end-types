@@ -5,14 +5,25 @@ export interface IMeeting {
   /** @format date-time */
   meetingDate: string;
   googleMeetLink: string;
-
-  /** @format int32 */
-  maxParticipantsCount: number;
-
-  /** @format int32 */
-  participantsCount: number;
+  participants: IParticipant[];
   topic: ITopic;
   userCreator: IUser;
+  languageId: string;
+  languageLevel: LanguageLevel;
+}
+
+export interface IParticipant {
+  /** @format int64 */
+  userId: number;
+  gender?: Gender | null;
+  firstName: string;
+  country: string;
+}
+
+export enum Gender {
+  NotSet = 1,
+  Male = 2,
+  Female = 3,
 }
 
 export interface ITopic {
@@ -30,12 +41,6 @@ export interface IUser {
   practiceLanguage: ILanguage;
   interfaceLanguage: ILanguage;
   languageLevel: LanguageLevel;
-}
-
-export enum Gender {
-  NotSet = 1,
-  Male = 2,
-  Female = 3,
 }
 
 export interface ILanguage {
@@ -90,9 +95,6 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {

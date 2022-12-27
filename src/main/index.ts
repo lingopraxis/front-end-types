@@ -6,6 +6,7 @@ export interface IMeeting {
   meetingDate: string;
   googleMeetLink: string;
   participants: IParticipant[];
+  maxParticipantsCount: number;
   topic: ITopic;
   userCreator: IUser;
   languageId: string;

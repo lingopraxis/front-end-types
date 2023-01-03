@@ -6,6 +6,8 @@ export interface IMeeting {
   meetingDate: string;
   googleMeetLink: string;
   participants: IParticipant[];
+
+  /** @format int32 */
   maxParticipantsCount: number;
   topic: ITopic;
   userCreator: IUser;
@@ -41,6 +43,7 @@ export interface IUser {
   countryName: string;
   practiceLanguage: ILanguage;
   interfaceLanguage: ILanguage;
+  timeZoneId: string;
   languageLevel: LanguageLevel;
 }
 
@@ -96,6 +99,9 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {

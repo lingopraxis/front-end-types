@@ -44,6 +44,7 @@ export interface IUser {
   practiceLanguage: ILanguage;
   interfaceLanguage: ILanguage;
   timeZoneId: string;
+  city: string;
   languageLevel: LanguageLevel;
 }
 
@@ -153,6 +154,8 @@ export interface IUpdateUserRequest {
   practiceLanguageId: string;
   interfaceLanguageId: string;
   languageLevel: LanguageLevel;
+  timeZoneId: string;
+  city: string;
 }
 
 export interface INotificationPreferenceDto {

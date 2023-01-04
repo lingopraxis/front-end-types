@@ -92,6 +92,8 @@ export interface IGetMeetingDatesRequest {
     languageLevel?: LanguageLevel | null;
     /** @format date-time */
     from: string;
+    /** @format date-time */
+    to?: string | null;
 }
 export interface ICreateMeetingResponse {
     /** @format int64 */
@@ -118,6 +120,9 @@ export interface ICreateMeetingRequest {
 }
 export interface ISearchTopicsRequest {
     page: IPaginationParams;
+}
+export interface IGoogleLogInInfo {
+    logInUrl?: string;
 }
 export interface IUpdateUserRequest {
     /** @format int64 */

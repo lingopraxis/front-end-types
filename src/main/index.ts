@@ -111,6 +111,9 @@ export interface IGetMeetingDatesRequest {
 
   /** @format date-time */
   from: string;
+
+  /** @format date-time */
+  to?: string | null;
 }
 
 export interface ICreateMeetingResponse {
@@ -144,6 +147,10 @@ export interface ICreateMeetingRequest {
 
 export interface ISearchTopicsRequest {
   page: IPaginationParams;
+}
+
+export interface IGoogleLogInInfo {
+  logInUrl?: string;
 }
 
 export interface IUpdateUserRequest {

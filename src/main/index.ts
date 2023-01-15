@@ -146,11 +146,12 @@ export interface ICreateMeetingRequest {
 }
 
 export interface ISearchTopicsRequest {
+  name?: string;
   page: IPaginationParams;
 }
 
 export interface IGoogleLogInInfo {
-  logInUrl?: string;
+  logInUrl: string;
 }
 
 export interface IUpdateUserRequest {

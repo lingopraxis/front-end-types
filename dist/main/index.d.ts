@@ -129,12 +129,12 @@ export interface IUpdateUserRequest {
     /** @format int64 */
     userId: number;
     gender: Gender;
-    countryName: string;
+    countryName?: string;
     practiceLanguageId: string;
     interfaceLanguageId: string;
     languageLevel: LanguageLevel;
-    timeZoneId: string;
-    city: string;
+    timeZoneId?: string;
+    city?: string;
 }
 export interface INotificationPreferenceDto {
     /** @format int64 */

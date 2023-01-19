@@ -34,11 +34,11 @@ export interface IUser {
     /** @format int64 */
     id: number;
     gender: Gender;
-    countryName: string;
+    countryName?: string;
     practiceLanguage: ILanguage;
     interfaceLanguage: ILanguage;
-    timeZoneId: string;
-    city: string;
+    timeZoneId?: string;
+    city?: string;
     languageLevel: LanguageLevel;
 }
 export interface ILanguage {

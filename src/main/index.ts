@@ -46,6 +46,7 @@ export interface IUser {
   timeZoneId?: string;
   city?: string;
   languageLevel: LanguageLevel;
+  authorizedWithGoogle: boolean;
 }
 
 export interface ILanguage {

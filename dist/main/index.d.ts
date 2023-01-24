@@ -40,7 +40,7 @@ export interface IUser {
     timeZoneId?: string;
     city?: string;
     languageLevel: LanguageLevel;
-    authorizedWithGoogle: boolean;
+    userGoogleInfo: IUserGoogleInfoDto;
 }
 export interface ILanguage {
     id: string;
@@ -54,6 +54,10 @@ export declare enum LanguageLevel {
     UpperIntermediate = 8,
     Advanced = 16,
     Proficiency = 32
+}
+export interface IUserGoogleInfoDto {
+    authorizedWithGoogle: boolean;
+    hasCalendarPermission: boolean;
 }
 export interface IGetMeetingsRequest {
     languageId?: string;

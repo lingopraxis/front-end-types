@@ -4,7 +4,6 @@ export interface IMeeting {
 
   /** @format date-time */
   meetingDate: string;
-  googleMeetLink: string;
   participants: IParticipant[];
 
   /** @format int32 */

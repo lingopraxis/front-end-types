@@ -3,7 +3,6 @@ export interface IMeeting {
     id: number;
     /** @format date-time */
     meetingDate: string;
-    googleMeetLink: string;
     participants: IParticipant[];
     /** @format int32 */
     maxParticipantsCount: number;

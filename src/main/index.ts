@@ -150,6 +150,10 @@ export interface ICreateMeetingRequest {
   peopleNumber: number;
 }
 
+export interface IMeetingMetadata {
+  url?: string;
+}
+
 export interface ISearchTopicsRequest {
   name?: string;
   page: IPaginationParams;

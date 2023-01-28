@@ -122,6 +122,9 @@ export interface ICreateMeetingRequest {
     /** @format int32 */
     peopleNumber: number;
 }
+export interface IMeetingMetadata {
+    url?: string;
+}
 export interface ISearchTopicsRequest {
     name?: string;
     page: IPaginationParams;

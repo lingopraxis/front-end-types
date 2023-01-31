@@ -40,6 +40,8 @@ export interface IUser {
     city?: string;
     languageLevel: LanguageLevel;
     userGoogleInfo: IUserGoogleInfoDto;
+    nickname: string;
+    email: string;
 }
 export interface ILanguage {
     id: string;
@@ -87,9 +89,6 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
 export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
@@ -142,6 +141,7 @@ export interface IUpdateUserRequest {
     languageLevel: LanguageLevel;
     timeZoneId?: string;
     city?: string;
+    nickname?: string;
 }
 export interface INotificationPreferenceDto {
     /** @format int64 */

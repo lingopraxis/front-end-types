@@ -143,6 +143,26 @@ export interface IUpdateUserRequest {
     city?: string;
     nickname?: string;
 }
+export interface IChatMessage {
+    /** @format int64 */
+    id: number;
+    userCreatorName: string;
+    /** @format int64 */
+    userCreatorId: number;
+    text: string;
+    /** @format date-time */
+    createdAt: string;
+}
+export interface IGetMeetingChatMessagesQuery {
+    paginationParams?: IPaginationParams;
+    /** @format int64 */
+    meetingId?: number;
+}
+export interface ICreateMeetingChatMessageRequest {
+    /** @format int64 */
+    meetingId: number;
+    text: string;
+}
 export interface INotificationPreferenceDto {
     /** @format int64 */
     id: number;

@@ -160,6 +160,7 @@ export interface ISearchTopicsRequest {
 
 export interface IGoogleLogInInfo {
   logInUrl: string;
+  requestId: string;
 }
 
 export interface IUpdateUserRequest {

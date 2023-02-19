@@ -107,6 +107,9 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {
@@ -156,6 +159,18 @@ export interface IMeetingMetadata {
 export interface ISearchTopicsRequest {
   name?: string;
   page: IPaginationParams;
+}
+
+export interface ICreateTopic {
+  name: string;
+  questions: string[];
+}
+
+export interface IAddQuestionsToTopic {
+  questions: string[];
+
+  /** @format int64 */
+  topicId: number;
 }
 
 export interface IGoogleLogInInfo {

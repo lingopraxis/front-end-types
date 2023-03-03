@@ -12,6 +12,8 @@ export interface IMeeting {
   userCreator: IUser;
   languageId: string;
   languageLevel: LanguageLevel;
+  address: IMeetingAddress;
+  type: MeetingType;
 }
 
 export interface IParticipant {
@@ -68,6 +70,23 @@ export enum LanguageLevel {
 export interface IUserGoogleInfoDto {
   authorizedWithGoogle: boolean;
   hasCalendarPermission: boolean;
+}
+
+export interface IMeetingAddress {
+  /** @format int32 */
+  version?: number;
+  additionalInfo?: string;
+
+  /** @format double */
+  latitude?: number;
+
+  /** @format double */
+  longitude?: number;
+}
+
+export enum MeetingType {
+  Online = 1,
+  Offline = 2,
 }
 
 export interface IGetMeetingsRequest {
@@ -147,6 +166,8 @@ export interface ICreateMeetingRequest {
 
   /** @format int32 */
   peopleNumber: number;
+  meetingType: MeetingType;
+  address: IMeetingAddress;
 }
 
 export interface IMeetingMetadata {

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateMeetingResult = exports.JoinMeetingResult = exports.LanguageLevel = exports.Gender = void 0;
+exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.LanguageLevel = exports.Gender = void 0;
 var Gender;
 (function (Gender) {
     Gender[Gender["NotSet"] = 1] = "NotSet";
@@ -17,6 +17,11 @@ var LanguageLevel;
     LanguageLevel[LanguageLevel["Advanced"] = 16] = "Advanced";
     LanguageLevel[LanguageLevel["Proficiency"] = 32] = "Proficiency";
 })(LanguageLevel = exports.LanguageLevel || (exports.LanguageLevel = {}));
+var MeetingType;
+(function (MeetingType) {
+    MeetingType[MeetingType["Online"] = 1] = "Online";
+    MeetingType[MeetingType["Offline"] = 2] = "Offline";
+})(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
 var JoinMeetingResult;
 (function (JoinMeetingResult) {
     JoinMeetingResult[JoinMeetingResult["Success"] = 1] = "Success";

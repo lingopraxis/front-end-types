@@ -9,11 +9,12 @@ export interface IMeeting {
   /** @format int32 */
   maxParticipantsCount: number;
   topic: ITopic;
-  userCreator: IUser;
+  userCreator: IUserDto;
   languageId: string;
   languageLevel: LanguageLevel;
-  address: IMeetingAddress;
+  address?: IMeetingAddress;
   type: MeetingType;
+  offlineMeetingInformation?: IOfflineMeetingInformation;
 }
 
 export interface IParticipant {
@@ -37,24 +38,17 @@ export interface ITopic {
   questions: string[];
 }
 
-export interface IUser {
-  /** @format int64 */
-  id: number;
-  gender: Gender;
-  countryName?: string;
-  practiceLanguage: ILanguage;
-  interfaceLanguage: ILanguage;
-  timeZoneId?: string;
-  city?: string;
-  languageLevel: LanguageLevel;
-  userGoogleInfo: IUserGoogleInfoDto;
-  nickname: string;
-  email: string;
-}
+export interface IUserDto {
+  interfaceLanguageId?: string;
 
-export interface ILanguage {
-  id: string;
-  name: string;
+  /** @format int64 */
+  telegramUserId?: number;
+  userTimeZoneId?: string;
+
+  /** @format int64 */
+  userId?: number;
+  authorizedWithGoogle?: boolean;
+  firstName?: string;
 }
 
 export enum LanguageLevel {
@@ -65,11 +59,6 @@ export enum LanguageLevel {
   UpperIntermediate = 8,
   Advanced = 16,
   Proficiency = 32,
-}
-
-export interface IUserGoogleInfoDto {
-  authorizedWithGoogle: boolean;
-  hasCalendarPermission: boolean;
 }
 
 export interface IMeetingAddress {
@@ -87,6 +76,12 @@ export interface IMeetingAddress {
 export enum MeetingType {
   Online = 1,
   Offline = 2,
+}
+
+export interface IOfflineMeetingInformation {
+  topic?: string;
+  topicDescription?: string;
+  comment?: string;
 }
 
 export interface IGetMeetingsRequest {
@@ -126,6 +121,9 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {
@@ -166,8 +164,9 @@ export interface ICreateMeetingRequest {
 
   /** @format int32 */
   peopleNumber: number;
-  meetingType: MeetingType;
+  type: MeetingType;
   address: IMeetingAddress;
+  offlineMeetingInformation: IOfflineMeetingInformation;
 }
 
 export interface IMeetingMetadata {
@@ -212,6 +211,11 @@ export interface IUpdateUserRequest {
   timeZoneId?: string;
   city?: string;
   nickname?: string;
+}
+
+export interface ILanguage {
+  id: string;
+  name: string;
 }
 
 export interface IChatMessage {

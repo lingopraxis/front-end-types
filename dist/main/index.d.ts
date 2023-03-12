@@ -7,11 +7,12 @@ export interface IMeeting {
     /** @format int32 */
     maxParticipantsCount: number;
     topic: ITopic;
-    userCreator: IUser;
+    userCreator: IUserDto;
     languageId: string;
     languageLevel: LanguageLevel;
-    address: IMeetingAddress;
+    address?: IMeetingAddress;
     type: MeetingType;
+    offlineMeetingInformation?: IOfflineMeetingInformation;
 }
 export interface IParticipant {
     /** @format int64 */
@@ -31,23 +32,15 @@ export interface ITopic {
     name: string;
     questions: string[];
 }
-export interface IUser {
+export interface IUserDto {
+    interfaceLanguageId?: string;
     /** @format int64 */
-    id: number;
-    gender: Gender;
-    countryName?: string;
-    practiceLanguage: ILanguage;
-    interfaceLanguage: ILanguage;
-    timeZoneId?: string;
-    city?: string;
-    languageLevel: LanguageLevel;
-    userGoogleInfo: IUserGoogleInfoDto;
-    nickname: string;
-    email: string;
-}
-export interface ILanguage {
-    id: string;
-    name: string;
+    telegramUserId?: number;
+    userTimeZoneId?: string;
+    /** @format int64 */
+    userId?: number;
+    authorizedWithGoogle?: boolean;
+    firstName?: string;
 }
 export declare enum LanguageLevel {
     None = 0,
@@ -57,10 +50,6 @@ export declare enum LanguageLevel {
     UpperIntermediate = 8,
     Advanced = 16,
     Proficiency = 32
-}
-export interface IUserGoogleInfoDto {
-    authorizedWithGoogle: boolean;
-    hasCalendarPermission: boolean;
 }
 export interface IMeetingAddress {
     /** @format int32 */
@@ -74,6 +63,11 @@ export interface IMeetingAddress {
 export declare enum MeetingType {
     Online = 1,
     Offline = 2
+}
+export interface IOfflineMeetingInformation {
+    topic?: string;
+    topicDescription?: string;
+    comment?: string;
 }
 export interface IGetMeetingsRequest {
     languageId?: string;
@@ -104,6 +98,9 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
 export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
@@ -135,8 +132,9 @@ export interface ICreateMeetingRequest {
     topicId: number;
     /** @format int32 */
     peopleNumber: number;
-    meetingType: MeetingType;
+    type: MeetingType;
     address: IMeetingAddress;
+    offlineMeetingInformation: IOfflineMeetingInformation;
 }
 export interface IMeetingMetadata {
     url?: string;
@@ -173,6 +171,10 @@ export interface IUpdateUserRequest {
     timeZoneId?: string;
     city?: string;
     nickname?: string;
+}
+export interface ILanguage {
+    id: string;
+    name: string;
 }
 export interface IChatMessage {
     /** @format int64 */

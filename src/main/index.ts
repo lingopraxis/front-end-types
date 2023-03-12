@@ -9,7 +9,7 @@ export interface IMeeting {
   /** @format int32 */
   maxParticipantsCount: number;
   topic: ITopic;
-  userCreator: IUserDto;
+  userCreator: IUser;
   languageId: string;
   languageLevel: LanguageLevel;
   address?: IMeetingAddress;
@@ -38,17 +38,17 @@ export interface ITopic {
   questions: string[];
 }
 
-export interface IUserDto {
-  interfaceLanguageId?: string;
+export interface IUser {
+  interfaceLanguageId: string;
 
   /** @format int64 */
-  telegramUserId?: number;
-  userTimeZoneId?: string;
+  telegramUserId: number;
+  userTimeZoneId: string;
 
   /** @format int64 */
-  userId?: number;
-  authorizedWithGoogle?: boolean;
-  firstName?: string;
+  userId: number;
+  authorizedWithGoogle: boolean;
+  firstName: string;
 }
 
 export enum LanguageLevel {
@@ -79,7 +79,7 @@ export enum MeetingType {
 }
 
 export interface IOfflineMeetingInformation {
-  topic?: string;
+  topic: string;
   topicDescription?: string;
   comment?: string;
 }
@@ -90,6 +90,7 @@ export interface IGetMeetingsRequest {
 
   /** @format date-time */
   from?: string | null;
+  type?: MeetingType | null;
 
   /** @format date-time */
   to?: string | null;

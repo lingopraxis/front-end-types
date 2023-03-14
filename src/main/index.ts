@@ -48,7 +48,10 @@ export interface IUser {
   /** @format int64 */
   userId: number;
   authorizedWithGoogle: boolean;
-  firstName: string;
+  nickname: string;
+  firstName?: string;
+  lastName?: string;
+  country?: string;
 }
 
 export enum LanguageLevel {
@@ -122,9 +125,6 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {
@@ -161,13 +161,13 @@ export interface ICreateMeetingRequest {
   meetingAt: string;
 
   /** @format int64 */
-  topicId: number;
+  topicId?: number;
 
   /** @format int32 */
   peopleNumber: number;
   type: MeetingType;
-  address: IMeetingAddress;
-  offlineMeetingInformation: IOfflineMeetingInformation;
+  address?: IMeetingAddress;
+  offlineMeetingInformation?: IOfflineMeetingInformation;
 }
 
 export interface IMeetingMetadata {

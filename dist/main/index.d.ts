@@ -7,7 +7,7 @@ export interface IMeeting {
     /** @format int32 */
     maxParticipantsCount: number;
     topic: ITopic;
-    userCreator: IUserDto;
+    userCreator: IUser;
     languageId: string;
     languageLevel: LanguageLevel;
     address?: IMeetingAddress;
@@ -32,15 +32,18 @@ export interface ITopic {
     name: string;
     questions: string[];
 }
-export interface IUserDto {
-    interfaceLanguageId?: string;
+export interface IUser {
+    interfaceLanguageId: string;
     /** @format int64 */
-    telegramUserId?: number;
-    userTimeZoneId?: string;
+    telegramUserId: number;
+    userTimeZoneId: string;
     /** @format int64 */
-    userId?: number;
-    authorizedWithGoogle?: boolean;
+    userId: number;
+    authorizedWithGoogle: boolean;
+    nickname: string;
     firstName?: string;
+    lastName?: string;
+    country?: string;
 }
 export declare enum LanguageLevel {
     None = 0,
@@ -65,7 +68,7 @@ export declare enum MeetingType {
     Offline = 2
 }
 export interface IOfflineMeetingInformation {
-    topic?: string;
+    topic: string;
     topicDescription?: string;
     comment?: string;
 }
@@ -74,6 +77,7 @@ export interface IGetMeetingsRequest {
     languageLevel?: LanguageLevel | null;
     /** @format date-time */
     from?: string | null;
+    type?: MeetingType | null;
     /** @format date-time */
     to?: string | null;
     page: IPaginationParams;
@@ -98,9 +102,6 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
 export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
@@ -129,12 +130,12 @@ export interface ICreateMeetingRequest {
     /** @format date-time */
     meetingAt: string;
     /** @format int64 */
-    topicId: number;
+    topicId?: number;
     /** @format int32 */
     peopleNumber: number;
     type: MeetingType;
-    address: IMeetingAddress;
-    offlineMeetingInformation: IOfflineMeetingInformation;
+    address?: IMeetingAddress;
+    offlineMeetingInformation?: IOfflineMeetingInformation;
 }
 export interface IMeetingMetadata {
     url?: string;

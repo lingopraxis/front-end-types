@@ -39,19 +39,27 @@ export interface ITopic {
 }
 
 export interface IUser {
-  interfaceLanguageId: string;
-
   /** @format int64 */
   telegramUserId: number;
   userTimeZoneId: string;
 
   /** @format int64 */
-  userId: number;
-  authorizedWithGoogle: boolean;
+  id: number;
+  gender: Gender;
+  countryName?: string;
+  practiceLanguage: ILanguage;
+  interfaceLanguage: ILanguage;
+  timeZoneId?: string;
+  city?: string;
+  languageLevel: LanguageLevel;
+  userGoogleInfo: IUserGoogleInfo;
   nickname: string;
-  firstName?: string;
-  lastName?: string;
-  country?: string;
+  email: string;
+}
+
+export interface ILanguage {
+  id: string;
+  name: string;
 }
 
 export enum LanguageLevel {
@@ -62,6 +70,11 @@ export enum LanguageLevel {
   UpperIntermediate = 8,
   Advanced = 16,
   Proficiency = 32,
+}
+
+export interface IUserGoogleInfo {
+  authorizedWithGoogle: boolean;
+  hasCalendarPermission: boolean;
 }
 
 export interface IMeetingAddress {
@@ -125,6 +138,9 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {
@@ -212,11 +228,6 @@ export interface IUpdateUserRequest {
   timeZoneId?: string;
   city?: string;
   nickname?: string;
-}
-
-export interface ILanguage {
-  id: string;
-  name: string;
 }
 
 export interface IChatMessage {

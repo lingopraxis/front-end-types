@@ -41,7 +41,6 @@ export interface ITopic {
 export interface IUser {
   /** @format int64 */
   telegramUserId: number;
-  userTimeZoneId: string;
 
   /** @format int64 */
   id: number;
@@ -138,9 +137,6 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {

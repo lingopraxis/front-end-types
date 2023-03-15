@@ -141,7 +141,7 @@ export interface ICreateMeetingRequest {
     /** @format date-time */
     meetingAt: string;
     /** @format int64 */
-    topicId?: number;
+    topicId?: number | null;
     /** @format int32 */
     peopleNumber: number;
     type: MeetingType;

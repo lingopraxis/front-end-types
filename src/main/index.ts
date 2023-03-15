@@ -173,7 +173,7 @@ export interface ICreateMeetingRequest {
   meetingAt: string;
 
   /** @format int64 */
-  topicId?: number;
+  topicId?: number | null;
 
   /** @format int32 */
   peopleNumber: number;

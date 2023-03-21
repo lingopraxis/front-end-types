@@ -1,3 +1,22 @@
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
+export declare type IUnit = object;
+export interface ISignUpRequest {
+    languageId: string;
+    languageLevel: LanguageLevel;
+    userName: string;
+    deviceId: string;
+}
+export declare enum LanguageLevel {
+    None = 0,
+    Beginner = 1,
+    PreIntermediate = 2,
+    Intermediate = 4,
+    UpperIntermediate = 8,
+    Advanced = 16,
+    Proficiency = 32
+}
 export interface IMeeting {
     /** @format int64 */
     id: number;
@@ -10,9 +29,9 @@ export interface IMeeting {
     userCreator: IUser;
     languageId: string;
     languageLevel: LanguageLevel;
+    comment?: string;
     address?: IMeetingAddress;
     type: MeetingType;
-    offlineMeetingInformation?: IOfflineMeetingInformation;
 }
 export interface IParticipant {
     /** @format int64 */
@@ -30,7 +49,8 @@ export interface ITopic {
     /** @format int64 */
     id: number;
     name: string;
-    questions: string[];
+    description?: string;
+    questions?: string[];
 }
 export interface IUser {
     /** @format int64 */
@@ -52,15 +72,6 @@ export interface ILanguage {
     id: string;
     name: string;
 }
-export declare enum LanguageLevel {
-    None = 0,
-    Beginner = 1,
-    PreIntermediate = 2,
-    Intermediate = 4,
-    UpperIntermediate = 8,
-    Advanced = 16,
-    Proficiency = 32
-}
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
     hasCalendarPermission: boolean;
@@ -77,11 +88,6 @@ export interface IMeetingAddress {
 export declare enum MeetingType {
     Online = 1,
     Offline = 2
-}
-export interface IOfflineMeetingInformation {
-    topic: string;
-    topicDescription?: string;
-    comment?: string;
 }
 export interface IGetMeetingsRequest {
     languageId?: string;
@@ -113,7 +119,6 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
-export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
     languageLevel?: LanguageLevel | null;
@@ -140,13 +145,18 @@ export interface ICreateMeetingRequest {
     languageLevel: LanguageLevel;
     /** @format date-time */
     meetingAt: string;
-    /** @format int64 */
-    topicId?: number | null;
     /** @format int32 */
     peopleNumber: number;
     type: MeetingType;
     address?: IMeetingAddress;
-    offlineMeetingInformation?: IOfflineMeetingInformation;
+    comment?: string;
+    topicInformation: ITopicInformation;
+}
+export interface ITopicInformation {
+    /** @format int64 */
+    id?: number | null;
+    name?: string;
+    description?: string;
 }
 export interface IMeetingMetadata {
     url?: string;

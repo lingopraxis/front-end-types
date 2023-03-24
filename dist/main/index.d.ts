@@ -17,6 +17,15 @@ export declare enum LanguageLevel {
     Advanced = 16,
     Proficiency = 32
 }
+export interface ISecurityTokens {
+    accessToken: string;
+    refreshToken: string;
+}
+export interface IGetTokenRequest {
+    /** @format int64 */
+    userId: number;
+    deactivated: boolean;
+}
 export interface IMeeting {
     /** @format int64 */
     id: number;

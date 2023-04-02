@@ -1,12 +1,12 @@
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
-export declare type IUnit = object;
-export interface ISignUpRequest {
+export interface ISignUpWithGoogleCommandResponse {
+    /** @format int64 */
+    id?: number;
+}
+export interface ISignUpWithGoogleRequest {
     languageId: string;
     languageLevel: LanguageLevel;
     userName: string;
-    deviceId: string;
+    googleToken: string;
 }
 export declare enum LanguageLevel {
     None = 0,
@@ -21,10 +21,8 @@ export interface ISecurityTokens {
     accessToken: string;
     refreshToken: string;
 }
-export interface IGetTokenRequest {
-    /** @format int64 */
-    userId: number;
-    deactivated: boolean;
+export interface ISignInFromGoogleRequest {
+    tokenId: string;
 }
 export interface IMeeting {
     /** @format int64 */
@@ -128,6 +126,10 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
+export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
     languageLevel?: LanguageLevel | null;

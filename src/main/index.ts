@@ -7,7 +7,7 @@ export interface ISignUpWithGoogleRequest {
   languageId: string;
   languageLevel: LanguageLevel;
   userName: string;
-  googleToken: string;
+  googleTokenId: string;
 }
 
 export enum LanguageLevel {
@@ -26,7 +26,11 @@ export interface ISecurityTokens {
 }
 
 export interface ISignInFromGoogleRequest {
-  tokenId: string;
+  googleTokenId: string;
+}
+
+export interface IRefreshTokenRequest {
+  refreshToken: string;
 }
 
 export interface IMeeting {
@@ -153,9 +157,6 @@ export interface IJoinMeetingRequest {
   meetingId: number;
 }
 
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
 export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {

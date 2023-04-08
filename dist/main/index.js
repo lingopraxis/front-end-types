@@ -1,6 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.Gender = exports.LanguageLevel = void 0;
+exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.Gender = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+var ApplicationErrorCode;
+(function (ApplicationErrorCode) {
+    ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
+    ApplicationErrorCode[ApplicationErrorCode["Unauthorized"] = 1002] = "Unauthorized";
+    ApplicationErrorCode[ApplicationErrorCode["Forbidden"] = 1003] = "Forbidden";
+    ApplicationErrorCode[ApplicationErrorCode["InternalServerError"] = 1004] = "InternalServerError";
+    ApplicationErrorCode[ApplicationErrorCode["GoogleAuthEmailNotVerified"] = 1005] = "GoogleAuthEmailNotVerified";
+    ApplicationErrorCode[ApplicationErrorCode["DuplicateEmailAddress"] = 1006] = "DuplicateEmailAddress";
+    ApplicationErrorCode[ApplicationErrorCode["UserNotRegistered"] = 1007] = "UserNotRegistered";
+    ApplicationErrorCode[ApplicationErrorCode["GoogleAuthIdTokenInvalid"] = 1008] = "GoogleAuthIdTokenInvalid";
+    ApplicationErrorCode[ApplicationErrorCode["LanguageDoesNotExist"] = 1009] = "LanguageDoesNotExist";
+})(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
     LanguageLevel[LanguageLevel["None"] = 0] = "None";

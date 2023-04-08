@@ -2,6 +2,21 @@ export interface ISignUpWithGoogleCommandResponse {
     /** @format int64 */
     id: number;
 }
+export interface IApplicationError {
+    code: ApplicationErrorCode;
+    message: string;
+}
+export declare enum ApplicationErrorCode {
+    BadRequest = 1000,
+    Unauthorized = 1002,
+    Forbidden = 1003,
+    InternalServerError = 1004,
+    GoogleAuthEmailNotVerified = 1005,
+    DuplicateEmailAddress = 1006,
+    UserNotRegistered = 1007,
+    GoogleAuthIdTokenInvalid = 1008,
+    LanguageDoesNotExist = 1009
+}
 export interface ISignUpWithGoogleRequest {
     languageId: string;
     languageLevel: LanguageLevel;
@@ -129,6 +144,9 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
 export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;

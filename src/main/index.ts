@@ -18,6 +18,7 @@ export enum ApplicationErrorCode {
   UserNotRegistered = 1007,
   GoogleAuthIdTokenInvalid = 1008,
   LanguageDoesNotExist = 1009,
+  CannotLeaveMeeting = 1010,
 }
 
 export interface ISignUpWithGoogleRequest {
@@ -192,8 +193,8 @@ export interface IGetMeetingDatesRequest {
 
 export interface ICreateMeetingResponse {
   /** @format int64 */
-  id: number;
-  googleMeetLink: string;
+  id?: number;
+  googleMeetLink?: string;
   createMeetingResult: CreateMeetingResult;
 }
 
@@ -253,14 +254,16 @@ export interface IAddQuestionsToTopicRequest {
   topicId: number;
 }
 
+export interface ISubscribeToPushNotificationsRequest {
+  token: string;
+}
+
 export interface IGoogleLogInInfo {
   logInUrl: string;
   requestId: string;
 }
 
 export interface IUpdateUserRequest {
-  /** @format int64 */
-  userId: number;
   gender: Gender;
   countryName?: string;
   practiceLanguageId: string;

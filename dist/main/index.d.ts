@@ -51,7 +51,8 @@ export interface IMeeting {
     participants: IParticipant[];
     /** @format int32 */
     maxParticipantsCount: number;
-    topic: ITopic;
+    topicName: string;
+    topicDescription?: string;
     userCreator: IUser;
     languageId: string;
     languageLevel: LanguageLevel;
@@ -71,26 +72,19 @@ export declare enum Gender {
     Male = 2,
     Female = 3
 }
-export interface ITopic {
-    /** @format int64 */
-    id: number;
-    name: string;
-    description?: string;
-    questions?: string[];
-}
 export interface IUser {
     /** @format int64 */
-    telegramUserId: number;
-    /** @format int64 */
     id: number;
-    gender: Gender;
+    /** @format int64 */
+    telegramUserId?: number | null;
+    gender?: Gender | null;
     countryName?: string;
     practiceLanguage: ILanguage;
-    interfaceLanguage: ILanguage;
+    interfaceLanguage?: ILanguage;
     timeZoneId?: string;
     city?: string;
     languageLevel: LanguageLevel;
-    userGoogleInfo: IUserGoogleInfo;
+    userGoogleInfo?: IUserGoogleInfo;
     nickname: string;
     email: string;
 }
@@ -145,9 +139,6 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
 export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
@@ -180,16 +171,18 @@ export interface ICreateMeetingRequest {
     type: MeetingType;
     address?: IMeetingAddress;
     comment?: string;
-    topicInformation: ITopicInformation;
-}
-export interface ITopicInformation {
-    /** @format int64 */
-    id?: number | null;
-    name?: string;
-    description?: string;
+    topicName: string;
+    topicDescription?: string;
 }
 export interface IMeetingMetadata {
     url?: string;
+}
+export interface ITopic {
+    /** @format int64 */
+    id: number;
+    name: string;
+    description?: string;
+    questions?: string[];
 }
 export interface ISearchTopicsRequest {
     name?: string;
@@ -245,7 +238,7 @@ export interface ICreateMeetingChatMessageRequest {
     meetingId: number;
     text: string;
 }
-export interface INotificationPreferenceDto {
+export interface INotificationPreference {
     /** @format int64 */
     id: number;
     languageId: string;

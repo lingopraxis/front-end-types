@@ -91,7 +91,7 @@ export interface IUser {
 
   /** @format int64 */
   telegramUserId?: number | null;
-  gender?: Gender | null;
+  gender: Gender;
   countryName?: string;
   practiceLanguage: ILanguage;
   interfaceLanguage?: ILanguage;

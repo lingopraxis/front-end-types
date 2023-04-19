@@ -94,7 +94,7 @@ export interface IUser {
   gender: Gender;
   countryName?: string;
   practiceLanguage: ILanguage;
-  interfaceLanguage?: ILanguage;
+  interfaceLanguage: ILanguage;
   timeZoneId?: string;
   city?: string;
   languageLevel: LanguageLevel;

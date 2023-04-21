@@ -23,6 +23,7 @@ export interface ISignUpWithGoogleRequest {
     languageLevel: LanguageLevel;
     userName: string;
     googleTokenId: string;
+    googleAuthCode: string;
 }
 export declare enum LanguageLevel {
     None = 0,
@@ -39,6 +40,7 @@ export interface ISecurityTokens {
 }
 export interface ISignInFromGoogleRequest {
     googleTokenId: string;
+    googleAuthCode?: string;
 }
 export interface IRefreshTokenRequest {
     refreshToken: string;

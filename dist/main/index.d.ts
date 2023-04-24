@@ -41,6 +41,7 @@ export interface ISecurityTokens {
 export interface ISignInFromGoogleRequest {
     googleTokenId: string;
     googleAuthCode?: string;
+    incrementalAuth?: boolean;
 }
 export interface IRefreshTokenRequest {
     refreshToken: string;

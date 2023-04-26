@@ -1,4 +1,4 @@
-export interface ISignUpWithGoogleCommandResponse {
+export interface ISocialSignUpResponse {
     /** @format int64 */
     id: number;
 }
@@ -16,14 +16,16 @@ export declare enum ApplicationErrorCode {
     UserNotRegistered = 1007,
     GoogleAuthIdTokenInvalid = 1008,
     LanguageDoesNotExist = 1009,
-    CannotLeaveMeeting = 1010
+    CannotLeaveMeeting = 1010,
+    AppleAuthCodeInvalid = 1011
 }
-export interface ISignUpWithGoogleRequest {
+export interface ISocialSignUpRequest {
     languageId: string;
     languageLevel: LanguageLevel;
     userName: string;
-    googleTokenId: string;
-    googleAuthCode: string;
+    tokenId: string;
+    authCode: string;
+    provider?: SocialLoginProvider;
 }
 export declare enum LanguageLevel {
     None = 0,
@@ -34,14 +36,20 @@ export declare enum LanguageLevel {
     Advanced = 16,
     Proficiency = 32
 }
+export declare enum SocialLoginProvider {
+    None = 0,
+    Google = 1,
+    Apple = 2
+}
 export interface ISecurityTokens {
     accessToken: string;
     refreshToken: string;
 }
-export interface ISignInFromGoogleRequest {
-    googleTokenId: string;
-    googleAuthCode?: string;
+export interface ISocialSignInRequest {
+    tokenId: string;
+    authCode?: string;
     incrementalAuth?: boolean;
+    provider?: SocialLoginProvider;
 }
 export interface IRefreshTokenRequest {
     refreshToken: string;

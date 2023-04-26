@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.Gender = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.Gender = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -13,6 +13,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["GoogleAuthIdTokenInvalid"] = 1008] = "GoogleAuthIdTokenInvalid";
     ApplicationErrorCode[ApplicationErrorCode["LanguageDoesNotExist"] = 1009] = "LanguageDoesNotExist";
     ApplicationErrorCode[ApplicationErrorCode["CannotLeaveMeeting"] = 1010] = "CannotLeaveMeeting";
+    ApplicationErrorCode[ApplicationErrorCode["AppleAuthCodeInvalid"] = 1011] = "AppleAuthCodeInvalid";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -24,6 +25,12 @@ var LanguageLevel;
     LanguageLevel[LanguageLevel["Advanced"] = 16] = "Advanced";
     LanguageLevel[LanguageLevel["Proficiency"] = 32] = "Proficiency";
 })(LanguageLevel = exports.LanguageLevel || (exports.LanguageLevel = {}));
+var SocialLoginProvider;
+(function (SocialLoginProvider) {
+    SocialLoginProvider[SocialLoginProvider["None"] = 0] = "None";
+    SocialLoginProvider[SocialLoginProvider["Google"] = 1] = "Google";
+    SocialLoginProvider[SocialLoginProvider["Apple"] = 2] = "Apple";
+})(SocialLoginProvider = exports.SocialLoginProvider || (exports.SocialLoginProvider = {}));
 var Gender;
 (function (Gender) {
     Gender[Gender["NotSet"] = 1] = "NotSet";

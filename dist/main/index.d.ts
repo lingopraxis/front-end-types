@@ -75,7 +75,7 @@ export interface IParticipant {
     /** @format int64 */
     userId: number;
     gender?: Gender | null;
-    firstName: string;
+    username: string;
     country: string;
 }
 export declare enum Gender {
@@ -96,7 +96,7 @@ export interface IUser {
     city?: string;
     languageLevel: LanguageLevel;
     userGoogleInfo?: IUserGoogleInfo;
-    nickname: string;
+    username: string;
     email: string;
 }
 export interface ILanguage {
@@ -232,7 +232,7 @@ export interface IUpdateUserRequest {
 export interface IChatMessage {
     /** @format int64 */
     id: number;
-    userCreatorName: string;
+    username: string;
     /** @format int64 */
     userCreatorId: number;
     text: string;

@@ -227,7 +227,7 @@ export interface IUpdateUserRequest {
     languageLevel: LanguageLevel;
     timeZoneId?: string;
     city?: string;
-    nickname?: string;
+    username: string;
 }
 export interface IChatMessage {
     /** @format int64 */

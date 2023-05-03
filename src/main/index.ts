@@ -231,6 +231,12 @@ export interface IMeetingMetadata {
   url?: string;
 }
 
+export interface IEditPushNotificationCommand {
+  /** @format int64 */
+  meetingId?: number;
+  enabled?: boolean;
+}
+
 export interface ITopic {
   /** @format int64 */
   id: number;

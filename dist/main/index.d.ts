@@ -150,6 +150,9 @@ export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
 }
+/**
+ * Represents a void type, since Void is not a valid return type in C#.
+ */
 export declare type IUnit = object;
 export interface IGetMeetingDatesRequest {
     languageId: string;
@@ -187,6 +190,11 @@ export interface ICreateMeetingRequest {
 }
 export interface IMeetingMetadata {
     url?: string;
+}
+export interface IEditPushNotificationCommand {
+    /** @format int64 */
+    meetingId?: number;
+    enabled?: boolean;
 }
 export interface ITopic {
     /** @format int64 */

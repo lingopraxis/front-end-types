@@ -331,3 +331,27 @@ export interface IUpdateNotificationPreference {
   languageId: string;
   languageLevel: LanguageLevel;
 }
+
+export interface IMeetingCreatedPushNotification {
+  /** @format int64 */
+  meetingId: number;
+}
+
+export interface IMessageCreatedPushNotification {
+  /** @format int64 */
+  meetingId: number;
+  actorUserName: string;
+  message: string;
+}
+
+export interface IUserJoinedMeetingPushNotification {
+  /** @format int64 */
+  meetingId: number;
+  actorUserName: string;
+}
+
+export interface IUserLeftMeetingPushNotification {
+  /** @format int64 */
+  meetingId: number;
+  actorUserName: string;
+}

@@ -66,6 +66,7 @@ export interface IMeeting {
     topicDescription?: string;
     userCreator: IUser;
     languageId: string;
+    notificationsEnabled: boolean;
     languageLevel: LanguageLevel;
     comment?: string;
     address?: IMeetingAddress;

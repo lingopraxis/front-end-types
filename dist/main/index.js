@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.Gender = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -37,6 +37,16 @@ var Gender;
     Gender[Gender["Male"] = 2] = "Male";
     Gender[Gender["Female"] = 3] = "Female";
 })(Gender = exports.Gender || (exports.Gender = {}));
+var PushNotificationTypes;
+(function (PushNotificationTypes) {
+    PushNotificationTypes[PushNotificationTypes["None"] = 0] = "None";
+    PushNotificationTypes[PushNotificationTypes["MeetingCreated"] = 1] = "MeetingCreated";
+    PushNotificationTypes[PushNotificationTypes["UserJoinedMeeting"] = 2] = "UserJoinedMeeting";
+    PushNotificationTypes[PushNotificationTypes["UserLeftMeeting"] = 4] = "UserLeftMeeting";
+    PushNotificationTypes[PushNotificationTypes["MeetingDeleted"] = 8] = "MeetingDeleted";
+    PushNotificationTypes[PushNotificationTypes["ChatMessageCreated"] = 16] = "ChatMessageCreated";
+    PushNotificationTypes[PushNotificationTypes["MeetingStartsSoon"] = 32] = "MeetingStartsSoon";
+})(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var MeetingType;
 (function (MeetingType) {
     MeetingType[MeetingType["Online"] = 1] = "Online";

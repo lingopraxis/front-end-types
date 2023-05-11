@@ -98,6 +98,7 @@ export interface IUser {
     languageLevel: LanguageLevel;
     userGoogleInfo?: IUserGoogleInfo;
     username: string;
+    pushNotificationTypes: PushNotificationTypes;
     email: string;
 }
 export interface ILanguage {
@@ -107,6 +108,15 @@ export interface ILanguage {
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
     hasCalendarPermission: boolean;
+}
+export declare enum PushNotificationTypes {
+    None = 0,
+    MeetingCreated = 1,
+    UserJoinedMeeting = 2,
+    UserLeftMeeting = 4,
+    MeetingDeleted = 8,
+    ChatMessageCreated = 16,
+    MeetingStartsSoon = 32
 }
 export interface IMeetingAddress {
     /** @format int32 */
@@ -290,6 +300,15 @@ export interface IUserJoinedMeetingPushNotification {
     actorUserName: string;
 }
 export interface IUserLeftMeetingPushNotification {
+    /** @format int64 */
+    meetingId: number;
+    actorUserName: string;
+}
+export interface IMeetingStartsSoonNotification {
+    /** @format int64 */
+    meetingId: number;
+}
+export interface IUserDeletedMeetingPushNotification {
     /** @format int64 */
     meetingId: number;
     actorUserName: string;

@@ -65,7 +65,7 @@ export interface IMeeting {
     topicName: string;
     topicDescription?: string;
     userCreator: IUser;
-    languageId: string;
+    language: ILanguage;
     notificationsEnabled: boolean;
     languageLevel: LanguageLevel;
     comment?: string;
@@ -271,7 +271,7 @@ export interface ICreateMeetingChatMessageRequest {
 export interface INotificationPreference {
     /** @format int64 */
     id: number;
-    languageId: string;
+    language: ILanguage;
     languageLevel: LanguageLevel;
 }
 export interface ICreateNotificationPreference {

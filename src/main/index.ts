@@ -344,37 +344,22 @@ export interface IUpdateNotificationPreference {
   languageLevel: LanguageLevel;
 }
 
-export interface IMeetingCreatedPushNotification {
+export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingDate: string };
+
+export interface IPushNotificationBase {
   /** @format int64 */
   meetingId: number;
+  languageId: string;
+  languageLevel: string;
+  topicName: string;
 }
 
-export interface IMessageCreatedPushNotification {
-  /** @format int64 */
-  meetingId: number;
-  actorUserName: string;
-  message: string;
-}
+export type IMessageCreatedPushNotification = IPushNotificationBase & { actorUserName: string; message: string };
 
-export interface IUserJoinedMeetingPushNotification {
-  /** @format int64 */
-  meetingId: number;
-  actorUserName: string;
-}
+export type IUserJoinedMeetingPushNotification = IPushNotificationBase & { actorUserName: string };
 
-export interface IUserLeftMeetingPushNotification {
-  /** @format int64 */
-  meetingId: number;
-  actorUserName: string;
-}
+export type IUserLeftMeetingPushNotification = IPushNotificationBase & { actorUserName: string };
 
-export interface IMeetingStartsSoonNotification {
-  /** @format int64 */
-  meetingId: number;
-}
+export type IMeetingStartsSoonNotification = IPushNotificationBase & object;
 
-export interface IUserDeletedMeetingPushNotification {
-  /** @format int64 */
-  meetingId: number;
-  actorUserName: string;
-}
+export type IUserDeletedMeetingPushNotification = IPushNotificationBase & { actorUserName: string };

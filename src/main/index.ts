@@ -297,6 +297,7 @@ export interface IUpdateUserRequest {
   timeZoneId?: string;
   city?: string;
   username: string;
+  pushNotificationTypes: PushNotificationTypes;
 }
 
 export interface IChatMessage {
@@ -349,7 +350,7 @@ export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingD
 export interface IPushNotificationBase {
   /** @format int64 */
   meetingId: number;
-  languageId: string;
+  language: string;
   languageLevel: string;
   topicName: string;
 }
@@ -360,6 +361,6 @@ export type IUserJoinedMeetingPushNotification = IPushNotificationBase & { actor
 
 export type IUserLeftMeetingPushNotification = IPushNotificationBase & { actorUserName: string };
 
-export type IMeetingStartsSoonNotification = IPushNotificationBase & object;
+export type IMeetingStartsSoonNotification = IPushNotificationBase & { meetingDate: string };
 
-export type IUserDeletedMeetingPushNotification = IPushNotificationBase & { actorUserName: string };
+export type IUserDeletedMeetingPushNotification = IPushNotificationBase & { meetingDate: string };

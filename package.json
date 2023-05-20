@@ -1,6 +1,6 @@
 {
   "name": "lingopractices-models",
-  "version": "1.1.56",
+  "version": "1.1.57",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": "https://github.com/lingopractices/front-end-types.git",

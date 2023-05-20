@@ -82,6 +82,7 @@ export interface IMeeting {
   comment?: string;
   address?: IMeetingAddress;
   type: MeetingType;
+  meetingLink?: string;
 }
 
 export interface IParticipant {

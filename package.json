@@ -1,6 +1,6 @@
 {
   "name": "lingopractices-models",
-  "version": "1.0.0",
+  "version": "1.1.56",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": "https://github.com/lingopractices/front-end-types.git",
@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "yarn tsc generate.ts && node generate.js && yarn tsc"
+    "start": "yarn tsc generate.ts && node generate.js && yarn tsc",
+    "release": "yarn start && npm version patch && chmod +x release.sh && ./release.sh && git push"
   },
   "devDependencies": {
     "@types/node": "^16.4.6",

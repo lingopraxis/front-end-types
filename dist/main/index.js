@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -14,6 +14,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["LanguageDoesNotExist"] = 1009] = "LanguageDoesNotExist";
     ApplicationErrorCode[ApplicationErrorCode["CannotLeaveMeeting"] = 1010] = "CannotLeaveMeeting";
     ApplicationErrorCode[ApplicationErrorCode["AppleAuthCodeInvalid"] = 1011] = "AppleAuthCodeInvalid";
+    ApplicationErrorCode[ApplicationErrorCode["EntityNotFound"] = 1012] = "EntityNotFound";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -31,6 +32,13 @@ var SocialLoginProvider;
     SocialLoginProvider[SocialLoginProvider["Google"] = 1] = "Google";
     SocialLoginProvider[SocialLoginProvider["Apple"] = 2] = "Apple";
 })(SocialLoginProvider = exports.SocialLoginProvider || (exports.SocialLoginProvider = {}));
+var DeviceType;
+(function (DeviceType) {
+    DeviceType[DeviceType["None"] = 0] = "None";
+    DeviceType[DeviceType["Android"] = 1] = "Android";
+    DeviceType[DeviceType["Ios"] = 2] = "Ios";
+    DeviceType[DeviceType["Web"] = 3] = "Web";
+})(DeviceType = exports.DeviceType || (exports.DeviceType = {}));
 var Gender;
 (function (Gender) {
     Gender[Gender["NotSet"] = 1] = "NotSet";
@@ -46,6 +54,7 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["MeetingDeleted"] = 8] = "MeetingDeleted";
     PushNotificationTypes[PushNotificationTypes["ChatMessageCreated"] = 16] = "ChatMessageCreated";
     PushNotificationTypes[PushNotificationTypes["MeetingStartsSoon"] = 32] = "MeetingStartsSoon";
+    PushNotificationTypes[PushNotificationTypes["All"] = 63] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var MeetingType;
 (function (MeetingType) {

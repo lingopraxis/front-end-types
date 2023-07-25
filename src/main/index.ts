@@ -20,6 +20,7 @@ export enum ApplicationErrorCode {
   LanguageDoesNotExist = 1009,
   CannotLeaveMeeting = 1010,
   AppleAuthCodeInvalid = 1011,
+  EntityNotFound = 1012,
 }
 
 export interface ISocialSignUpRequest {
@@ -29,6 +30,7 @@ export interface ISocialSignUpRequest {
   tokenId: string;
   authCode: string;
   provider?: SocialLoginProvider;
+  deviceType?: DeviceType;
 }
 
 export enum LanguageLevel {
@@ -47,6 +49,13 @@ export enum SocialLoginProvider {
   Apple = 2,
 }
 
+export enum DeviceType {
+  None = 0,
+  Android = 1,
+  Ios = 2,
+  Web = 3,
+}
+
 export interface ISecurityTokens {
   accessToken: string;
   refreshToken: string;
@@ -57,6 +66,7 @@ export interface ISocialSignInRequest {
   authCode?: string;
   incrementalAuth?: boolean;
   provider?: SocialLoginProvider;
+  deviceType?: DeviceType;
 }
 
 export interface IRefreshTokenRequest {
@@ -136,6 +146,7 @@ export enum PushNotificationTypes {
   MeetingDeleted = 8,
   ChatMessageCreated = 16,
   MeetingStartsSoon = 32,
+  All = 63,
 }
 
 export interface IMeetingAddress {
@@ -192,11 +203,6 @@ export interface IJoinMeetingRequest {
   /** @format int64 */
   meetingId: number;
 }
-
-/**
- * Represents a void type, since Void is not a valid return type in C#.
- */
-export type IUnit = object;
 
 export interface IGetMeetingDatesRequest {
   languageId: string;
@@ -364,4 +370,7 @@ export type IUserLeftMeetingPushNotification = IPushNotificationBase & { actorUs
 
 export type IMeetingStartsSoonNotification = IPushNotificationBase & { meetingDate: string };
 
-export type IUserDeletedMeetingPushNotification = IPushNotificationBase & { meetingDate: string };
+export type IUserDeletedMeetingPushNotification = IPushNotificationBase & {
+  meetingDate: string;
+  actorUserName: string;
+};

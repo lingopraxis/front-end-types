@@ -190,8 +190,7 @@ export declare enum CreateMeetingResult {
     Success = 1,
     TokenHasBeenExpiredOrRevoked = 2,
     CouldNotCreateGoogleMeetLink = 3,
-    HasMeetingSameTime = 4,
-    UnknownError = 5
+    HasMeetingSameTime = 4
 }
 export interface ICreateMeetingRequest {
     languageId: string;
@@ -213,6 +212,31 @@ export interface IEditPushNotificationCommand {
     /** @format int64 */
     meetingId?: number;
     enabled?: boolean;
+}
+export interface IUpdateMeetingResponse {
+    updateMeetingResult: UpdateMeetingResult;
+}
+export declare enum UpdateMeetingResult {
+    Success = 1,
+    MeetingNotFound = 2,
+    UnauthorizedUserEditAction = 3,
+    NoSlotsAvailable = 4,
+    HasMeetingSameTime = 5
+}
+export interface IUpdateMeetingRequest {
+    /** @format int64 */
+    meetingId: number;
+    /** @format int64 */
+    userId: number;
+    languageId?: string;
+    languageLevel?: LanguageLevel;
+    /** @format date-time */
+    meetingAt?: string;
+    /** @format int32 */
+    peopleNumber?: number;
+    comment?: string;
+    topicName?: string;
+    topicDescription?: string;
 }
 export interface ITopic {
     /** @format int64 */

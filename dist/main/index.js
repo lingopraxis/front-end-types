@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.UpdateMeetingResult = exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -75,5 +75,12 @@ var CreateMeetingResult;
     CreateMeetingResult[CreateMeetingResult["TokenHasBeenExpiredOrRevoked"] = 2] = "TokenHasBeenExpiredOrRevoked";
     CreateMeetingResult[CreateMeetingResult["CouldNotCreateGoogleMeetLink"] = 3] = "CouldNotCreateGoogleMeetLink";
     CreateMeetingResult[CreateMeetingResult["HasMeetingSameTime"] = 4] = "HasMeetingSameTime";
-    CreateMeetingResult[CreateMeetingResult["UnknownError"] = 5] = "UnknownError";
 })(CreateMeetingResult = exports.CreateMeetingResult || (exports.CreateMeetingResult = {}));
+var UpdateMeetingResult;
+(function (UpdateMeetingResult) {
+    UpdateMeetingResult[UpdateMeetingResult["Success"] = 1] = "Success";
+    UpdateMeetingResult[UpdateMeetingResult["MeetingNotFound"] = 2] = "MeetingNotFound";
+    UpdateMeetingResult[UpdateMeetingResult["UnauthorizedUserEditAction"] = 3] = "UnauthorizedUserEditAction";
+    UpdateMeetingResult[UpdateMeetingResult["NoSlotsAvailable"] = 4] = "NoSlotsAvailable";
+    UpdateMeetingResult[UpdateMeetingResult["HasMeetingSameTime"] = 5] = "HasMeetingSameTime";
+})(UpdateMeetingResult = exports.UpdateMeetingResult || (exports.UpdateMeetingResult = {}));

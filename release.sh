@@ -13,7 +13,7 @@ zip -r front-end-types.zip . -x ./node_modules/\* ./.git/\*
 tar -czvf front-end-types.tar.gz --exclude=node_modules --exclude=.git ../front-end-types
 
 # Execute the command with the latest version
-gh release create "$new_version" --generate-notes 'front-end-types.tar.gz#Source.tar.gz' 'front-end-types.zip#Source.zip'
+gh release create "$new_version" --generate-notes 
 
 # cleanup
 rm -rf front-end-types.tar.gz front-end-types.zip

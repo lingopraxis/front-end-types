@@ -4,7 +4,7 @@
 latest_version=$(jq -r '.version' package.json)
 
 # Increment the patch version
-new_version=$(echo "$latest_version" | awk -F. '{print $1"."$2".$(($3+1))}')
+new_version=$(echo $latest_version | awk -F. -v OFS=. '{$NF++; print}')
 
 git tag $new_version
 

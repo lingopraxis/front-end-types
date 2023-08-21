@@ -1,6 +1,6 @@
 # Lingo Practices Frontend Types
 
-Generates frontend types for api Lingo Practices API using swager files
+Generates frontend types for api Lingo Practices API using swagger files
 
 ### Install dependencies
 

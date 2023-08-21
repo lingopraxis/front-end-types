@@ -382,6 +382,10 @@ export interface IUpdateNotificationPreference {
   languageLevel: LanguageLevel;
 }
 
+export interface ICreateFeedbackRequest {
+  text: string;
+}
+
 export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingDate: string };
 
 export interface IPushNotificationBase {

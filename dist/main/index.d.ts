@@ -226,17 +226,15 @@ export declare enum UpdateMeetingResult {
 export interface IUpdateMeetingRequest {
     /** @format int64 */
     meetingId: number;
-    /** @format int64 */
-    userId: number;
-    languageId?: string;
-    languageLevel?: LanguageLevel;
+    languageId: string;
+    languageLevel: LanguageLevel;
     /** @format date-time */
-    meetingAt?: string;
+    meetingAt: string;
     /** @format int32 */
-    peopleNumber?: number;
-    comment?: string;
-    topicName?: string;
-    topicDescription?: string;
+    peopleNumber: number;
+    comment: string;
+    topicName: string;
+    topicDescription: string;
 }
 export interface ITopic {
     /** @format int64 */
@@ -315,9 +313,6 @@ export interface IUpdateNotificationPreference {
     id: number;
     languageId: string;
     languageLevel: LanguageLevel;
-}
-export interface ICreateFeedbackRequest {
-    text: string;
 }
 export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
     meetingDate: string;

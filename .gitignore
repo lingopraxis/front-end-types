@@ -1,3 +1,5 @@
 node_modules
 generate.js
 .idea
+*.tar.gz
+*.zip

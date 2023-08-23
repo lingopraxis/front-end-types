@@ -1,7 +1,3 @@
-export interface ISocialSignUpResponse {
-    /** @format int64 */
-    id: number;
-}
 export interface IApplicationError {
     code: ApplicationErrorCode;
     message: string;
@@ -19,6 +15,10 @@ export declare enum ApplicationErrorCode {
     CannotLeaveMeeting = 1010,
     AppleAuthCodeInvalid = 1011,
     EntityNotFound = 1012
+}
+export interface ISocialSignUpResponse {
+    /** @format int64 */
+    id: number;
 }
 export interface ISocialSignUpRequest {
     languageId: string;
@@ -49,10 +49,6 @@ export declare enum DeviceType {
     Ios = 2,
     Web = 3
 }
-export interface ISecurityTokens {
-    accessToken: string;
-    refreshToken: string;
-}
 export interface ISocialSignInRequest {
     tokenId: string;
     authCode?: string;
@@ -62,6 +58,39 @@ export interface ISocialSignInRequest {
 }
 export interface IRefreshTokenRequest {
     refreshToken: string;
+}
+export interface ICreateFeedbackRequest {
+    text: string;
+}
+export interface ILanguage {
+    id: string;
+    name: string;
+}
+export interface IChatMessage {
+    /** @format int64 */
+    id: number;
+    username: string;
+    /** @format int64 */
+    userCreatorId: number;
+    text: string;
+    /** @format date-time */
+    createdAt: string;
+}
+export interface IGetMeetingChatMessagesQuery {
+    paginationParams?: IPaginationParams;
+    /** @format int64 */
+    meetingId?: number;
+}
+export interface IPaginationParams {
+    /** @format int32 */
+    offset: number;
+    /** @format int32 */
+    limit: number;
+}
+export interface ICreateMeetingChatMessageRequest {
+    /** @format int64 */
+    meetingId: number;
+    text: string;
 }
 export interface IMeeting {
     /** @format int64 */
@@ -111,10 +140,6 @@ export interface IUser {
     pushNotificationTypes: PushNotificationTypes;
     email: string;
 }
-export interface ILanguage {
-    id: string;
-    name: string;
-}
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
     hasCalendarPermission: boolean;
@@ -152,12 +177,6 @@ export interface IGetMeetingsRequest {
     to?: string | null;
     page: IPaginationParams;
 }
-export interface IPaginationParams {
-    /** @format int32 */
-    offset: number;
-    /** @format int32 */
-    limit: number;
-}
 export interface IJoinMeetingResponse {
     result: JoinMeetingResult;
 }
@@ -171,14 +190,6 @@ export declare enum JoinMeetingResult {
 export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
-}
-export interface IGetMeetingDatesRequest {
-    languageId: string;
-    languageLevel?: LanguageLevel | null;
-    /** @format date-time */
-    from: string;
-    /** @format date-time */
-    to?: string | null;
 }
 export interface ICreateMeetingResponse {
     /** @format int64 */
@@ -205,6 +216,14 @@ export interface ICreateMeetingRequest {
     topicName: string;
     topicDescription?: string;
 }
+export interface IGetMeetingDatesRequest {
+    languageId: string;
+    languageLevel?: LanguageLevel | null;
+    /** @format date-time */
+    from: string;
+    /** @format date-time */
+    to?: string | null;
+}
 export interface IMeetingMetadata {
     url?: string;
 }
@@ -226,77 +245,13 @@ export declare enum UpdateMeetingResult {
 export interface IUpdateMeetingRequest {
     /** @format int64 */
     meetingId: number;
-    languageId: string;
-    languageLevel: LanguageLevel;
     /** @format date-time */
-    meetingAt: string;
+    meetingAt?: string;
     /** @format int32 */
-    peopleNumber: number;
-    comment: string;
-    topicName: string;
-    topicDescription: string;
-}
-export interface ITopic {
-    /** @format int64 */
-    id: number;
-    name: string;
-    description?: string;
-    questions?: string[];
-}
-export interface ISearchTopicsRequest {
-    name?: string;
-    page: IPaginationParams;
-}
-export interface ICreateTopicResponse {
-    /** @format int64 */
-    id: number;
-}
-export interface ICreateTopicRequest {
-    name: string;
-    questions: string[];
-}
-export interface IAddQuestionsToTopicRequest {
-    questions: string[];
-    /** @format int64 */
-    topicId: number;
-}
-export interface ISubscribeToPushNotificationsRequest {
-    token: string;
-}
-export interface IGoogleLogInInfo {
-    logInUrl: string;
-    requestId: string;
-}
-export interface IUpdateUserRequest {
-    gender: Gender;
-    countryName?: string;
-    practiceLanguageId: string;
-    interfaceLanguageId: string;
-    languageLevel: LanguageLevel;
-    timeZoneId?: string;
-    city?: string;
-    username: string;
-    pushNotificationTypes: PushNotificationTypes;
-}
-export interface IChatMessage {
-    /** @format int64 */
-    id: number;
-    username: string;
-    /** @format int64 */
-    userCreatorId: number;
-    text: string;
-    /** @format date-time */
-    createdAt: string;
-}
-export interface IGetMeetingChatMessagesQuery {
-    paginationParams?: IPaginationParams;
-    /** @format int64 */
-    meetingId?: number;
-}
-export interface ICreateMeetingChatMessageRequest {
-    /** @format int64 */
-    meetingId: number;
-    text: string;
+    peopleNumber?: number;
+    comment?: string;
+    topicName?: string;
+    topicDescription?: string;
 }
 export interface INotificationPreference {
     /** @format int64 */
@@ -313,6 +268,59 @@ export interface IUpdateNotificationPreference {
     id: number;
     languageId: string;
     languageLevel: LanguageLevel;
+}
+export interface ISubscribeToPushNotificationsRequest {
+    token: string;
+}
+export interface ITestPushNotificationsCommand {
+    type?: PushNotificationTypes;
+}
+export interface ITopic {
+    /** @format int64 */
+    id: number;
+    name: string;
+    description?: string;
+    questions?: string[];
+}
+export interface IAddQuestionsToTopicRequest {
+    questions: string[];
+    /** @format int64 */
+    topicId: number;
+}
+export interface ISearchTopicsRequest {
+    name?: string;
+    page: IPaginationParams;
+}
+export interface ICreateTopicResponse {
+    /** @format int64 */
+    id: number;
+}
+export interface ICreateTopicRequest {
+    name: string;
+    questions: string[];
+}
+export interface IUpdateUserRequest {
+    gender: Gender;
+    countryName?: string;
+    practiceLanguageId: string;
+    interfaceLanguageId: string;
+    languageLevel: LanguageLevel;
+    timeZoneId?: string;
+    city?: string;
+    username: string;
+    pushNotificationTypes: PushNotificationTypes;
+}
+export interface IProblemDetails {
+    type?: string | null;
+    title?: string | null;
+    /** @format int32 */
+    status?: number | null;
+    detail?: string | null;
+    instance?: string | null;
+}
+export interface IGoogleLogInInfo {
+    logInUrl: string;
+    requestId: string;
 }
 export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
     meetingDate: string;

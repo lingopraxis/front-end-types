@@ -59,6 +59,10 @@ export interface ISocialSignInRequest {
 export interface IRefreshTokenRequest {
     refreshToken: string;
 }
+export interface ITimeZoneDetails {
+    timeZoneName?: string;
+    offset?: string;
+}
 export interface ICreateFeedbackRequest {
     text: string;
 }
@@ -152,7 +156,8 @@ export declare enum PushNotificationTypes {
     MeetingDeleted = 8,
     ChatMessageCreated = 16,
     MeetingStartsSoon = 32,
-    All = 63
+    CustomNotificationCreated = 64,
+    All = 127
 }
 export interface IMeetingAddress {
     /** @format int32 */
@@ -275,6 +280,17 @@ export interface ISubscribeToPushNotificationsRequest {
 export interface ITestPushNotificationsCommand {
     type?: PushNotificationTypes;
 }
+export interface IBroadcastMessageRequest {
+    notification?: ICustomNotificationCreatedPushNotification;
+}
+export interface ICustomNotificationCreatedPushNotification {
+    messages: Record<string, ICustomMessage>;
+    testUserIds: number[];
+}
+export interface ICustomMessage {
+    title: string;
+    message: string;
+}
 export interface ITopic {
     /** @format int64 */
     id: number;
@@ -298,6 +314,18 @@ export interface ICreateTopicResponse {
 export interface ICreateTopicRequest {
     name: string;
     questions: string[];
+}
+export interface IStatistic {
+    /** @format int32 */
+    createdMeetingsCount?: number;
+    /** @format int32 */
+    meetingsCount?: number;
+    /** @format int32 */
+    interlocutorCount?: number;
+    /** @format int32 */
+    messagesWrittenCount?: number;
+    /** @format int32 */
+    topicOfferCount?: number;
 }
 export interface IUpdateUserRequest {
     gender: Gender;

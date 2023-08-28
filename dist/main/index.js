@@ -54,7 +54,8 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["MeetingDeleted"] = 8] = "MeetingDeleted";
     PushNotificationTypes[PushNotificationTypes["ChatMessageCreated"] = 16] = "ChatMessageCreated";
     PushNotificationTypes[PushNotificationTypes["MeetingStartsSoon"] = 32] = "MeetingStartsSoon";
-    PushNotificationTypes[PushNotificationTypes["All"] = 63] = "All";
+    PushNotificationTypes[PushNotificationTypes["CustomNotificationCreated"] = 64] = "CustomNotificationCreated";
+    PushNotificationTypes[PushNotificationTypes["All"] = 127] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var MeetingType;
 (function (MeetingType) {

@@ -427,7 +427,7 @@ export interface IGoogleLogInInfo {
   requestId: string;
 }
 
-export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingDate: string };
+export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingDate: string; userCreatorId: number };
 
 export interface IPushNotificationBase {
   /** @format int64 */

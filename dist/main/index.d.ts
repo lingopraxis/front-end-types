@@ -352,6 +352,7 @@ export interface IGoogleLogInInfo {
 }
 export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
     meetingDate: string;
+    userCreatorId: number;
 };
 export interface IPushNotificationBase {
     /** @format int64 */

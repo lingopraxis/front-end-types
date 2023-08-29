@@ -276,6 +276,17 @@ export interface IGetMeetingDatesRequest {
   to?: string | null;
 }
 
+export interface IGetMyMeetingsRequest {
+  page?: IPaginationParams;
+  onlyPast?: boolean;
+  sort?: Sort;
+}
+
+export enum Sort {
+  Ascending = 1,
+  Descending = 2,
+}
+
 export interface IMeetingMetadata {
   url?: string;
 }

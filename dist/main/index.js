@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateMeetingResult = exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -77,6 +77,11 @@ var CreateMeetingResult;
     CreateMeetingResult[CreateMeetingResult["CouldNotCreateGoogleMeetLink"] = 3] = "CouldNotCreateGoogleMeetLink";
     CreateMeetingResult[CreateMeetingResult["HasMeetingSameTime"] = 4] = "HasMeetingSameTime";
 })(CreateMeetingResult = exports.CreateMeetingResult || (exports.CreateMeetingResult = {}));
+var Sort;
+(function (Sort) {
+    Sort[Sort["Ascending"] = 1] = "Ascending";
+    Sort[Sort["Descending"] = 2] = "Descending";
+})(Sort = exports.Sort || (exports.Sort = {}));
 var UpdateMeetingResult;
 (function (UpdateMeetingResult) {
     UpdateMeetingResult[UpdateMeetingResult["Success"] = 1] = "Success";

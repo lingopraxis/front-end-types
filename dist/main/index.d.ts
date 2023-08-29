@@ -229,6 +229,15 @@ export interface IGetMeetingDatesRequest {
     /** @format date-time */
     to?: string | null;
 }
+export interface IGetMyMeetingsRequest {
+    page?: IPaginationParams;
+    onlyPast?: boolean;
+    sort?: Sort;
+}
+export declare enum Sort {
+    Ascending = 1,
+    Descending = 2
+}
 export interface IMeetingMetadata {
     url?: string;
 }

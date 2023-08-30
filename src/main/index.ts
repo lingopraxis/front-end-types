@@ -443,7 +443,7 @@ export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingD
 export interface IPushNotificationBase {
   /** @format int64 */
   meetingId: number;
-  language: string;
+  languageId: string;
   languageLevel: string;
   topicName: string;
 }

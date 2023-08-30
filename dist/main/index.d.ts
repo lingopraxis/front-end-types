@@ -366,7 +366,7 @@ export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
 export interface IPushNotificationBase {
     /** @format int64 */
     meetingId: number;
-    language: string;
+    languageId: string;
     languageLevel: string;
     topicName: string;
 }

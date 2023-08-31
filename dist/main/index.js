@@ -59,8 +59,9 @@ var PushNotificationTypes;
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var MeetingType;
 (function (MeetingType) {
-    MeetingType[MeetingType["Online"] = 1] = "Online";
+    MeetingType[MeetingType["GoogleMeet"] = 1] = "GoogleMeet";
     MeetingType[MeetingType["Offline"] = 2] = "Offline";
+    MeetingType[MeetingType["Zoom"] = 3] = "Zoom";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
 var JoinMeetingResult;
 (function (JoinMeetingResult) {
@@ -74,7 +75,7 @@ var CreateMeetingResult;
 (function (CreateMeetingResult) {
     CreateMeetingResult[CreateMeetingResult["Success"] = 1] = "Success";
     CreateMeetingResult[CreateMeetingResult["TokenHasBeenExpiredOrRevoked"] = 2] = "TokenHasBeenExpiredOrRevoked";
-    CreateMeetingResult[CreateMeetingResult["CouldNotCreateGoogleMeetLink"] = 3] = "CouldNotCreateGoogleMeetLink";
+    CreateMeetingResult[CreateMeetingResult["CouldNotCreateMeetLink"] = 3] = "CouldNotCreateMeetLink";
     CreateMeetingResult[CreateMeetingResult["HasMeetingSameTime"] = 4] = "HasMeetingSameTime";
 })(CreateMeetingResult = exports.CreateMeetingResult || (exports.CreateMeetingResult = {}));
 var Sort;

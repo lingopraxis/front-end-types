@@ -201,8 +201,9 @@ export interface IMeetingAddress {
 }
 
 export enum MeetingType {
-  Online = 1,
+  GoogleMeet = 1,
   Offline = 2,
+  Zoom = 3,
 }
 
 export interface IGetMeetingsRequest {
@@ -238,14 +239,15 @@ export interface IJoinMeetingRequest {
 export interface ICreateMeetingResponse {
   /** @format int64 */
   id?: number;
-  googleMeetLink?: string;
+  meetLink?: string;
+  type?: MeetingType;
   createMeetingResult: CreateMeetingResult;
 }
 
 export enum CreateMeetingResult {
   Success = 1,
   TokenHasBeenExpiredOrRevoked = 2,
-  CouldNotCreateGoogleMeetLink = 3,
+  CouldNotCreateMeetLink = 3,
   HasMeetingSameTime = 4,
 }
 

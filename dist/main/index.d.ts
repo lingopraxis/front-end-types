@@ -169,8 +169,9 @@ export interface IMeetingAddress {
     longitude?: number;
 }
 export declare enum MeetingType {
-    Online = 1,
-    Offline = 2
+    GoogleMeet = 1,
+    Offline = 2,
+    Zoom = 3
 }
 export interface IGetMeetingsRequest {
     languageId?: string;
@@ -199,13 +200,14 @@ export interface IJoinMeetingRequest {
 export interface ICreateMeetingResponse {
     /** @format int64 */
     id?: number;
-    googleMeetLink?: string;
+    meetLink?: string;
+    type?: MeetingType;
     createMeetingResult: CreateMeetingResult;
 }
 export declare enum CreateMeetingResult {
     Success = 1,
     TokenHasBeenExpiredOrRevoked = 2,
-    CouldNotCreateGoogleMeetLink = 3,
+    CouldNotCreateMeetLink = 3,
     HasMeetingSameTime = 4
 }
 export interface ICreateMeetingRequest {

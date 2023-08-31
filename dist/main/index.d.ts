@@ -49,6 +49,10 @@ export declare enum DeviceType {
     Ios = 2,
     Web = 3
 }
+export interface ISecurityTokens {
+    accessToken: string;
+    refreshToken: string;
+}
 export interface ISocialSignInRequest {
     tokenId: string;
     authCode?: string;

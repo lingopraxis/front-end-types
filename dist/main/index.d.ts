@@ -375,6 +375,8 @@ export interface IPushNotificationBase {
     languageId: string;
     languageLevel: string;
     topicName: string;
+    /** @format date-time */
+    sentTime: string;
 }
 export declare type IMessageCreatedPushNotification = IPushNotificationBase & {
     actorUserName: string;

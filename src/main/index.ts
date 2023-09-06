@@ -364,6 +364,9 @@ export interface IBroadcastMessageRequest {
 export interface ICustomNotificationCreatedPushNotification {
   messages: Record<string, ICustomMessage>;
   testUserIds: number[];
+
+  /** @format date-time */
+  sentTime: string;
 }
 
 export interface ICustomMessage {

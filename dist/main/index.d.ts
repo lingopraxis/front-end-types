@@ -41,7 +41,8 @@ export declare enum LanguageLevel {
 export declare enum SocialLoginProvider {
     None = 0,
     Google = 1,
-    Apple = 2
+    Apple = 2,
+    Zoom = 3
 }
 export declare enum DeviceType {
     None = 0,
@@ -144,6 +145,7 @@ export interface IUser {
     city?: string;
     languageLevel: LanguageLevel;
     userGoogleInfo?: IUserGoogleInfo;
+    userZoomInfo?: IUserZoomInfo;
     username: string;
     pushNotificationTypes: PushNotificationTypes;
     email: string;
@@ -151,6 +153,9 @@ export interface IUser {
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
     hasCalendarPermission: boolean;
+}
+export interface IUserZoomInfo {
+    authorized: boolean;
 }
 export declare enum PushNotificationTypes {
     None = 0,
@@ -363,9 +368,16 @@ export interface IProblemDetails {
     detail?: string | null;
     instance?: string | null;
 }
-export interface IGoogleLogInInfo {
+export interface ILogInInfo {
     logInUrl: string;
     requestId: string;
+}
+export interface IGetProviderLogInInfo {
+    provider: LogInRequestType;
+}
+export declare enum LogInRequestType {
+    Google = 1,
+    Zoom = 2
 }
 export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
     meetingDate: string;

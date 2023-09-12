@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -31,6 +31,7 @@ var SocialLoginProvider;
     SocialLoginProvider[SocialLoginProvider["None"] = 0] = "None";
     SocialLoginProvider[SocialLoginProvider["Google"] = 1] = "Google";
     SocialLoginProvider[SocialLoginProvider["Apple"] = 2] = "Apple";
+    SocialLoginProvider[SocialLoginProvider["Zoom"] = 3] = "Zoom";
 })(SocialLoginProvider = exports.SocialLoginProvider || (exports.SocialLoginProvider = {}));
 var DeviceType;
 (function (DeviceType) {
@@ -91,3 +92,8 @@ var UpdateMeetingResult;
     UpdateMeetingResult[UpdateMeetingResult["NoSlotsAvailable"] = 4] = "NoSlotsAvailable";
     UpdateMeetingResult[UpdateMeetingResult["HasMeetingSameTime"] = 5] = "HasMeetingSameTime";
 })(UpdateMeetingResult = exports.UpdateMeetingResult || (exports.UpdateMeetingResult = {}));
+var LogInRequestType;
+(function (LogInRequestType) {
+    LogInRequestType[LogInRequestType["Google"] = 1] = "Google";
+    LogInRequestType[LogInRequestType["Zoom"] = 2] = "Zoom";
+})(LogInRequestType = exports.LogInRequestType || (exports.LogInRequestType = {}));

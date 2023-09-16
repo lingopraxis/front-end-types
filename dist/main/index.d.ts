@@ -304,14 +304,10 @@ export interface IBroadcastMessageRequest {
     notification?: ICustomNotificationCreatedPushNotification;
 }
 export interface ICustomNotificationCreatedPushNotification {
-    messages: Record<string, ICustomMessage>;
-    testUserIds: number[];
+    title: string;
+    subTitle: string;
     /** @format date-time */
     sentTime: string;
-}
-export interface ICustomMessage {
-    title: string;
-    message: string;
 }
 export interface ITopic {
     /** @format int64 */
@@ -319,6 +315,12 @@ export interface ITopic {
     name: string;
     description?: string;
     questions?: string[];
+    tags?: ITag[];
+}
+export interface ITag {
+    /** @format int64 */
+    id: number;
+    name: string;
 }
 export interface IAddQuestionsToTopicRequest {
     questions: string[];
@@ -328,6 +330,7 @@ export interface IAddQuestionsToTopicRequest {
 export interface ISearchTopicsRequest {
     name?: string;
     page: IPaginationParams;
+    tagIds?: number[];
 }
 export interface ICreateTopicResponse {
     /** @format int64 */
@@ -337,6 +340,7 @@ export interface ICreateTopicRequest {
     name: string;
     questions: string[];
 }
+export declare type IInitializeTopicCommand = object;
 export interface IStatistic {
     /** @format int32 */
     createdMeetingsCount?: number;
@@ -371,9 +375,6 @@ export interface IProblemDetails {
 export interface ILogInInfo {
     logInUrl: string;
     requestId: string;
-}
-export interface IGetProviderLogInInfo {
-    provider: LogInRequestType;
 }
 export declare enum LogInRequestType {
     Google = 1,

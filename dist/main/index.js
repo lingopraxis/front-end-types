@@ -60,9 +60,10 @@ var PushNotificationTypes;
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var MeetingType;
 (function (MeetingType) {
+    MeetingType[MeetingType["None"] = 0] = "None";
     MeetingType[MeetingType["GoogleMeet"] = 1] = "GoogleMeet";
     MeetingType[MeetingType["Offline"] = 2] = "Offline";
-    MeetingType[MeetingType["Zoom"] = 3] = "Zoom";
+    MeetingType[MeetingType["Zoom"] = 4] = "Zoom";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
 var JoinMeetingResult;
 (function (JoinMeetingResult) {

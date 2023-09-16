@@ -178,9 +178,10 @@ export interface IMeetingAddress {
     longitude?: number;
 }
 export declare enum MeetingType {
+    None = 0,
     GoogleMeet = 1,
     Offline = 2,
-    Zoom = 3
+    Zoom = 4
 }
 export interface IGetMeetingsRequest {
     languageId?: string;

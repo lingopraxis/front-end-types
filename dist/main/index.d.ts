@@ -14,7 +14,8 @@ export declare enum ApplicationErrorCode {
     LanguageDoesNotExist = 1009,
     CannotLeaveMeeting = 1010,
     AppleAuthCodeInvalid = 1011,
-    EntityNotFound = 1012
+    EntityNotFound = 1012,
+    DuplicateTopicName = 1013
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */
@@ -55,7 +56,7 @@ export interface ISecurityTokens {
     refreshToken: string;
 }
 export interface ISocialSignInRequest {
-    tokenId: string;
+    tokenId?: string;
     authCode?: string;
     incrementalAuth?: boolean;
     provider?: SocialLoginProvider;

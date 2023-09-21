@@ -15,7 +15,9 @@ export declare enum ApplicationErrorCode {
     CannotLeaveMeeting = 1010,
     AppleAuthCodeInvalid = 1011,
     EntityNotFound = 1012,
-    DuplicateTopicName = 1013
+    DuplicateTopicName = 1013,
+    ZoomRefreshTokenInvalid = 1014,
+    GoogleRefreshTokenInvalid = 1015
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */
@@ -202,11 +204,22 @@ export declare enum JoinMeetingResult {
     AllSeatsAreTaken = 2,
     HasMeetingSameTime = 3,
     AlreadyInProgressOrEnded = 4,
-    Canceled = 5
+    Canceled = 5,
+    TokenHasBeenExpiredOrRevoked = 6,
+    CouldNotJoinToMeeting = 7
 }
 export interface IJoinMeetingRequest {
     /** @format int64 */
     meetingId: number;
+}
+export interface ILeaveMeetingResponse {
+    leaveMeetingResult: LeaveMeetingResult;
+}
+export declare enum LeaveMeetingResult {
+    Success = 1,
+    TokenHasBeenExpiredOrRevoked = 2,
+    CouldNotRemoveMeeting = 3,
+    CouldNotLeaveMeeting = 4
 }
 export interface ICreateMeetingResponse {
     /** @format int64 */
@@ -267,7 +280,9 @@ export declare enum UpdateMeetingResult {
     MeetingNotFound = 2,
     UnauthorizedUserEditAction = 3,
     NoSlotsAvailable = 4,
-    HasMeetingSameTime = 5
+    HasMeetingSameTime = 5,
+    TokenHasBeenExpiredOrRevoked = 6,
+    CouldNotUpdateMeeting = 7
 }
 export interface IUpdateMeetingRequest {
     /** @format int64 */
@@ -307,9 +322,11 @@ export interface IBroadcastMessageRequest {
 }
 export interface ICustomNotificationCreatedPushNotification {
     title: string;
+    titleArgs: string[];
     subTitle: string;
-    /** @format date-time */
-    sentTime: string;
+    subTitleArgs: string[];
+    body: string;
+    languageId: string;
 }
 export interface ITopic {
     /** @format int64 */

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.JoinMeetingResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttedndeesResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -16,8 +16,6 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["AppleAuthCodeInvalid"] = 1011] = "AppleAuthCodeInvalid";
     ApplicationErrorCode[ApplicationErrorCode["EntityNotFound"] = 1012] = "EntityNotFound";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateTopicName"] = 1013] = "DuplicateTopicName";
-    ApplicationErrorCode[ApplicationErrorCode["ZoomRefreshTokenInvalid"] = 1014] = "ZoomRefreshTokenInvalid";
-    ApplicationErrorCode[ApplicationErrorCode["GoogleRefreshTokenInvalid"] = 1015] = "GoogleRefreshTokenInvalid";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -68,16 +66,16 @@ var MeetingType;
     MeetingType[MeetingType["Offline"] = 2] = "Offline";
     MeetingType[MeetingType["Zoom"] = 4] = "Zoom";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
-var JoinMeetingResult;
-(function (JoinMeetingResult) {
-    JoinMeetingResult[JoinMeetingResult["Success"] = 1] = "Success";
-    JoinMeetingResult[JoinMeetingResult["AllSeatsAreTaken"] = 2] = "AllSeatsAreTaken";
-    JoinMeetingResult[JoinMeetingResult["HasMeetingSameTime"] = 3] = "HasMeetingSameTime";
-    JoinMeetingResult[JoinMeetingResult["AlreadyInProgressOrEnded"] = 4] = "AlreadyInProgressOrEnded";
-    JoinMeetingResult[JoinMeetingResult["Canceled"] = 5] = "Canceled";
-    JoinMeetingResult[JoinMeetingResult["TokenHasBeenExpiredOrRevoked"] = 6] = "TokenHasBeenExpiredOrRevoked";
-    JoinMeetingResult[JoinMeetingResult["CouldNotJoinToMeeting"] = 7] = "CouldNotJoinToMeeting";
-})(JoinMeetingResult = exports.JoinMeetingResult || (exports.JoinMeetingResult = {}));
+var UpdateAttedndeesResult;
+(function (UpdateAttedndeesResult) {
+    UpdateAttedndeesResult[UpdateAttedndeesResult["Success"] = 1] = "Success";
+    UpdateAttedndeesResult[UpdateAttedndeesResult["AllSeatsAreTaken"] = 2] = "AllSeatsAreTaken";
+    UpdateAttedndeesResult[UpdateAttedndeesResult["HasMeetingSameTime"] = 3] = "HasMeetingSameTime";
+    UpdateAttedndeesResult[UpdateAttedndeesResult["AlreadyInProgressOrEnded"] = 4] = "AlreadyInProgressOrEnded";
+    UpdateAttedndeesResult[UpdateAttedndeesResult["Canceled"] = 5] = "Canceled";
+    UpdateAttedndeesResult[UpdateAttedndeesResult["TokenHasBeenExpiredOrRevoked"] = 6] = "TokenHasBeenExpiredOrRevoked";
+    UpdateAttedndeesResult[UpdateAttedndeesResult["CouldNotJoinToMeeting"] = 7] = "CouldNotJoinToMeeting";
+})(UpdateAttedndeesResult = exports.UpdateAttedndeesResult || (exports.UpdateAttedndeesResult = {}));
 var LeaveMeetingResult;
 (function (LeaveMeetingResult) {
     LeaveMeetingResult[LeaveMeetingResult["Success"] = 1] = "Success";

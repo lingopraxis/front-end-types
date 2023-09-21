@@ -17,8 +17,6 @@ export enum ApplicationErrorCode {
   AppleAuthCodeInvalid = 1011,
   EntityNotFound = 1012,
   DuplicateTopicName = 1013,
-  ZoomRefreshTokenInvalid = 1014,
-  GoogleRefreshTokenInvalid = 1015,
 }
 
 export interface ISocialSignUpResponse {
@@ -235,10 +233,10 @@ export interface IGetMeetingsRequest {
 }
 
 export interface IJoinMeetingResponse {
-  result: JoinMeetingResult;
+  result: UpdateAttedndeesResult;
 }
 
-export enum JoinMeetingResult {
+export enum UpdateAttedndeesResult {
   Success = 1,
   AllSeatsAreTaken = 2,
   HasMeetingSameTime = 3,

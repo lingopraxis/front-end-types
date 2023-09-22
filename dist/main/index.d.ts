@@ -195,9 +195,9 @@ export interface IGetMeetingsRequest {
     page: IPaginationParams;
 }
 export interface IJoinMeetingResponse {
-    result: UpdateAttedndeesResult;
+    result: UpdateAttendeesResult;
 }
-export declare enum UpdateAttedndeesResult {
+export declare enum UpdateAttendeesResult {
     Success = 1,
     AllSeatsAreTaken = 2,
     HasMeetingSameTime = 3,

@@ -233,10 +233,10 @@ export interface IGetMeetingsRequest {
 }
 
 export interface IJoinMeetingResponse {
-  result: UpdateAttedndeesResult;
+  result: UpdateAttendeesResult;
 }
 
-export enum UpdateAttedndeesResult {
+export enum UpdateAttendeesResult {
   Success = 1,
   AllSeatsAreTaken = 2,
   HasMeetingSameTime = 3,

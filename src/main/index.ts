@@ -385,12 +385,16 @@ export interface IBroadcastMessageRequest {
 }
 
 export interface ICustomNotificationCreatedPushNotification {
+  messages: Record<string, ICustomMessage>;
+
+  /** @format date-time */
+  sentTime: string;
+  testUserIds: number[];
+}
+
+export interface ICustomMessage {
   title: string;
-  titleArgs: string[];
-  subTitle: string;
-  subTitleArgs: string[];
-  body: string;
-  languageId: string;
+  message: string;
 }
 
 export interface ITopic {

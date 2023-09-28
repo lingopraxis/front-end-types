@@ -148,6 +148,8 @@ export interface IUser {
     userGoogleInfo?: IUserGoogleInfo;
     userZoomInfo?: IUserZoomInfo;
     username: string;
+    webAppPushNotificationTypes: PushNotificationTypes;
+    mobileAppPushNotificationTypes: PushNotificationTypes;
     pushNotificationTypes: PushNotificationTypes;
     email: string;
 }

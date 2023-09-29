@@ -466,6 +466,8 @@ export interface IUpdateUserRequest {
   city?: string;
   username: string;
   pushNotificationTypes: PushNotificationTypes;
+  mobileAppPushNotificationTypes: PushNotificationTypes;
+  webAppAppNotificationTypes: PushNotificationTypes;
 }
 
 export interface IProblemDetails {

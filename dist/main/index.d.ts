@@ -383,9 +383,8 @@ export interface IUpdateUserRequest {
     timeZoneId?: string;
     city?: string;
     username: string;
-    pushNotificationTypes: PushNotificationTypes;
-    mobileAppPushNotificationTypes: PushNotificationTypes;
-    webAppPushNotificationTypes: PushNotificationTypes;
+    mobileAppPushNotificationTypes?: PushNotificationTypes | null;
+    webAppPushNotificationTypes?: PushNotificationTypes | null;
 }
 export interface IProblemDetails {
     type?: string | null;

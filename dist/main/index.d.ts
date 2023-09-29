@@ -385,7 +385,7 @@ export interface IUpdateUserRequest {
     username: string;
     pushNotificationTypes: PushNotificationTypes;
     mobileAppPushNotificationTypes: PushNotificationTypes;
-    webAppAppNotificationTypes: PushNotificationTypes;
+    webAppPushNotificationTypes: PushNotificationTypes;
 }
 export interface IProblemDetails {
     type?: string | null;

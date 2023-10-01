@@ -15,7 +15,8 @@ export declare enum ApplicationErrorCode {
     CannotLeaveMeeting = 1010,
     AppleAuthCodeInvalid = 1011,
     EntityNotFound = 1012,
-    DuplicateTopicName = 1013
+    DuplicateTopicName = 1013,
+    IncrementalAuthInvalidEmail = 1014
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */

@@ -16,6 +16,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["AppleAuthCodeInvalid"] = 1011] = "AppleAuthCodeInvalid";
     ApplicationErrorCode[ApplicationErrorCode["EntityNotFound"] = 1012] = "EntityNotFound";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateTopicName"] = 1013] = "DuplicateTopicName";
+    ApplicationErrorCode[ApplicationErrorCode["IncrementalAuthInvalidEmail"] = 1014] = "IncrementalAuthInvalidEmail";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {

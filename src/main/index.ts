@@ -17,6 +17,7 @@ export enum ApplicationErrorCode {
   AppleAuthCodeInvalid = 1011,
   EntityNotFound = 1012,
   DuplicateTopicName = 1013,
+  IncrementalAuthInvalidEmail = 1014,
 }
 
 export interface ISocialSignUpResponse {

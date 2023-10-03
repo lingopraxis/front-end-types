@@ -180,6 +180,7 @@ export interface IUser {
   mobileAppPushNotificationTypes: PushNotificationTypes;
   pushNotificationTypes: PushNotificationTypes;
   email: string;
+  hasPushNotificationToken: boolean;
 }
 
 export interface IUserGoogleInfo {

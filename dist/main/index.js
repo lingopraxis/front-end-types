@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -106,6 +106,18 @@ var UpdateMeetingResult;
     UpdateMeetingResult[UpdateMeetingResult["TokenHasBeenExpiredOrRevoked"] = 6] = "TokenHasBeenExpiredOrRevoked";
     UpdateMeetingResult[UpdateMeetingResult["CouldNotUpdateMeeting"] = 7] = "CouldNotUpdateMeeting";
 })(UpdateMeetingResult = exports.UpdateMeetingResult || (exports.UpdateMeetingResult = {}));
+var NotificationDays;
+(function (NotificationDays) {
+    NotificationDays[NotificationDays["None"] = 0] = "None";
+    NotificationDays[NotificationDays["Sunday"] = 1] = "Sunday";
+    NotificationDays[NotificationDays["Monday"] = 2] = "Monday";
+    NotificationDays[NotificationDays["Tuesday"] = 4] = "Tuesday";
+    NotificationDays[NotificationDays["Wednesday"] = 8] = "Wednesday";
+    NotificationDays[NotificationDays["Thursday"] = 16] = "Thursday";
+    NotificationDays[NotificationDays["Friday"] = 32] = "Friday";
+    NotificationDays[NotificationDays["Saturday"] = 64] = "Saturday";
+    NotificationDays[NotificationDays["All"] = 127] = "All";
+})(NotificationDays = exports.NotificationDays || (exports.NotificationDays = {}));
 var LogInRequestType;
 (function (LogInRequestType) {
     LogInRequestType[LogInRequestType["Google"] = 1] = "Google";

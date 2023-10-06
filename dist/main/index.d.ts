@@ -313,6 +313,45 @@ export interface IUpdateNotificationPreference {
     languageId: string;
     languageLevel: LanguageLevel;
 }
+export interface IPushNotificationSchedulePreference {
+    /** @format int64 */
+    id?: number;
+    isEnabled?: boolean;
+    isChatAlertsAnyTime?: boolean;
+    /** @format time */
+    notifyFrom?: string;
+    /** @format time */
+    notifyTo?: string;
+    notificationDays?: NotificationDays;
+}
+export declare enum NotificationDays {
+    None = 0,
+    Sunday = 1,
+    Monday = 2,
+    Tuesday = 4,
+    Wednesday = 8,
+    Thursday = 16,
+    Friday = 32,
+    Saturday = 64,
+    All = 127
+}
+export interface IProblemDetails {
+    type?: string | null;
+    title?: string | null;
+    /** @format int32 */
+    status?: number | null;
+    detail?: string | null;
+    instance?: string | null;
+}
+export interface IUpdateNotificationSchedulePreference {
+    isEnabled: boolean;
+    isChatAlertsAnyTime: boolean;
+    /** @format time */
+    notifyFrom: string;
+    /** @format time */
+    notifyTo: string;
+    notificationDays: NotificationDays;
+}
 export interface ISubscribeToPushNotificationsRequest {
     token: string;
 }
@@ -387,14 +426,6 @@ export interface IUpdateUserRequest {
     username: string;
     mobileAppPushNotificationTypes?: PushNotificationTypes | null;
     webAppPushNotificationTypes?: PushNotificationTypes | null;
-}
-export interface IProblemDetails {
-    type?: string | null;
-    title?: string | null;
-    /** @format int32 */
-    status?: number | null;
-    detail?: string | null;
-    instance?: string | null;
 }
 export interface ILogInInfo {
     logInUrl: string;

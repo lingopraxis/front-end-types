@@ -151,7 +151,6 @@ export interface IUser {
     username: string;
     webAppPushNotificationTypes: PushNotificationTypes;
     mobileAppPushNotificationTypes: PushNotificationTypes;
-    pushNotificationTypes: PushNotificationTypes;
     email: string;
     hasPushNotificationToken: boolean;
 }
@@ -221,7 +220,8 @@ export declare enum LeaveMeetingResult {
     Success = 1,
     TokenHasBeenExpiredOrRevoked = 2,
     CouldNotRemoveMeeting = 3,
-    CouldNotLeaveMeeting = 4
+    CouldNotLeaveMeeting = 4,
+    MeetingNotFound = 5
 }
 export interface ICreateMeetingResponse {
     /** @format int64 */

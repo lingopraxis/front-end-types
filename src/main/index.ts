@@ -178,7 +178,6 @@ export interface IUser {
   username: string;
   webAppPushNotificationTypes: PushNotificationTypes;
   mobileAppPushNotificationTypes: PushNotificationTypes;
-  pushNotificationTypes: PushNotificationTypes;
   email: string;
   hasPushNotificationToken: boolean;
 }
@@ -264,6 +263,7 @@ export enum LeaveMeetingResult {
   TokenHasBeenExpiredOrRevoked = 2,
   CouldNotRemoveMeeting = 3,
   CouldNotLeaveMeeting = 4,
+  MeetingNotFound = 5,
 }
 
 export interface ICreateMeetingResponse {

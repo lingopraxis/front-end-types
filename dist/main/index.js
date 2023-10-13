@@ -83,6 +83,7 @@ var LeaveMeetingResult;
     LeaveMeetingResult[LeaveMeetingResult["TokenHasBeenExpiredOrRevoked"] = 2] = "TokenHasBeenExpiredOrRevoked";
     LeaveMeetingResult[LeaveMeetingResult["CouldNotRemoveMeeting"] = 3] = "CouldNotRemoveMeeting";
     LeaveMeetingResult[LeaveMeetingResult["CouldNotLeaveMeeting"] = 4] = "CouldNotLeaveMeeting";
+    LeaveMeetingResult[LeaveMeetingResult["MeetingNotFound"] = 5] = "MeetingNotFound";
 })(LeaveMeetingResult = exports.LeaveMeetingResult || (exports.LeaveMeetingResult = {}));
 var CreateMeetingResult;
 (function (CreateMeetingResult) {

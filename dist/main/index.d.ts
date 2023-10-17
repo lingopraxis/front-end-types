@@ -153,6 +153,9 @@ export interface IUser {
     mobileAppPushNotificationTypes: PushNotificationTypes;
     email: string;
     hasPushNotificationToken: boolean;
+    /** @format date-time */
+    registeredAt?: string;
+    aboutMe?: string;
 }
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
@@ -404,16 +407,20 @@ export interface ICreateTopicRequest {
 }
 export declare type IInitializeTopicCommand = object;
 export interface IStatistic {
-    /** @format int32 */
-    createdMeetingsCount?: number;
-    /** @format int32 */
-    meetingsCount?: number;
+    statisticByLanguages?: IStatisticByLanguage[];
     /** @format int32 */
     interlocutorCount?: number;
     /** @format int32 */
     messagesWrittenCount?: number;
     /** @format int32 */
     topicOfferCount?: number;
+}
+export interface IStatisticByLanguage {
+    language?: string;
+    /** @format int32 */
+    createdMeetingsCount?: number;
+    /** @format int32 */
+    meetingsCount?: number;
 }
 export interface IUpdateUserRequest {
     gender: Gender;
@@ -426,6 +433,7 @@ export interface IUpdateUserRequest {
     username: string;
     mobileAppPushNotificationTypes?: PushNotificationTypes | null;
     webAppPushNotificationTypes?: PushNotificationTypes | null;
+    aboutMe?: string;
 }
 export interface ILogInInfo {
     logInUrl: string;

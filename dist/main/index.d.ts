@@ -199,6 +199,12 @@ export interface IGetMeetingsRequest {
     /** @format date-time */
     to?: string | null;
     page: IPaginationParams;
+    sort?: MeetingSort | null;
+    withFreePlacesOnly?: boolean | null;
+}
+export declare enum MeetingSort {
+    ClosestAtTheTop = 1,
+    FreeAtTop = 2
 }
 export interface IJoinMeetingResponse {
     result: UpdateAttendeesResult;
@@ -263,6 +269,13 @@ export interface IGetMeetingDatesRequest {
 export interface IGetMyMeetingsRequest {
     page?: IPaginationParams;
     onlyPast?: boolean;
+    languageId?: string;
+    languageLevel?: LanguageLevel | null;
+    /** @format date-time */
+    from?: string | null;
+    type?: MeetingType | null;
+    /** @format date-time */
+    to?: string | null;
     sort?: Sort;
 }
 export declare enum Sort {

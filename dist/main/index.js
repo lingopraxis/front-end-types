@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -17,6 +17,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["EntityNotFound"] = 1012] = "EntityNotFound";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateTopicName"] = 1013] = "DuplicateTopicName";
     ApplicationErrorCode[ApplicationErrorCode["IncrementalAuthInvalidEmail"] = 1014] = "IncrementalAuthInvalidEmail";
+    ApplicationErrorCode[ApplicationErrorCode["DuplicateOrganizationName"] = 1015] = "DuplicateOrganizationName";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -42,6 +43,15 @@ var DeviceType;
     DeviceType[DeviceType["Ios"] = 2] = "Ios";
     DeviceType[DeviceType["Web"] = 3] = "Web";
 })(DeviceType = exports.DeviceType || (exports.DeviceType = {}));
+var OrganizationType;
+(function (OrganizationType) {
+    OrganizationType[OrganizationType["Unknown"] = 0] = "Unknown";
+    OrganizationType[OrganizationType["LanguageSchool"] = 1] = "LanguageSchool";
+    OrganizationType[OrganizationType["SpeakingClub"] = 2] = "SpeakingClub";
+    OrganizationType[OrganizationType["EducationalInstitution"] = 3] = "EducationalInstitution";
+    OrganizationType[OrganizationType["CulturalCenter"] = 4] = "CulturalCenter";
+    OrganizationType[OrganizationType["Other"] = 5] = "Other";
+})(OrganizationType = exports.OrganizationType || (exports.OrganizationType = {}));
 var Gender;
 (function (Gender) {
     Gender[Gender["NotSet"] = 1] = "NotSet";
@@ -67,11 +77,6 @@ var MeetingType;
     MeetingType[MeetingType["Offline"] = 2] = "Offline";
     MeetingType[MeetingType["Zoom"] = 4] = "Zoom";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
-var MeetingSort;
-(function (MeetingSort) {
-    MeetingSort[MeetingSort["ClosestAtTheTop"] = 1] = "ClosestAtTheTop";
-    MeetingSort[MeetingSort["FreeAtTop"] = 2] = "FreeAtTop";
-})(MeetingSort = exports.MeetingSort || (exports.MeetingSort = {}));
 var UpdateAttendeesResult;
 (function (UpdateAttendeesResult) {
     UpdateAttendeesResult[UpdateAttendeesResult["Success"] = 1] = "Success";

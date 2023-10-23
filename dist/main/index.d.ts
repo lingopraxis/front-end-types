@@ -16,7 +16,8 @@ export declare enum ApplicationErrorCode {
     AppleAuthCodeInvalid = 1011,
     EntityNotFound = 1012,
     DuplicateTopicName = 1013,
-    IncrementalAuthInvalidEmail = 1014
+    IncrementalAuthInvalidEmail = 1014,
+    DuplicateOrganizationName = 1015
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */
@@ -30,6 +31,7 @@ export interface ISocialSignUpRequest {
     authCode: string;
     provider?: SocialLoginProvider;
     deviceType?: DeviceType;
+    organization?: ICreateOrganization;
 }
 export declare enum LanguageLevel {
     None = 0,
@@ -51,6 +53,21 @@ export declare enum DeviceType {
     Android = 1,
     Ios = 2,
     Web = 3
+}
+export interface ICreateOrganization {
+    name?: string;
+    description?: string;
+    webSiteUrl?: string;
+    logo?: string;
+    type?: OrganizationType;
+}
+export declare enum OrganizationType {
+    Unknown = 0,
+    LanguageSchool = 1,
+    SpeakingClub = 2,
+    EducationalInstitution = 3,
+    CulturalCenter = 4,
+    Other = 5
 }
 export interface ISecurityTokens {
     accessToken: string;
@@ -153,6 +170,7 @@ export interface IUser {
     mobileAppPushNotificationTypes: PushNotificationTypes;
     email: string;
     hasPushNotificationToken: boolean;
+    organization?: IOrganization;
     /** @format date-time */
     registeredAt?: string;
     aboutMe?: string;
@@ -174,6 +192,17 @@ export declare enum PushNotificationTypes {
     MeetingStartsSoon = 32,
     CustomNotificationCreated = 64,
     All = 127
+}
+export interface IOrganization {
+    /** @format int64 */
+    id?: number;
+    name?: string;
+    description?: string;
+    webSiteUrl?: string;
+    logo?: string;
+    isApproved?: boolean;
+    links?: string[];
+    type?: OrganizationType;
 }
 export interface IMeetingAddress {
     /** @format int32 */
@@ -199,12 +228,6 @@ export interface IGetMeetingsRequest {
     /** @format date-time */
     to?: string | null;
     page: IPaginationParams;
-    sort?: MeetingSort | null;
-    withFreePlacesOnly?: boolean | null;
-}
-export declare enum MeetingSort {
-    ClosestAtTheTop = 1,
-    FreeAtTop = 2
 }
 export interface IJoinMeetingResponse {
     result: UpdateAttendeesResult;
@@ -269,13 +292,6 @@ export interface IGetMeetingDatesRequest {
 export interface IGetMyMeetingsRequest {
     page?: IPaginationParams;
     onlyPast?: boolean;
-    languageId?: string;
-    languageLevel?: LanguageLevel | null;
-    /** @format date-time */
-    from?: string | null;
-    type?: MeetingType | null;
-    /** @format date-time */
-    to?: string | null;
     sort?: Sort;
 }
 export declare enum Sort {
@@ -367,6 +383,14 @@ export interface IUpdateNotificationSchedulePreference {
     /** @format time */
     notifyTo: string;
     notificationDays: NotificationDays;
+}
+export interface IUpdateOrganization {
+    name: string;
+    description?: string;
+    webSiteUrl?: string;
+    logo?: string;
+    links?: string[];
+    type: OrganizationType;
 }
 export interface ISubscribeToPushNotificationsRequest {
     token: string;

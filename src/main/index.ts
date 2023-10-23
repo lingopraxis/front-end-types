@@ -18,6 +18,7 @@ export enum ApplicationErrorCode {
   EntityNotFound = 1012,
   DuplicateTopicName = 1013,
   IncrementalAuthInvalidEmail = 1014,
+  DuplicateOrganizationName = 1015,
 }
 
 export interface ISocialSignUpResponse {
@@ -33,6 +34,7 @@ export interface ISocialSignUpRequest {
   authCode: string;
   provider?: SocialLoginProvider;
   deviceType?: DeviceType;
+  organization?: ICreateOrganization;
 }
 
 export enum LanguageLevel {
@@ -57,6 +59,23 @@ export enum DeviceType {
   Android = 1,
   Ios = 2,
   Web = 3,
+}
+
+export interface ICreateOrganization {
+  name?: string;
+  description?: string;
+  webSiteUrl?: string;
+  logo?: string;
+  type?: OrganizationType;
+}
+
+export enum OrganizationType {
+  Unknown = 0,
+  LanguageSchool = 1,
+  SpeakingClub = 2,
+  EducationalInstitution = 3,
+  CulturalCenter = 4,
+  Other = 5,
 }
 
 export interface ISecurityTokens {
@@ -180,6 +199,7 @@ export interface IUser {
   mobileAppPushNotificationTypes: PushNotificationTypes;
   email: string;
   hasPushNotificationToken: boolean;
+  organization?: IOrganization;
 
   /** @format date-time */
   registeredAt?: string;
@@ -205,6 +225,18 @@ export enum PushNotificationTypes {
   MeetingStartsSoon = 32,
   CustomNotificationCreated = 64,
   All = 127,
+}
+
+export interface IOrganization {
+  /** @format int64 */
+  id?: number;
+  name?: string;
+  description?: string;
+  webSiteUrl?: string;
+  logo?: string;
+  isApproved?: boolean;
+  links?: string[];
+  type?: OrganizationType;
 }
 
 export interface IMeetingAddress {
@@ -237,13 +269,6 @@ export interface IGetMeetingsRequest {
   /** @format date-time */
   to?: string | null;
   page: IPaginationParams;
-  sort?: MeetingSort | null;
-  withFreePlacesOnly?: boolean | null;
-}
-
-export enum MeetingSort {
-  ClosestAtTheTop = 1,
-  FreeAtTop = 2,
 }
 
 export interface IJoinMeetingResponse {
@@ -322,15 +347,6 @@ export interface IGetMeetingDatesRequest {
 export interface IGetMyMeetingsRequest {
   page?: IPaginationParams;
   onlyPast?: boolean;
-  languageId?: string;
-  languageLevel?: LanguageLevel | null;
-
-  /** @format date-time */
-  from?: string | null;
-  type?: MeetingType | null;
-
-  /** @format date-time */
-  to?: string | null;
   sort?: Sort;
 }
 
@@ -442,6 +458,15 @@ export interface IUpdateNotificationSchedulePreference {
   /** @format time */
   notifyTo: string;
   notificationDays: NotificationDays;
+}
+
+export interface IUpdateOrganization {
+  name: string;
+  description?: string;
+  webSiteUrl?: string;
+  logo?: string;
+  links?: string[];
+  type: OrganizationType;
 }
 
 export interface ISubscribeToPushNotificationsRequest {

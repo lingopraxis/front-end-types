@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -77,6 +77,11 @@ var MeetingType;
     MeetingType[MeetingType["Offline"] = 2] = "Offline";
     MeetingType[MeetingType["Zoom"] = 4] = "Zoom";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
+var MeetingSort;
+(function (MeetingSort) {
+    MeetingSort[MeetingSort["ClosestAtTheTop"] = 1] = "ClosestAtTheTop";
+    MeetingSort[MeetingSort["FreeAtTop"] = 2] = "FreeAtTop";
+})(MeetingSort = exports.MeetingSort || (exports.MeetingSort = {}));
 var UpdateAttendeesResult;
 (function (UpdateAttendeesResult) {
     UpdateAttendeesResult[UpdateAttendeesResult["Success"] = 1] = "Success";

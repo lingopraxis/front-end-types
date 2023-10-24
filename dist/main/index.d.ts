@@ -466,7 +466,7 @@ export interface IStatistic {
     topicOfferCount?: number;
 }
 export interface IStatisticByLanguage {
-    language?: string;
+    languageId?: string;
     /** @format int32 */
     createdMeetingsCount?: number;
     /** @format int32 */

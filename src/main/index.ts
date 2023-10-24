@@ -564,7 +564,7 @@ export interface IStatistic {
 }
 
 export interface IStatisticByLanguage {
-  language?: string;
+  languageId?: string;
 
   /** @format int32 */
   createdMeetingsCount?: number;

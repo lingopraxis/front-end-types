@@ -171,6 +171,7 @@ export interface IParticipant {
   gender?: Gender | null;
   username: string;
   country: string;
+  aboutMe?: string;
 }
 
 export enum Gender {

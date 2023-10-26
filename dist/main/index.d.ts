@@ -145,6 +145,7 @@ export interface IParticipant {
     gender?: Gender | null;
     username: string;
     country: string;
+    aboutMe?: string;
 }
 export declare enum Gender {
     NotSet = 1,

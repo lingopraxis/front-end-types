@@ -172,6 +172,9 @@ export interface IParticipant {
   username: string;
   country: string;
   aboutMe?: string;
+
+  /** @format date-time */
+  createdAt?: string;
 }
 
 export enum Gender {

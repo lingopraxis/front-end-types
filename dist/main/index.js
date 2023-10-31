@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.PushNotificationTypes = exports.Gender = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.Gender = exports.PushNotificationTypes = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -52,12 +52,14 @@ var OrganizationType;
     OrganizationType[OrganizationType["CulturalCenter"] = 4] = "CulturalCenter";
     OrganizationType[OrganizationType["Other"] = 5] = "Other";
 })(OrganizationType = exports.OrganizationType || (exports.OrganizationType = {}));
-var Gender;
-(function (Gender) {
-    Gender[Gender["NotSet"] = 1] = "NotSet";
-    Gender[Gender["Male"] = 2] = "Male";
-    Gender[Gender["Female"] = 3] = "Female";
-})(Gender = exports.Gender || (exports.Gender = {}));
+var PlatformsInUse;
+(function (PlatformsInUse) {
+    PlatformsInUse[PlatformsInUse["None"] = 0] = "None";
+    PlatformsInUse[PlatformsInUse["TelegramWebApp"] = 1] = "TelegramWebApp";
+    PlatformsInUse[PlatformsInUse["Ios"] = 2] = "Ios";
+    PlatformsInUse[PlatformsInUse["Android"] = 4] = "Android";
+    PlatformsInUse[PlatformsInUse["Website"] = 8] = "Website";
+})(PlatformsInUse = exports.PlatformsInUse || (exports.PlatformsInUse = {}));
 var PushNotificationTypes;
 (function (PushNotificationTypes) {
     PushNotificationTypes[PushNotificationTypes["None"] = 0] = "None";
@@ -70,6 +72,12 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["CustomNotificationCreated"] = 64] = "CustomNotificationCreated";
     PushNotificationTypes[PushNotificationTypes["All"] = 127] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
+var Gender;
+(function (Gender) {
+    Gender[Gender["NotSet"] = 1] = "NotSet";
+    Gender[Gender["Male"] = 2] = "Male";
+    Gender[Gender["Female"] = 3] = "Female";
+})(Gender = exports.Gender || (exports.Gender = {}));
 var MeetingType;
 (function (MeetingType) {
     MeetingType[MeetingType["None"] = 0] = "None";

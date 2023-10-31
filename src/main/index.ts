@@ -29,7 +29,7 @@ export interface ISocialSignUpResponse {
 export interface ISocialSignUpRequest {
   languageId: string;
   languageLevel: LanguageLevel;
-  userName: string;
+  userName?: string;
   tokenId: string;
   authCode: string;
   provider?: SocialLoginProvider;

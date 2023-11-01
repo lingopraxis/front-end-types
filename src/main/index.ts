@@ -65,7 +65,6 @@ export interface ICreateOrganization {
   name?: string;
   description?: string;
   webSiteUrl?: string;
-  logo?: string;
   type?: OrganizationType;
 }
 
@@ -186,13 +185,171 @@ export interface IFixDuplicateByEmailCommand {
   email?: string;
 }
 
-export interface ICreateFeedbackRequest {
-  text: string;
+export interface IImage {
+  /** @format int64 */
+  id?: number;
+  linkPreview?: string;
+  linkHero?: string;
+  linkOriginal?: string;
+}
+
+export interface IUser {
+  /** @format int64 */
+  id: number;
+
+  /** @format int64 */
+  telegramUserId?: number | null;
+  gender: Gender;
+  countryName?: string;
+  practiceLanguage: ILanguage;
+  interfaceLanguage: ILanguage;
+  timeZoneId?: string;
+  city?: string;
+  languageLevel: LanguageLevel;
+  userGoogleInfo?: IUserGoogleInfo;
+  userZoomInfo?: IUserZoomInfo;
+  username: string;
+  webAppPushNotificationTypes: PushNotificationTypes;
+  mobileAppPushNotificationTypes: PushNotificationTypes;
+  email: string;
+  hasPushNotificationToken: boolean;
+  organization?: IOrganization;
+
+  /** @format date-time */
+  registeredAt?: string;
+  aboutMe?: string;
+}
+
+export enum Gender {
+  NotSet = 1,
+  Male = 2,
+  Female = 3,
 }
 
 export interface ILanguage {
   id: string;
   name: string;
+}
+
+export interface IUserGoogleInfo {
+  authorizedWithGoogle: boolean;
+  hasCalendarPermission: boolean;
+}
+
+export interface IUserZoomInfo {
+  authorized: boolean;
+}
+
+export interface IOrganization {
+  /** @format int64 */
+  id?: number;
+  name?: string;
+  description?: string;
+  webSiteUrl?: string;
+  image?: IImage;
+  isApproved?: boolean;
+  links?: string[];
+  type?: OrganizationType;
+}
+
+export interface ICreateFeedbackRequest {
+  text: string;
+}
+
+export interface IIHeaderDictionary {
+  Item?: any[];
+
+  /** @format int64 */
+  ContentLength?: number | null;
+  Accept?: any[];
+  AcceptCharset?: any[];
+  AcceptEncoding?: any[];
+  AcceptLanguage?: any[];
+  AcceptRanges?: any[];
+  AccessControlAllowCredentials?: any[];
+  AccessControlAllowHeaders?: any[];
+  AccessControlAllowMethods?: any[];
+  AccessControlAllowOrigin?: any[];
+  AccessControlExposeHeaders?: any[];
+  AccessControlMaxAge?: any[];
+  AccessControlRequestHeaders?: any[];
+  AccessControlRequestMethod?: any[];
+  Age?: any[];
+  Allow?: any[];
+  AltSvc?: any[];
+  Authorization?: any[];
+  Baggage?: any[];
+  CacheControl?: any[];
+  Connection?: any[];
+  ContentDisposition?: any[];
+  ContentEncoding?: any[];
+  ContentLanguage?: any[];
+  ContentLocation?: any[];
+  ContentMD5?: any[];
+  ContentRange?: any[];
+  ContentSecurityPolicy?: any[];
+  ContentSecurityPolicyReportOnly?: any[];
+  ContentType?: any[];
+  CorrelationContext?: any[];
+  Cookie?: any[];
+  Date?: any[];
+  ETag?: any[];
+  Expires?: any[];
+  Expect?: any[];
+  From?: any[];
+  GrpcAcceptEncoding?: any[];
+  GrpcEncoding?: any[];
+  GrpcMessage?: any[];
+  GrpcStatus?: any[];
+  GrpcTimeout?: any[];
+  Host?: any[];
+  KeepAlive?: any[];
+  IfMatch?: any[];
+  IfModifiedSince?: any[];
+  IfNoneMatch?: any[];
+  IfRange?: any[];
+  IfUnmodifiedSince?: any[];
+  LastModified?: any[];
+  Link?: any[];
+  Location?: any[];
+  MaxForwards?: any[];
+  Origin?: any[];
+  Pragma?: any[];
+  ProxyAuthenticate?: any[];
+  ProxyAuthorization?: any[];
+  ProxyConnection?: any[];
+  Range?: any[];
+  Referer?: any[];
+  RetryAfter?: any[];
+  RequestId?: any[];
+  SecWebSocketAccept?: any[];
+  SecWebSocketKey?: any[];
+  SecWebSocketProtocol?: any[];
+  SecWebSocketVersion?: any[];
+  SecWebSocketExtensions?: any[];
+  Server?: any[];
+  SetCookie?: any[];
+  StrictTransportSecurity?: any[];
+  TE?: any[];
+  Trailer?: any[];
+  TransferEncoding?: any[];
+  Translate?: any[];
+  TraceParent?: any[];
+  TraceState?: any[];
+  Upgrade?: any[];
+  UpgradeInsecureRequests?: any[];
+  UserAgent?: any[];
+  Vary?: any[];
+  Via?: any[];
+  Warning?: any[];
+  WebSocketSubProtocols?: any[];
+  WWWAuthenticate?: any[];
+  XContentTypeOptions?: any[];
+  XFrameOptions?: any[];
+  XPoweredBy?: any[];
+  XRequestedWith?: any[];
+  XUACompatible?: any[];
+  XXSSProtection?: any[];
 }
 
 export interface IChatMessage {
@@ -261,60 +418,6 @@ export interface IParticipant {
 
   /** @format date-time */
   createdAt?: string;
-}
-
-export enum Gender {
-  NotSet = 1,
-  Male = 2,
-  Female = 3,
-}
-
-export interface IUser {
-  /** @format int64 */
-  id: number;
-
-  /** @format int64 */
-  telegramUserId?: number | null;
-  gender: Gender;
-  countryName?: string;
-  practiceLanguage: ILanguage;
-  interfaceLanguage: ILanguage;
-  timeZoneId?: string;
-  city?: string;
-  languageLevel: LanguageLevel;
-  userGoogleInfo?: IUserGoogleInfo;
-  userZoomInfo?: IUserZoomInfo;
-  username: string;
-  webAppPushNotificationTypes: PushNotificationTypes;
-  mobileAppPushNotificationTypes: PushNotificationTypes;
-  email: string;
-  hasPushNotificationToken: boolean;
-  organization?: IOrganization;
-
-  /** @format date-time */
-  registeredAt?: string;
-  aboutMe?: string;
-}
-
-export interface IUserGoogleInfo {
-  authorizedWithGoogle: boolean;
-  hasCalendarPermission: boolean;
-}
-
-export interface IUserZoomInfo {
-  authorized: boolean;
-}
-
-export interface IOrganization {
-  /** @format int64 */
-  id?: number;
-  name?: string;
-  description?: string;
-  webSiteUrl?: string;
-  logo?: string;
-  isApproved?: boolean;
-  links?: string[];
-  type?: OrganizationType;
 }
 
 export interface IMeetingAddress {
@@ -554,9 +657,11 @@ export interface IUpdateOrganization {
   name: string;
   description?: string;
   webSiteUrl?: string;
-  logo?: string;
   links?: string[];
   type: OrganizationType;
+
+  /** @format int64 */
+  imageId?: number | null;
 }
 
 export interface ISubscribeToPushNotificationsRequest {

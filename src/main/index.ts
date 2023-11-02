@@ -275,13 +275,13 @@ export interface IUser {
 
   /** @format int64 */
   telegramUserId?: number | null;
-  gender: Gender;
+  gender?: Gender;
   countryName?: string;
-  practiceLanguage: ILanguage;
+  practiceLanguage?: ILanguage;
   interfaceLanguage: ILanguage;
   timeZoneId?: string;
   city?: string;
-  languageLevel: LanguageLevel;
+  languageLevel?: LanguageLevel;
   userGoogleInfo?: IUserGoogleInfo;
   userZoomInfo?: IUserZoomInfo;
   username: string;
@@ -646,17 +646,18 @@ export interface IStatisticByLanguage {
 }
 
 export interface IUpdateUserRequest {
-  gender: Gender;
+  gender?: Gender;
+  practiceLanguageId?: string;
+  languageLevel?: LanguageLevel;
+  username?: string;
+  aboutMe?: string;
   countryName?: string;
-  practiceLanguageId: string;
   interfaceLanguageId: string;
-  languageLevel: LanguageLevel;
   timeZoneId?: string;
   city?: string;
-  username: string;
   mobileAppPushNotificationTypes?: PushNotificationTypes | null;
   webAppPushNotificationTypes?: PushNotificationTypes | null;
-  aboutMe?: string;
+  isOrganization?: boolean;
 }
 
 export interface ILogInInfo {

@@ -247,6 +247,7 @@ export interface IMeeting {
   languageLevel: LanguageLevel;
   comment?: string;
   address?: IMeetingAddress;
+  customMeetingInfo?: ICustomMeetingInfo;
   type: MeetingType;
   meetingLink?: string;
 }
@@ -329,11 +330,18 @@ export interface IMeetingAddress {
   longitude?: number;
 }
 
+export interface ICustomMeetingInfo {
+  platform?: string;
+  link?: string;
+  connectionNotes?: string;
+}
+
 export enum MeetingType {
   None = 0,
   GoogleMeet = 1,
   Offline = 2,
   Zoom = 4,
+  Custom = 5,
 }
 
 export interface IGetMeetingsRequest {
@@ -413,6 +421,7 @@ export interface ICreateMeetingRequest {
   peopleNumber: number;
   type: MeetingType;
   address?: IMeetingAddress;
+  customMeetingInfo?: ICustomMeetingInfo;
   comment?: string;
   topicName: string;
   topicDescription?: string;

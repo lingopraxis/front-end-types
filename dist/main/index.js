@@ -84,6 +84,7 @@ var MeetingType;
     MeetingType[MeetingType["GoogleMeet"] = 1] = "GoogleMeet";
     MeetingType[MeetingType["Offline"] = 2] = "Offline";
     MeetingType[MeetingType["Zoom"] = 4] = "Zoom";
+    MeetingType[MeetingType["Custom"] = 5] = "Custom";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
 var MeetingSort;
 (function (MeetingSort) {

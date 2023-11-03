@@ -408,6 +408,7 @@ export interface IUpdateMeetingRequest {
     comment?: string;
     topicName?: string;
     topicDescription?: string;
+    customMeetingInfo?: ICustomMeetingInfo;
 }
 export interface INotificationPreference {
     /** @format int64 */

@@ -349,7 +349,7 @@ export enum MeetingType {
   GoogleMeet = 1,
   Offline = 2,
   Zoom = 4,
-  Custom = 5,
+  Custom = 8,
 }
 
 export interface IGetMeetingsRequest {

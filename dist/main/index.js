@@ -70,7 +70,8 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["ChatMessageCreated"] = 16] = "ChatMessageCreated";
     PushNotificationTypes[PushNotificationTypes["MeetingStartsSoon"] = 32] = "MeetingStartsSoon";
     PushNotificationTypes[PushNotificationTypes["CustomNotificationCreated"] = 64] = "CustomNotificationCreated";
-    PushNotificationTypes[PushNotificationTypes["All"] = 127] = "All";
+    PushNotificationTypes[PushNotificationTypes["MeetingUpdated"] = 128] = "MeetingUpdated";
+    PushNotificationTypes[PushNotificationTypes["All"] = 255] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var Gender;
 (function (Gender) {

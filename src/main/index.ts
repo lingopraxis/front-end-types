@@ -65,7 +65,6 @@ export interface ICreateOrganization {
   name?: string;
   description?: string;
   webSiteUrl?: string;
-  logo?: string;
   type?: OrganizationType;
 }
 
@@ -179,7 +178,8 @@ export enum PushNotificationTypes {
   ChatMessageCreated = 16,
   MeetingStartsSoon = 32,
   CustomNotificationCreated = 64,
-  All = 127,
+  MeetingUpdated = 128,
+  All = 255,
 }
 
 export interface IFixDuplicateByEmailCommand {
@@ -188,6 +188,14 @@ export interface IFixDuplicateByEmailCommand {
 
 export interface ICreateFeedbackRequest {
   text: string;
+}
+
+export interface IImage {
+  /** @format int64 */
+  id?: number;
+  linkPreview?: string;
+  linkHero?: string;
+  linkOriginal?: string;
 }
 
 export interface ILanguage {
@@ -312,7 +320,7 @@ export interface IOrganization {
   name?: string;
   description?: string;
   webSiteUrl?: string;
-  logo?: string;
+  image?: IImage;
   isApproved?: boolean;
   links?: string[];
   type?: OrganizationType;
@@ -564,9 +572,11 @@ export interface IUpdateOrganization {
   name: string;
   description?: string;
   webSiteUrl?: string;
-  logo?: string;
   links?: string[];
   type: OrganizationType;
+
+  /** @format int64 */
+  imageId?: number | null;
 }
 
 export interface ISubscribeToPushNotificationsRequest {

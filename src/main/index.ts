@@ -64,7 +64,7 @@ export enum DeviceType {
 export interface ICreateOrganization {
   name?: string;
   description?: string;
-  webSiteUrl?: string;
+  links?: string[];
   type?: OrganizationType;
 }
 
@@ -319,9 +319,7 @@ export interface IOrganization {
   id?: number;
   name?: string;
   description?: string;
-  webSiteUrl?: string;
   image?: IImage;
-  isApproved?: boolean;
   links?: string[];
   type?: OrganizationType;
 }
@@ -571,7 +569,6 @@ export interface IUpdateNotificationSchedulePreference {
 export interface IUpdateOrganization {
   name: string;
   description?: string;
-  webSiteUrl?: string;
   links?: string[];
   type: OrganizationType;
 

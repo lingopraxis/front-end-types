@@ -82,6 +82,67 @@ export interface ISocialSignInRequest {
 export interface IRefreshTokenRequest {
     refreshToken: string;
 }
+export interface IBroadcastMessageDto {
+    /** @format int64 */
+    id: number;
+    name: string;
+    englishTitle: string;
+    russianTitle: string;
+    englishText: string;
+    russianText: string;
+    isSent?: boolean;
+    isReady?: boolean;
+    /** @format date-time */
+    lastMeetingCreatedAt?: string | null;
+    /** @format date-time */
+    lastParticipation?: string | null;
+    practiceLanguageId?: string;
+    practiceLanguageLevel?: LanguageLevel;
+    platformsInUse?: PlatformsInUse;
+    notifyAll?: boolean;
+}
+export declare enum PlatformsInUse {
+    None = 0,
+    TelegramWebApp = 1,
+    Ios = 2,
+    Android = 4,
+    Website = 8
+}
+export interface ICountForBroadcastResponse {
+    /** @format int32 */
+    count?: number;
+}
+export interface IGetCountOfUsersByFilter {
+    /** @format date-time */
+    lastMeetingCreatedAt?: string | null;
+    /** @format date-time */
+    lastParticipation?: string | null;
+    practiceLanguageId?: string;
+    practiceLanguageLevel?: LanguageLevel;
+    platformsInUse?: PlatformsInUse;
+}
+export interface ICreateBroadcastMessageResponse {
+    /** @format int64 */
+    id: number;
+}
+export declare type ICreateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & object;
+export interface IApiCreateBroadcastMessageDto {
+    name: string;
+    englishTitle: string;
+    russianTitle: string;
+    englishText: string;
+    russianText: string;
+    isReady?: boolean;
+    /** @format date-time */
+    lastMeetingCreatedAt?: string | null;
+    /** @format date-time */
+    lastParticipation?: string | null;
+    practiceLanguageId?: string;
+    practiceLanguageLevel?: LanguageLevel;
+    platformsInUse?: PlatformsInUse;
+    notifyAll?: boolean;
+}
+export declare type IUpdateBroadcastMessageRequest = IBroadcastMessageDto & object;
 export interface ITimeZoneDetails {
     timeZoneName?: string;
     offset?: string;
@@ -134,13 +195,7 @@ export interface IUserDto {
     mobileAppPushNotificationTypes: PushNotificationTypes;
     webAppPushNotificationTypes: PushNotificationTypes;
     country?: string;
-}
-export declare enum PlatformsInUse {
-    None = 0,
-    TelegramWebApp = 1,
-    Ios = 2,
-    Android = 4,
-    Website = 8
+    role?: UserRole;
 }
 export declare enum PushNotificationTypes {
     None = 0,
@@ -153,6 +208,12 @@ export declare enum PushNotificationTypes {
     CustomNotificationCreated = 64,
     MeetingUpdated = 128,
     All = 255
+}
+export declare enum UserRole {
+    IUser = 0,
+    Moderator = 1,
+    Admin = 2,
+    SuperAdmin = 4
 }
 export interface IFixDuplicateByEmailCommand {
     email?: string;

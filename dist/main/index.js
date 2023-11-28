@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.Gender = exports.PushNotificationTypes = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.Gender = exports.UserRole = exports.PushNotificationTypes = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -73,6 +73,13 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["MeetingUpdated"] = 128] = "MeetingUpdated";
     PushNotificationTypes[PushNotificationTypes["All"] = 255] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
+var UserRole;
+(function (UserRole) {
+    UserRole[UserRole["IUser"] = 0] = "IUser";
+    UserRole[UserRole["Moderator"] = 1] = "Moderator";
+    UserRole[UserRole["Admin"] = 2] = "Admin";
+    UserRole[UserRole["SuperAdmin"] = 4] = "SuperAdmin";
+})(UserRole = exports.UserRole || (exports.UserRole = {}));
 var Gender;
 (function (Gender) {
     Gender[Gender["NotSet"] = 1] = "NotSet";

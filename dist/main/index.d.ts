@@ -147,77 +147,6 @@ export interface ITimeZoneDetails {
     timeZoneName?: string;
     offset?: string;
 }
-export interface IResponseDuplicates {
-    email?: string;
-    duplicates?: IDuplicate[];
-}
-export interface IDuplicate {
-    isDeleted?: boolean;
-    /** @format date-time */
-    createdAt?: string;
-    /** @format int64 */
-    id?: number;
-    userName?: string;
-    /** @format int64 */
-    telegramId?: number | null;
-    telegramUserName?: string;
-    /** @format int64 */
-    googleInfoId?: number | null;
-    /** @format int64 */
-    zoomInfoId?: number | null;
-}
-export interface IFixDuplicateResponse {
-    userBeforeMerge?: IUserDto;
-    userAfterMerge?: IUserDto;
-    /** @format int32 */
-    countOfDuplicatsBefore?: number;
-    /** @format int32 */
-    countOfDuplicatsAfter?: number;
-    createdMeetingsInDuplicates?: number[];
-    createdMeetingsAfter?: number[];
-    meetingsInDuplicates?: number[];
-    meetingsAfter?: number[];
-    messagesInDuplicates?: number[];
-    messagesAfter?: number[];
-    topicInDuplicates?: number[];
-    topicAfter?: number[];
-}
-export interface IUserDto {
-    interfaceLanguageId: string;
-    /** @format int64 */
-    telegramUserId: number;
-    userTimeZoneId: string;
-    /** @format int64 */
-    userId: number;
-    authorizedWithGoogle: boolean;
-    username: string;
-    platformsInUse: PlatformsInUse;
-    mobileAppPushNotificationTypes: PushNotificationTypes;
-    webAppPushNotificationTypes: PushNotificationTypes;
-    country?: string;
-    role?: UserRole;
-}
-export declare enum PushNotificationTypes {
-    None = 0,
-    MeetingCreated = 1,
-    UserJoinedMeeting = 2,
-    UserLeftMeeting = 4,
-    MeetingDeleted = 8,
-    ChatMessageCreated = 16,
-    MeetingStartsSoon = 32,
-    CustomNotificationCreated = 64,
-    MeetingUpdated = 128,
-    All = 255
-}
-export declare enum UserRole {
-    IUser = 0,
-    Moderator = 1,
-    Admin = 2,
-    SuperAdmin = 4
-}
-export interface IFixDuplicateByEmailCommand {
-    email?: string;
-}
 export interface ICreateFeedbackRequest {
     text: string;
 }
@@ -316,6 +245,7 @@ export interface IUser {
     /** @format date-time */
     registeredAt?: string;
     aboutMe?: string;
+    role?: UserRole;
 }
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
@@ -323,6 +253,18 @@ export interface IUserGoogleInfo {
 }
 export interface IUserZoomInfo {
     authorized: boolean;
+}
+export declare enum PushNotificationTypes {
+    None = 0,
+    MeetingCreated = 1,
+    UserJoinedMeeting = 2,
+    UserLeftMeeting = 4,
+    MeetingDeleted = 8,
+    ChatMessageCreated = 16,
+    MeetingStartsSoon = 32,
+    CustomNotificationCreated = 64,
+    MeetingUpdated = 128,
+    All = 255
 }
 export interface IOrganization {
     /** @format int64 */
@@ -332,6 +274,12 @@ export interface IOrganization {
     image?: IImage;
     links?: string[];
     type?: OrganizationType;
+}
+export declare enum UserRole {
+    None = 0,
+    Moderator = 1,
+    Admin = 2,
+    SuperAdmin = 4
 }
 export interface IMeetingAddress {
     /** @format int32 */

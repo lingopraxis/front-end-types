@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.Gender = exports.UserRole = exports.PushNotificationTypes = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -60,6 +60,12 @@ var PlatformsInUse;
     PlatformsInUse[PlatformsInUse["Android"] = 4] = "Android";
     PlatformsInUse[PlatformsInUse["Website"] = 8] = "Website";
 })(PlatformsInUse = exports.PlatformsInUse || (exports.PlatformsInUse = {}));
+var Gender;
+(function (Gender) {
+    Gender[Gender["NotSet"] = 1] = "NotSet";
+    Gender[Gender["Male"] = 2] = "Male";
+    Gender[Gender["Female"] = 3] = "Female";
+})(Gender = exports.Gender || (exports.Gender = {}));
 var PushNotificationTypes;
 (function (PushNotificationTypes) {
     PushNotificationTypes[PushNotificationTypes["None"] = 0] = "None";
@@ -75,17 +81,11 @@ var PushNotificationTypes;
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var UserRole;
 (function (UserRole) {
-    UserRole[UserRole["IUser"] = 0] = "IUser";
+    UserRole[UserRole["None"] = 0] = "None";
     UserRole[UserRole["Moderator"] = 1] = "Moderator";
     UserRole[UserRole["Admin"] = 2] = "Admin";
     UserRole[UserRole["SuperAdmin"] = 4] = "SuperAdmin";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
-var Gender;
-(function (Gender) {
-    Gender[Gender["NotSet"] = 1] = "NotSet";
-    Gender[Gender["Male"] = 2] = "Male";
-    Gender[Gender["Female"] = 3] = "Female";
-})(Gender = exports.Gender || (exports.Gender = {}));
 var MeetingType;
 (function (MeetingType) {
     MeetingType[MeetingType["None"] = 0] = "None";

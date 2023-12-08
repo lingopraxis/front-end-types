@@ -113,7 +113,6 @@ export interface IBroadcastMessageDto {
   practiceLanguageId?: string;
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
-  notifyAll?: boolean;
 }
 
 export enum PlatformsInUse {
@@ -163,7 +162,6 @@ export interface IApiCreateBroadcastMessageDto {
   practiceLanguageId?: string;
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
-  notifyAll?: boolean;
 }
 
 export type IUpdateBroadcastMessageRequest = IBroadcastMessageDto & object;

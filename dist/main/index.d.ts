@@ -99,7 +99,6 @@ export interface IBroadcastMessageDto {
     practiceLanguageId?: string;
     practiceLanguageLevel?: LanguageLevel;
     platformsInUse?: PlatformsInUse;
-    notifyAll?: boolean;
 }
 export declare enum PlatformsInUse {
     None = 0,
@@ -140,7 +139,6 @@ export interface IApiCreateBroadcastMessageDto {
     practiceLanguageId?: string;
     practiceLanguageLevel?: LanguageLevel;
     platformsInUse?: PlatformsInUse;
-    notifyAll?: boolean;
 }
 export declare type IUpdateBroadcastMessageRequest = IBroadcastMessageDto & object;
 export interface ITimeZoneDetails {

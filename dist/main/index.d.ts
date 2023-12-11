@@ -140,7 +140,17 @@ export interface IApiCreateBroadcastMessageDto {
     practiceLanguageLevel?: LanguageLevel;
     platformsInUse?: PlatformsInUse;
 }
-export declare type IUpdateBroadcastMessageRequest = IBroadcastMessageDto & object;
+export interface IProblemDetails {
+    type?: string | null;
+    title?: string | null;
+    /** @format int32 */
+    status?: number | null;
+    detail?: string | null;
+    instance?: string | null;
+}
+export declare type IUpdateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & {
+    id?: number;
+};
 export interface ITimeZoneDetails {
     timeZoneName?: string;
     offset?: string;
@@ -459,14 +469,6 @@ export declare enum NotificationDays {
     Friday = 32,
     Saturday = 64,
     All = 127
-}
-export interface IProblemDetails {
-    type?: string | null;
-    title?: string | null;
-    /** @format int32 */
-    status?: number | null;
-    detail?: string | null;
-    instance?: string | null;
 }
 export interface IUpdateNotificationSchedulePreference {
     isEnabled: boolean;

@@ -45,6 +45,7 @@ export enum LanguageLevel {
   UpperIntermediate = 8,
   Advanced = 16,
   Proficiency = 32,
+  All = 63,
 }
 
 export enum SocialLoginProvider {
@@ -570,6 +571,16 @@ export interface IUpdateNotificationSchedulePreference {
   /** @format time */
   notifyTo: string;
   notificationDays: NotificationDays;
+}
+
+export interface IGenerateQuestionsRequest {
+  topicName: string;
+  languageId: string;
+  languageLevel: LanguageLevel;
+
+  /** @format int32 */
+  questionsNumber: number;
+  additionalPrompts?: string;
 }
 
 export interface IUpdateOrganization {

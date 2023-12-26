@@ -28,6 +28,7 @@ var LanguageLevel;
     LanguageLevel[LanguageLevel["UpperIntermediate"] = 8] = "UpperIntermediate";
     LanguageLevel[LanguageLevel["Advanced"] = 16] = "Advanced";
     LanguageLevel[LanguageLevel["Proficiency"] = 32] = "Proficiency";
+    LanguageLevel[LanguageLevel["All"] = 63] = "All";
 })(LanguageLevel = exports.LanguageLevel || (exports.LanguageLevel = {}));
 var SocialLoginProvider;
 (function (SocialLoginProvider) {

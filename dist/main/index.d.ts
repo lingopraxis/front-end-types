@@ -17,7 +17,8 @@ export declare enum ApplicationErrorCode {
     EntityNotFound = 1012,
     DuplicateTopicName = 1013,
     IncrementalAuthInvalidEmail = 1014,
-    DuplicateOrganizationName = 1015
+    DuplicateOrganizationName = 1015,
+    DuplicateBannerLocalization = 1016
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */
@@ -83,6 +84,53 @@ export interface ISocialSignInRequest {
 export interface IRefreshTokenRequest {
     refreshToken: string;
 }
+export interface IBannerLocalized {
+    /** @format int64 */
+    bannerId: number;
+    /** @format int64 */
+    id: number;
+    url?: string;
+    languageId: string;
+    title: string;
+}
+export interface IBanner {
+    /** @format int64 */
+    id: number;
+    name: string;
+    bannerLocalized?: IBannerLocalized[];
+}
+export interface IProblemDetails {
+    type?: string | null;
+    title?: string | null;
+    /** @format int32 */
+    status?: number | null;
+    detail?: string | null;
+    instance?: string | null;
+}
+export interface ICreateBannerResponse {
+    /** @format int64 */
+    id: number;
+}
+export interface ICreateBannerRequest {
+    name: string;
+}
+export interface ICreateBannerLocalizedResponse {
+    /** @format int64 */
+    id: number;
+}
+export interface ICreateBannerLocalizedRequest {
+    /** @format int64 */
+    bannerId: number;
+    url?: string;
+    languageId: string;
+    title: string;
+}
+export interface IUpdateBannerRequest {
+    /** @format int64 */
+    id: number;
+    name: string;
+}
+export declare type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
 export interface IBroadcastMessageDto {
     /** @format int64 */
     id: number;
@@ -140,14 +188,6 @@ export interface IApiCreateBroadcastMessageDto {
     practiceLanguageId?: string;
     practiceLanguageLevel?: LanguageLevel;
     platformsInUse?: PlatformsInUse;
-}
-export interface IProblemDetails {
-    type?: string | null;
-    title?: string | null;
-    /** @format int32 */
-    status?: number | null;
-    detail?: string | null;
-    instance?: string | null;
 }
 export declare type IUpdateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & {
     id?: number;
@@ -236,6 +276,7 @@ export interface IUser {
     id: number;
     /** @format int64 */
     telegramUserId?: number | null;
+    isPlusUser?: boolean;
     gender?: Gender;
     countryName?: string;
     practiceLanguage?: ILanguage;

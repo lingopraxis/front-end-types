@@ -18,6 +18,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["DuplicateTopicName"] = 1013] = "DuplicateTopicName";
     ApplicationErrorCode[ApplicationErrorCode["IncrementalAuthInvalidEmail"] = 1014] = "IncrementalAuthInvalidEmail";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateOrganizationName"] = 1015] = "DuplicateOrganizationName";
+    ApplicationErrorCode[ApplicationErrorCode["DuplicateBannerLocalization"] = 1016] = "DuplicateBannerLocalization";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {

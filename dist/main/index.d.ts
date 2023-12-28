@@ -89,9 +89,10 @@ export interface IBannerLocalized {
     bannerId: number;
     /** @format int64 */
     id: number;
-    url?: string;
+    url: string;
     languageId: string;
     title: string;
+    body: string;
 }
 export interface IBanner {
     /** @format int64 */
@@ -121,9 +122,10 @@ export interface ICreateBannerLocalizedResponse {
 export interface ICreateBannerLocalizedRequest {
     /** @format int64 */
     bannerId: number;
-    url?: string;
+    url: string;
     languageId: string;
     title: string;
+    body: string;
 }
 export interface IUpdateBannerRequest {
     /** @format int64 */

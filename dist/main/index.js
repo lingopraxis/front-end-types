@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInRequestType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -19,6 +19,9 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["IncrementalAuthInvalidEmail"] = 1014] = "IncrementalAuthInvalidEmail";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateOrganizationName"] = 1015] = "DuplicateOrganizationName";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateBannerLocalization"] = 1016] = "DuplicateBannerLocalization";
+    ApplicationErrorCode[ApplicationErrorCode["BlockUserError"] = 1017] = "BlockUserError";
+    ApplicationErrorCode[ApplicationErrorCode["UnblockUserError"] = 1018] = "UnblockUserError";
+    ApplicationErrorCode[ApplicationErrorCode["AccountAlreadyInUse"] = 1019] = "AccountAlreadyInUse";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -153,8 +156,8 @@ var NotificationDays;
     NotificationDays[NotificationDays["Saturday"] = 64] = "Saturday";
     NotificationDays[NotificationDays["All"] = 127] = "All";
 })(NotificationDays = exports.NotificationDays || (exports.NotificationDays = {}));
-var LogInRequestType;
-(function (LogInRequestType) {
-    LogInRequestType[LogInRequestType["Google"] = 1] = "Google";
-    LogInRequestType[LogInRequestType["Zoom"] = 2] = "Zoom";
-})(LogInRequestType = exports.LogInRequestType || (exports.LogInRequestType = {}));
+var LogInProviderType;
+(function (LogInProviderType) {
+    LogInProviderType[LogInProviderType["Google"] = 1] = "Google";
+    LogInProviderType[LogInProviderType["Zoom"] = 2] = "Zoom";
+})(LogInProviderType = exports.LogInProviderType || (exports.LogInProviderType = {}));

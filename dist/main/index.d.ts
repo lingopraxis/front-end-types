@@ -18,7 +18,10 @@ export declare enum ApplicationErrorCode {
     DuplicateTopicName = 1013,
     IncrementalAuthInvalidEmail = 1014,
     DuplicateOrganizationName = 1015,
-    DuplicateBannerLocalization = 1016
+    DuplicateBannerLocalization = 1016,
+    BlockUserError = 1017,
+    UnblockUserError = 1018,
+    AccountAlreadyInUse = 1019
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */
@@ -288,6 +291,7 @@ export interface IUser {
     languageLevel?: LanguageLevel;
     userGoogleInfo?: IUserGoogleInfo;
     userZoomInfo?: IUserZoomInfo;
+    userAppleInfo?: IUserAppleInfo;
     username: string;
     webAppPushNotificationTypes: PushNotificationTypes;
     mobileAppPushNotificationTypes: PushNotificationTypes;
@@ -302,9 +306,21 @@ export interface IUser {
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
     hasCalendarPermission: boolean;
+    email?: string;
+    /** @format date-time */
+    createdAt?: string | null;
 }
 export interface IUserZoomInfo {
     authorized: boolean;
+    email?: string;
+    /** @format date-time */
+    createdAt?: string | null;
+}
+export interface IUserAppleInfo {
+    authorized: boolean;
+    email?: string;
+    /** @format date-time */
+    createdAt?: string | null;
 }
 export declare enum PushNotificationTypes {
     None = 0,
@@ -619,13 +635,13 @@ export interface IUpdateUserRequest {
     webAppPushNotificationTypes?: PushNotificationTypes | null;
     isOrganization?: boolean;
 }
+export declare enum LogInProviderType {
+    Google = 1,
+    Zoom = 2
+}
 export interface ILogInInfo {
     logInUrl: string;
     requestId: string;
-}
-export declare enum LogInRequestType {
-    Google = 1,
-    Zoom = 2
 }
 export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
     meetingDate: string;

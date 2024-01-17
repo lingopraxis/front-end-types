@@ -1,3 +1,8 @@
+export declare enum AnalyticsType {
+    USER = "user",
+    MEETING = "meeting",
+    PUSH_NOTIFICATION = "push_notification"
+}
 export declare enum USER_EVENTS {
     LOGIN = "login",
     LOG_OUT = "log_out",
@@ -52,7 +57,7 @@ export declare enum MEETING_EVENTS {
     CLICK_COPY_CUSTOM_MEET_LINK = "click_copy_custom_meet_link",
     OPEN_MEET_PARTICIPANT_INFO = "open_meet_participant_info"
 }
-export declare enum PUSH_NOTIFICATIONS_EVENTS {
+export declare enum PUSH_NOTIFICATION_EVENTS {
     CLICK_MEET_CREATED = "click_meet_created",
     CLICK_MEET_DELETED = "click_meet_deleted",
     CLICK_MEET_UPDATED = "click_meet_updated",

@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PUSH_NOTIFICATIONS_EVENTS = exports.MEETING_EVENTS = exports.USER_EVENTS = void 0;
+exports.PUSH_NOTIFICATION_EVENTS = exports.MEETING_EVENTS = exports.USER_EVENTS = exports.AnalyticsType = void 0;
+var AnalyticsType;
+(function (AnalyticsType) {
+    AnalyticsType["USER"] = "user";
+    AnalyticsType["MEETING"] = "meeting";
+    AnalyticsType["PUSH_NOTIFICATION"] = "push_notification";
+})(AnalyticsType = exports.AnalyticsType || (exports.AnalyticsType = {}));
 var USER_EVENTS;
 (function (USER_EVENTS) {
     USER_EVENTS["LOGIN"] = "login";
@@ -57,13 +63,13 @@ var MEETING_EVENTS;
     MEETING_EVENTS["CLICK_COPY_CUSTOM_MEET_LINK"] = "click_copy_custom_meet_link";
     MEETING_EVENTS["OPEN_MEET_PARTICIPANT_INFO"] = "open_meet_participant_info";
 })(MEETING_EVENTS = exports.MEETING_EVENTS || (exports.MEETING_EVENTS = {}));
-var PUSH_NOTIFICATIONS_EVENTS;
-(function (PUSH_NOTIFICATIONS_EVENTS) {
-    PUSH_NOTIFICATIONS_EVENTS["CLICK_MEET_CREATED"] = "click_meet_created";
-    PUSH_NOTIFICATIONS_EVENTS["CLICK_MEET_DELETED"] = "click_meet_deleted";
-    PUSH_NOTIFICATIONS_EVENTS["CLICK_MEET_UPDATED"] = "click_meet_updated";
-    PUSH_NOTIFICATIONS_EVENTS["CLICK_MEET_STARTS_SOON"] = "click_meet_starts_soon";
-    PUSH_NOTIFICATIONS_EVENTS["CLICK_MESSAGE_CREATED"] = "click_message_created";
-    PUSH_NOTIFICATIONS_EVENTS["CLICK_USER_JOINED_MEET"] = "click_user_joined_meet";
-    PUSH_NOTIFICATIONS_EVENTS["CLICK_USER_LEFT_MEET"] = "click_user_left_meet";
-})(PUSH_NOTIFICATIONS_EVENTS = exports.PUSH_NOTIFICATIONS_EVENTS || (exports.PUSH_NOTIFICATIONS_EVENTS = {}));
+var PUSH_NOTIFICATION_EVENTS;
+(function (PUSH_NOTIFICATION_EVENTS) {
+    PUSH_NOTIFICATION_EVENTS["CLICK_MEET_CREATED"] = "click_meet_created";
+    PUSH_NOTIFICATION_EVENTS["CLICK_MEET_DELETED"] = "click_meet_deleted";
+    PUSH_NOTIFICATION_EVENTS["CLICK_MEET_UPDATED"] = "click_meet_updated";
+    PUSH_NOTIFICATION_EVENTS["CLICK_MEET_STARTS_SOON"] = "click_meet_starts_soon";
+    PUSH_NOTIFICATION_EVENTS["CLICK_MESSAGE_CREATED"] = "click_message_created";
+    PUSH_NOTIFICATION_EVENTS["CLICK_USER_JOINED_MEET"] = "click_user_joined_meet";
+    PUSH_NOTIFICATION_EVENTS["CLICK_USER_LEFT_MEET"] = "click_user_left_meet";
+})(PUSH_NOTIFICATION_EVENTS = exports.PUSH_NOTIFICATION_EVENTS || (exports.PUSH_NOTIFICATION_EVENTS = {}));

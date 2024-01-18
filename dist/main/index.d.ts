@@ -379,6 +379,7 @@ export interface IGetMeetingsRequest {
     /** @format date-time */
     to?: string | null;
     page: IPaginationParams;
+    onlyPast?: boolean;
     sort?: MeetingSort | null;
     withFreePlacesOnly?: boolean | null;
 }

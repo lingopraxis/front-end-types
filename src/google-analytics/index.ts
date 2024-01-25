@@ -2,6 +2,7 @@ export enum AnalyticsType {
     USER = 'user',
     MEETING = 'meeting',
     PUSH_NOTIFICATION = 'push_notification',
+    DEEP_LINK= "deep_link"
 }
 
 export enum USER_EVENTS {

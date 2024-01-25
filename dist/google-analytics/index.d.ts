@@ -1,7 +1,8 @@
 export declare enum AnalyticsType {
     USER = "user",
     MEETING = "meeting",
-    PUSH_NOTIFICATION = "push_notification"
+    PUSH_NOTIFICATION = "push_notification",
+    DEEP_LINK= "deep_link"
 }
 export declare enum USER_EVENTS {
     LOGIN = "login",
@@ -24,15 +25,15 @@ export declare enum USER_EVENTS {
     CREATE_NOTIFICATION = "create_notification",
     UPDATE_NOTIFICATION = "update_notification",
     DELETE_NOTIFICATION = "delete_notification",
-    UPDATE_MOBILE_APP_PUSH_NOTIFICATIONS = "update_mobile_app_push_notifications",
+    UPDATE_MOBILE_APP_PUSH_NOTIFICATIONS = "update_mobile_push_notifications",
     UPDATE_WEB_APP_PUSH_NOTIFICATIONS = "update_web_app_push_notifications",
     SUBSCRIBE_NOTIFICATIONS = "subscribe_notifications",
     UPDATE_NOTIFICATION_SCHEDULE = "update_notification_schedule",
     SEND_FEEDBACK = "send_feedback",
-    UPDATE_AND_SEND_BROADCAST_MESSAGE = "update_and_send_broadcast_message",
-    UPDATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT = "update_and_save_broadcast_message_draft",
-    CREATE_AND_SEND_BROADCAST_MESSAGE = "create_and_send_broadcast_message",
-    CREATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT = "create_and_save_broadcast_message_draft",
+    UPDATE_AND_SEND_BROADCAST_MESSAGE = "update_send_broadcast_msg",
+    UPDATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT = "update_save_broadcast_msg_draft",
+    CREATE_AND_SEND_BROADCAST_MESSAGE = "create_send_broadcast_msg",
+    CREATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT = "create_save_broadcast_msg_draft",
     CREATE_TOPIC = "create_topic",
     UPDATE_TOPIC_QUESTIONS = "update-topic-questions",
     SEND_MESSAGE = "send_message",
@@ -64,5 +65,9 @@ export declare enum PUSH_NOTIFICATION_EVENTS {
     CLICK_MEET_STARTS_SOON = "click_meet_starts_soon",
     CLICK_MESSAGE_CREATED = "click_message_created",
     CLICK_USER_JOINED_MEET = "click_user_joined_meet",
-    CLICK_USER_LEFT_MEET = "click_user_left_meet"
+    CLICK_USER_LEFT_MEET = "click_user_left_meet",
+    CLICK_USER_CUSTOM_NOTIFICATION = "click_user_custom_notification"
+}
+export declare enum DEEP_LINK_EVENTS {
+    OPEN_MEET = "open_meet",
 }

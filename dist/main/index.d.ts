@@ -216,6 +216,7 @@ export interface IUser {
     isPlusUser?: boolean;
     gender?: Gender;
     countryName?: string;
+    countryCode?: string;
     practiceLanguage?: ILanguage;
     interfaceLanguage: ILanguage;
     timeZoneId?: string;
@@ -635,6 +636,7 @@ export interface IUpdateUserRequest {
     languageLevel?: LanguageLevel;
     username?: string;
     aboutMe?: string;
+    countryCode?: string;
     countryName?: string;
     interfaceLanguageId: string;
     timeZoneId?: string;

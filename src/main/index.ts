@@ -23,6 +23,25 @@ export enum ApplicationErrorCode {
   BlockUserError = 1017,
   UnblockUserError = 1018,
   AccountAlreadyInUse = 1019,
+  TooManyRequests = 1020,
+}
+
+export interface IVerifyPurchaseCommand {
+  transactionId?: string;
+}
+
+export interface IProblemDetails {
+  type?: string | null;
+  title?: string | null;
+
+  /** @format int32 */
+  status?: number | null;
+  detail?: string | null;
+  instance?: string | null;
+}
+
+export interface IAppleNotificationCommand {
+  signedPayload?: string;
 }
 
 export interface ISocialSignUpResponse {
@@ -116,16 +135,6 @@ export interface IBanner {
   id: number;
   name: string;
   bannerLocalized?: IBannerLocalized[];
-}
-
-export interface IProblemDetails {
-  type?: string | null;
-  title?: string | null;
-
-  /** @format int32 */
-  status?: number | null;
-  detail?: string | null;
-  instance?: string | null;
 }
 
 export interface ICreateBannerResponse {

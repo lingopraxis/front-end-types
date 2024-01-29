@@ -2,7 +2,7 @@ export declare enum AnalyticsType {
     USER = "user",
     MEETING = "meeting",
     PUSH_NOTIFICATION = "push_notification",
-    DEEP_LINK= "deep_link"
+    DEEP_LINK = "deep_link"
 }
 export declare enum USER_EVENTS {
     LOGIN = "login",
@@ -69,5 +69,5 @@ export declare enum PUSH_NOTIFICATION_EVENTS {
     CLICK_USER_CUSTOM_NOTIFICATION = "click_user_custom_notification"
 }
 export declare enum DEEP_LINK_EVENTS {
-    OPEN_MEET = "open_meet",
+    OPEN_MEET = "open_meet"
 }

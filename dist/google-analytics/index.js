@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PUSH_NOTIFICATION_EVENTS = exports.MEETING_EVENTS = exports.USER_EVENTS = exports.AnalyticsType = void 0;
+exports.DEEP_LINK_EVENTS = exports.PUSH_NOTIFICATION_EVENTS = exports.MEETING_EVENTS = exports.USER_EVENTS = exports.AnalyticsType = void 0;
 var AnalyticsType;
 (function (AnalyticsType) {
     AnalyticsType["USER"] = "user";
     AnalyticsType["MEETING"] = "meeting";
     AnalyticsType["PUSH_NOTIFICATION"] = "push_notification";
+    AnalyticsType["DEEP_LINK"] = "deep_link";
 })(AnalyticsType = exports.AnalyticsType || (exports.AnalyticsType = {}));
 var USER_EVENTS;
 (function (USER_EVENTS) {
@@ -29,15 +30,15 @@ var USER_EVENTS;
     USER_EVENTS["CREATE_NOTIFICATION"] = "create_notification";
     USER_EVENTS["UPDATE_NOTIFICATION"] = "update_notification";
     USER_EVENTS["DELETE_NOTIFICATION"] = "delete_notification";
-    USER_EVENTS["UPDATE_MOBILE_APP_PUSH_NOTIFICATIONS"] = "update_mobile_app_push_notifications";
+    USER_EVENTS["UPDATE_MOBILE_APP_PUSH_NOTIFICATIONS"] = "update_mobile_push_notifications";
     USER_EVENTS["UPDATE_WEB_APP_PUSH_NOTIFICATIONS"] = "update_web_app_push_notifications";
     USER_EVENTS["SUBSCRIBE_NOTIFICATIONS"] = "subscribe_notifications";
     USER_EVENTS["UPDATE_NOTIFICATION_SCHEDULE"] = "update_notification_schedule";
     USER_EVENTS["SEND_FEEDBACK"] = "send_feedback";
-    USER_EVENTS["UPDATE_AND_SEND_BROADCAST_MESSAGE"] = "update_and_send_broadcast_message";
-    USER_EVENTS["UPDATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT"] = "update_and_save_broadcast_message_draft";
-    USER_EVENTS["CREATE_AND_SEND_BROADCAST_MESSAGE"] = "create_and_send_broadcast_message";
-    USER_EVENTS["CREATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT"] = "create_and_save_broadcast_message_draft";
+    USER_EVENTS["UPDATE_AND_SEND_BROADCAST_MESSAGE"] = "update_send_broadcast_msg";
+    USER_EVENTS["UPDATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT"] = "update_save_broadcast_msg_draft";
+    USER_EVENTS["CREATE_AND_SEND_BROADCAST_MESSAGE"] = "create_send_broadcast_msg";
+    USER_EVENTS["CREATE_AND_SAVE_BROADCAST_MESSAGE_DRAFT"] = "create_save_broadcast_msg_draft";
     USER_EVENTS["CREATE_TOPIC"] = "create_topic";
     USER_EVENTS["UPDATE_TOPIC_QUESTIONS"] = "update-topic-questions";
     USER_EVENTS["SEND_MESSAGE"] = "send_message";
@@ -72,4 +73,9 @@ var PUSH_NOTIFICATION_EVENTS;
     PUSH_NOTIFICATION_EVENTS["CLICK_MESSAGE_CREATED"] = "click_message_created";
     PUSH_NOTIFICATION_EVENTS["CLICK_USER_JOINED_MEET"] = "click_user_joined_meet";
     PUSH_NOTIFICATION_EVENTS["CLICK_USER_LEFT_MEET"] = "click_user_left_meet";
+    PUSH_NOTIFICATION_EVENTS["CLICK_USER_CUSTOM_NOTIFICATION"] = "click_user_custom_notification";
 })(PUSH_NOTIFICATION_EVENTS = exports.PUSH_NOTIFICATION_EVENTS || (exports.PUSH_NOTIFICATION_EVENTS = {}));
+var DEEP_LINK_EVENTS;
+(function (DEEP_LINK_EVENTS) {
+    DEEP_LINK_EVENTS["OPEN_MEET"] = "open_meet";
+})(DEEP_LINK_EVENTS = exports.DEEP_LINK_EVENTS || (exports.DEEP_LINK_EVENTS = {}));

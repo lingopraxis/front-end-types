@@ -86,7 +86,7 @@ export enum PUSH_NOTIFICATION_EVENTS {
     CLICK_MESSAGE_CREATED = 'click_message_created',
     CLICK_USER_JOINED_MEET = 'click_user_joined_meet',
     CLICK_USER_LEFT_MEET = 'click_user_left_meet',
-    CLICK_USER_CUSTOM_NOTIFICATION = "click_user_custom_notification"
+    CLICK_USER_CUSTOM_NOTIFICATION = "click_custom"
 }
 
 export enum DEEP_LINK_EVENTS {

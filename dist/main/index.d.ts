@@ -24,9 +24,6 @@ export declare enum ApplicationErrorCode {
     AccountAlreadyInUse = 1019,
     TooManyRequests = 1020
 }
-export interface IVerifyPurchaseCommand {
-    transactionId?: string;
-}
 export interface IProblemDetails {
     type?: string | null;
     title?: string | null;
@@ -35,8 +32,8 @@ export interface IProblemDetails {
     detail?: string | null;
     instance?: string | null;
 }
-export interface IAppleNotificationCommand {
-    signedPayload?: string;
+export interface IVerifyAppleSubscription {
+    transactionId: string;
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */
@@ -208,82 +205,8 @@ export interface ITimeZoneDetails {
     timeZoneName?: string;
     offset?: string;
 }
-export interface IUser {
-    /** @format int64 */
-    id: number;
-    /** @format int64 */
-    telegramUserId?: number | null;
-    isPlusUser?: boolean;
-    gender?: Gender;
-    countryName?: string;
-    countryCode?: string;
-    practiceLanguage?: ILanguage;
-    interfaceLanguage: ILanguage;
-    timeZoneId?: string;
-    city?: string;
-    languageLevel?: LanguageLevel;
-    userGoogleInfo?: IUserGoogleInfo;
-    userZoomInfo?: IUserZoomInfo;
-    userAppleInfo?: IUserAppleInfo;
-    username: string;
-    webAppPushNotificationTypes: PushNotificationTypes;
-    mobileAppPushNotificationTypes: PushNotificationTypes;
-    email: string;
-    hasPushNotificationToken: boolean;
-    organization?: IOrganization;
-    /** @format date-time */
-    registeredAt?: string;
-    aboutMe?: string;
-    role?: UserRole;
-}
-export declare enum Gender {
-    NotSet = 1,
-    Male = 2,
-    Female = 3
-}
-export interface ILanguage {
-    id: string;
-    name: string;
-}
-export interface IUserGoogleInfo {
-    authorizedWithGoogle: boolean;
-    hasCalendarPermission: boolean;
-    email?: string;
-    /** @format date-time */
-    createdAt?: string | null;
-}
-export interface IUserZoomInfo {
-    authorized: boolean;
-    email?: string;
-    /** @format date-time */
-    createdAt?: string | null;
-}
-export interface IUserAppleInfo {
-    authorized: boolean;
-    email?: string;
-    /** @format date-time */
-    createdAt?: string | null;
-}
-export declare enum PushNotificationTypes {
-    None = 0,
-    MeetingCreated = 1,
-    UserJoinedMeeting = 2,
-    UserLeftMeeting = 4,
-    MeetingDeleted = 8,
-    ChatMessageCreated = 16,
-    MeetingStartsSoon = 32,
-    CustomNotificationCreated = 64,
-    MeetingUpdated = 128,
-    All = 255
-}
-export interface IOrganization {
-    /** @format int64 */
-    id?: number;
-    name?: string;
-    description?: string;
-    image?: IImage;
-    links?: string[];
-    type?: OrganizationType;
+export interface ICreateFeedbackRequest {
+    text: string;
 }
 export interface IImage {
     /** @format int64 */
@@ -292,14 +215,9 @@ export interface IImage {
     linkHero?: string;
     linkOriginal?: string;
 }
-export declare enum UserRole {
-    None = 0,
-    Moderator = 1,
-    Admin = 2,
-    SuperAdmin = 4
-}
-export interface ICreateFeedbackRequest {
-    text: string;
+export interface ILanguage {
+    id: string;
+    name: string;
 }
 export interface IChatMessage {
     /** @format int64 */
@@ -356,6 +274,87 @@ export interface IParticipant {
     aboutMe?: string;
     /** @format date-time */
     createdAt?: string;
+}
+export declare enum Gender {
+    NotSet = 1,
+    Male = 2,
+    Female = 3
+}
+export interface IUser {
+    /** @format int64 */
+    id: number;
+    /** @format int64 */
+    telegramUserId?: number | null;
+    isPlusUser?: boolean;
+    /** @format date-time */
+    subscriptionExpiresAt?: string | null;
+    gender?: Gender;
+    countryName?: string;
+    countryCode?: string;
+    practiceLanguage?: ILanguage;
+    interfaceLanguage: ILanguage;
+    timeZoneId?: string;
+    city?: string;
+    languageLevel?: LanguageLevel;
+    userGoogleInfo?: IUserGoogleInfo;
+    userZoomInfo?: IUserZoomInfo;
+    userAppleInfo?: IUserAppleInfo;
+    username: string;
+    webAppPushNotificationTypes: PushNotificationTypes;
+    mobileAppPushNotificationTypes: PushNotificationTypes;
+    email: string;
+    hasPushNotificationToken: boolean;
+    organization?: IOrganization;
+    /** @format date-time */
+    registeredAt?: string;
+    aboutMe?: string;
+    role?: UserRole;
+}
+export interface IUserGoogleInfo {
+    authorizedWithGoogle: boolean;
+    hasCalendarPermission: boolean;
+    email?: string;
+    /** @format date-time */
+    createdAt?: string | null;
+}
+export interface IUserZoomInfo {
+    authorized: boolean;
+    email?: string;
+    /** @format date-time */
+    createdAt?: string | null;
+}
+export interface IUserAppleInfo {
+    authorized: boolean;
+    email?: string;
+    /** @format date-time */
+    createdAt?: string | null;
+}
+export declare enum PushNotificationTypes {
+    None = 0,
+    MeetingCreated = 1,
+    UserJoinedMeeting = 2,
+    UserLeftMeeting = 4,
+    MeetingDeleted = 8,
+    ChatMessageCreated = 16,
+    MeetingStartsSoon = 32,
+    CustomNotificationCreated = 64,
+    MeetingUpdated = 128,
+    All = 255
+}
+export interface IOrganization {
+    /** @format int64 */
+    id?: number;
+    name?: string;
+    description?: string;
+    image?: IImage;
+    links?: string[];
+    type?: OrganizationType;
+}
+export declare enum UserRole {
+    None = 0,
+    Moderator = 1,
+    Admin = 2,
+    SuperAdmin = 4
 }
 export interface IMeetingAddress {
     /** @format int32 */

@@ -26,6 +26,15 @@ export enum ApplicationErrorCode {
   TooManyRequests = 1020,
 }
 
+export interface IAppleNotificationCommand {
+  signedPayload?: string;
+}
+
+export interface IVerifyAppleSubscription {
+  /** @format int64 */
+  originalTransactionId: number;
+}
+
 export interface IProblemDetails {
   type?: string | null;
   title?: string | null;
@@ -36,8 +45,8 @@ export interface IProblemDetails {
   instance?: string | null;
 }
 
-export interface IVerifyAppleSubscription {
-  transactionId: string;
+export interface IRecoverSubscriptions {
+  originalTransactionIds: number[];
 }
 
 export interface ISocialSignUpResponse {
@@ -749,6 +758,7 @@ export interface IStatistic {
 
   /** @format int32 */
   topicOfferCount?: number;
+  isPlusUser?: boolean;
 }
 
 export interface IStatisticByLanguage {

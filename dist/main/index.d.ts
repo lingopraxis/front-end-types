@@ -24,6 +24,13 @@ export declare enum ApplicationErrorCode {
     AccountAlreadyInUse = 1019,
     TooManyRequests = 1020
 }
+export interface IAppleNotificationCommand {
+    signedPayload?: string;
+}
+export interface IVerifyAppleSubscription {
+    /** @format int64 */
+    originalTransactionId: number;
+}
 export interface IProblemDetails {
     type?: string | null;
     title?: string | null;
@@ -32,8 +39,8 @@ export interface IProblemDetails {
     detail?: string | null;
     instance?: string | null;
 }
-export interface IVerifyAppleSubscription {
-    transactionId: string;
+export interface IRecoverSubscriptions {
+    originalTransactionIds: number[];
 }
 export interface ISocialSignUpResponse {
     /** @format int64 */
@@ -621,6 +628,7 @@ export interface IStatistic {
     messagesWrittenCount?: number;
     /** @format int32 */
     topicOfferCount?: number;
+    isPlusUser?: boolean;
 }
 export interface IStatisticByLanguage {
     languageId?: string;

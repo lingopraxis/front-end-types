@@ -39,8 +39,8 @@ export declare enum USER_EVENTS {
     SEND_MESSAGE = "send_message",
     GENERATE_TOPIC_QUESTIONS = "generate_topic_questions",
     MARK_BANNER_WATCHED = "mark_banner_watched",
-    UNLINK_GOOGLE_ACCOUNT = 'unlink_google_account',
-    UNLINK_ZOOM_ACCOUNT = 'unlink_zoom_account'
+    UNLINK_GOOGLE_ACCOUNT = "unlink_google_account",
+    UNLINK_ZOOM_ACCOUNT = "unlink_zoom_account"
 }
 export declare enum MEETING_EVENTS {
     CREATE_MEETING = "create_meeting",

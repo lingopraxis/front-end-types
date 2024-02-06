@@ -24,9 +24,6 @@ export declare enum ApplicationErrorCode {
     AccountAlreadyInUse = 1019,
     TooManyRequests = 1020
 }
-export interface IAppleNotificationCommand {
-    signedPayload?: string;
-}
 export interface IVerifyAppleSubscription {
     /** @format int64 */
     originalTransactionId: number;

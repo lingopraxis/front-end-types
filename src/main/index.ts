@@ -26,10 +26,6 @@ export enum ApplicationErrorCode {
   TooManyRequests = 1020,
 }
 
-export interface IAppleNotificationCommand {
-  signedPayload?: string;
-}
-
 export interface IVerifyAppleSubscription {
   /** @format int64 */
   originalTransactionId: number;

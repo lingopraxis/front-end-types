@@ -52,6 +52,8 @@ export enum USER_EVENTS {
     GENERATE_TOPIC_QUESTIONS = 'generate_topic_questions',
 
     MARK_BANNER_WATCHED = 'mark_banner_watched',
+    UNLINK_GOOGLE_ACCOUNT = 'unlink_google_account',
+    UNLINK_ZOOM_ACCOUNT = 'unlink_zoom_account'
 }
 
 export enum MEETING_EVENTS {

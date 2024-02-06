@@ -44,6 +44,8 @@ var USER_EVENTS;
     USER_EVENTS["SEND_MESSAGE"] = "send_message";
     USER_EVENTS["GENERATE_TOPIC_QUESTIONS"] = "generate_topic_questions";
     USER_EVENTS["MARK_BANNER_WATCHED"] = "mark_banner_watched";
+    USER_EVENTS["UNLINK_GOOGLE_ACCOUNT"] = "unlink_google_account",
+    USER_EVENTS["UNLINK_ZOOM_ACCOUNT"] = "unlink_zoom_account"
 })(USER_EVENTS = exports.USER_EVENTS || (exports.USER_EVENTS = {}));
 var MEETING_EVENTS;
 (function (MEETING_EVENTS) {

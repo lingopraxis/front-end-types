@@ -53,7 +53,19 @@ export enum USER_EVENTS {
 
     MARK_BANNER_WATCHED = 'mark_banner_watched',
     UNLINK_GOOGLE_ACCOUNT = 'unlink_google_account',
-    UNLINK_ZOOM_ACCOUNT = 'unlink_zoom_account'
+    UNLINK_ZOOM_ACCOUNT = 'unlink_zoom_account',
+
+    RESTART_WALKTHROUGH = 'restart_walkthru',
+    START_WALKTHROUGH_HOME = 'start_walkthru_home',
+    STOP_WALKTHROUGH_HOME = 'stop_walkthru_home',
+    WALKTHROUGH_HOME_APPEARED = 'walkthru_home_appeared',
+    WALKTHROUGH_HOME_ENDED = 'walkthru_home_ended',
+    RESTART_ENDED_WALKTHROUGH_HOME = 'restart_ended_walkthru_home',
+    START_WALKTHROUGH_CREATE_MEETING = 'start_walkthru_create_meet',
+    STOP_WALKTHROUGH_CREATE_MEETING = 'stop_walkthru_create_meet',
+    WALKTHROUGH_CREATE_MEETING_APPEARED = 'walkthru_create_meet_appeared',
+    WALKTHROUGH_CREATE_MEETING_ENDED = 'walkthru_create_meet_ended',
+    RESTART_ENDED_WALKTHROUGH_CREATE_MEETING = 'restart_ended_walkthru_create_meet',
 }
 
 export enum MEETING_EVENTS {

@@ -46,6 +46,17 @@ var USER_EVENTS;
     USER_EVENTS["MARK_BANNER_WATCHED"] = "mark_banner_watched";
     USER_EVENTS["UNLINK_GOOGLE_ACCOUNT"] = "unlink_google_account";
     USER_EVENTS["UNLINK_ZOOM_ACCOUNT"] = "unlink_zoom_account";
+    USER_EVENTS["RESTART_WALKTHROUGH"] = "restart_walkthru";
+    USER_EVENTS["START_WALKTHROUGH_HOME"] = "start_walkthru_home";
+    USER_EVENTS["STOP_WALKTHROUGH_HOME"] = "stop_walkthru_home";
+    USER_EVENTS["WALKTHROUGH_HOME_APPEARED"] = "walkthru_home_appeared";
+    USER_EVENTS["WALKTHROUGH_HOME_ENDED"] = "walkthru_home_ended";
+    USER_EVENTS["RESTART_ENDED_WALKTHROUGH_HOME"] = "restart_ended_walkthru_home";
+    USER_EVENTS["START_WALKTHROUGH_CREATE_MEETING"] = "start_walkthru_create_meet";
+    USER_EVENTS["STOP_WALKTHROUGH_CREATE_MEETING"] = "stop_walkthru_create_meet";
+    USER_EVENTS["WALKTHROUGH_CREATE_MEETING_APPEARED"] = "walkthru_create_meet_appeared";
+    USER_EVENTS["WALKTHROUGH_CREATE_MEETING_ENDED"] = "walkthru_create_meet_ended";
+    USER_EVENTS["RESTART_ENDED_WALKTHROUGH_CREATE_MEETING"] = "restart_ended_walkthru_create_meet";
 })(USER_EVENTS = exports.USER_EVENTS || (exports.USER_EVENTS = {}));
 var MEETING_EVENTS;
 (function (MEETING_EVENTS) {

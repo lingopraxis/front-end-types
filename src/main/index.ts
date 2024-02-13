@@ -135,7 +135,16 @@ export interface IBanner {
   /** @format int64 */
   id: number;
   name: string;
+  platformsInUse: PlatformsInUse;
   bannerLocalized?: IBannerLocalized[];
+}
+
+export enum PlatformsInUse {
+  None = 0,
+  TelegramWebApp = 1,
+  Ios = 2,
+  Android = 4,
+  Website = 8,
 }
 
 export interface ICreateBannerResponse {
@@ -145,6 +154,7 @@ export interface ICreateBannerResponse {
 
 export interface ICreateBannerRequest {
   name: string;
+  platformsInUse?: PlatformsInUse;
 }
 
 export interface ICreateBannerLocalizedResponse {
@@ -165,9 +175,19 @@ export interface IUpdateBannerRequest {
   /** @format int64 */
   id: number;
   name: string;
+  platformsInUse: PlatformsInUse;
 }
 
 export type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
+
+export interface IBlockedUser {
+  /** @format int64 */
+  userId?: number;
+
+  /** @format int64 */
+  blockedUserId?: number;
+  blockedUsername?: string;
+}
 
 export interface IBroadcastMessageDto {
   /** @format int64 */
@@ -188,14 +208,6 @@ export interface IBroadcastMessageDto {
   practiceLanguageId?: string;
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
-}
-
-export enum PlatformsInUse {
-  None = 0,
-  TelegramWebApp = 1,
-  Ios = 2,
-  Android = 4,
-  Website = 8,
 }
 
 export interface ICountForBroadcastResponse {

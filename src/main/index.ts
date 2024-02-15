@@ -342,6 +342,7 @@ export interface IParticipant {
 
   /** @format date-time */
   createdAt?: string;
+  blocked: boolean;
 }
 
 export enum Gender {
@@ -437,6 +438,7 @@ export enum UserRole {
   Moderator = 1,
   Admin = 2,
   SuperAdmin = 4,
+  Developer = 8,
 }
 
 export interface IMeetingAddress {

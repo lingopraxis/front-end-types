@@ -91,6 +91,7 @@ var UserRole;
     UserRole[UserRole["Moderator"] = 1] = "Moderator";
     UserRole[UserRole["Admin"] = 2] = "Admin";
     UserRole[UserRole["SuperAdmin"] = 4] = "SuperAdmin";
+    UserRole[UserRole["Developer"] = 8] = "Developer";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
 var MeetingType;
 (function (MeetingType) {

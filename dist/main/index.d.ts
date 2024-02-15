@@ -288,6 +288,7 @@ export interface IParticipant {
     aboutMe?: string;
     /** @format date-time */
     createdAt?: string;
+    blocked: boolean;
 }
 export declare enum Gender {
     NotSet = 1,
@@ -368,7 +369,8 @@ export declare enum UserRole {
     None = 0,
     Moderator = 1,
     Admin = 2,
-    SuperAdmin = 4
+    SuperAdmin = 4,
+    Developer = 8
 }
 export interface IMeetingAddress {
     /** @format int32 */

@@ -118,6 +118,8 @@ export interface IBanner {
     id: number;
     name: string;
     platformsInUse: PlatformsInUse;
+    /** @format date-time */
+    expirationDate?: string | null;
     bannerLocalized?: IBannerLocalized[];
 }
 export declare enum PlatformsInUse {
@@ -127,31 +129,13 @@ export declare enum PlatformsInUse {
     Android = 4,
     Website = 8
 }
-export interface ICreateBannerResponse {
-    /** @format int64 */
-    id: number;
-}
-export interface ICreateBannerRequest {
-    name: string;
-    platformsInUse?: PlatformsInUse;
-}
-export interface ICreateBannerLocalizedResponse {
-    /** @format int64 */
-    id: number;
-}
-export interface ICreateBannerLocalizedRequest {
-    /** @format int64 */
-    bannerId: number;
-    url: string;
-    languageId: string;
-    title: string;
-    body: string;
-}
 export interface IUpdateBannerRequest {
     /** @format int64 */
     id: number;
     name: string;
     platformsInUse: PlatformsInUse;
+    /** @format date-time */
+    expirationDate: string;
 }
 export declare type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
 export interface IBlockedUser {
@@ -285,10 +269,11 @@ export interface IParticipant {
     gender?: Gender | null;
     username: string;
     country: string;
+    countryCode?: string;
     aboutMe?: string;
     /** @format date-time */
     createdAt?: string;
-    blocked: boolean;
+    blocked?: boolean;
 }
 export declare enum Gender {
     NotSet = 1,

@@ -57,6 +57,8 @@ var USER_EVENTS;
     USER_EVENTS["WALKTHROUGH_CREATE_MEETING_APPEARED"] = "walkthru_create_meet_appeared";
     USER_EVENTS["WALKTHROUGH_CREATE_MEETING_ENDED"] = "walkthru_create_meet_ended";
     USER_EVENTS["RESTART_ENDED_WALKTHROUGH_CREATE_MEETING"] = "restart_ended_walkthru_create_meet";
+    USER_EVENTS["BLOCK_USER"] = "block_user";
+    USER_EVENTS["UNBLOCK_USER"] = "unblock_user";
 })(USER_EVENTS = exports.USER_EVENTS || (exports.USER_EVENTS = {}));
 var MEETING_EVENTS;
 (function (MEETING_EVENTS) {

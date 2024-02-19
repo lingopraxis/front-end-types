@@ -66,6 +66,9 @@ export enum USER_EVENTS {
     WALKTHROUGH_CREATE_MEETING_APPEARED = 'walkthru_create_meet_appeared',
     WALKTHROUGH_CREATE_MEETING_ENDED = 'walkthru_create_meet_ended',
     RESTART_ENDED_WALKTHROUGH_CREATE_MEETING = 'restart_ended_walkthru_create_meet',
+
+    BLOCK_USER = 'block_user',
+    UNBLOCK_USER = 'unblock_user'
 }
 
 export enum MEETING_EVENTS {

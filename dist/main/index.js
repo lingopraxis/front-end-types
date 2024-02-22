@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.LogInProviderType = exports.SubscriptionIdentifier = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -92,6 +92,7 @@ var UserRole;
     UserRole[UserRole["Admin"] = 2] = "Admin";
     UserRole[UserRole["SuperAdmin"] = 4] = "SuperAdmin";
     UserRole[UserRole["Developer"] = 8] = "Developer";
+    UserRole[UserRole["Financier"] = 16] = "Financier";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
 var MeetingType;
 (function (MeetingType) {
@@ -158,6 +159,12 @@ var NotificationDays;
     NotificationDays[NotificationDays["Saturday"] = 64] = "Saturday";
     NotificationDays[NotificationDays["All"] = 127] = "All";
 })(NotificationDays = exports.NotificationDays || (exports.NotificationDays = {}));
+var SubscriptionIdentifier;
+(function (SubscriptionIdentifier) {
+    SubscriptionIdentifier[SubscriptionIdentifier["Month"] = 1] = "Month";
+    SubscriptionIdentifier[SubscriptionIdentifier["HalfYear"] = 2] = "HalfYear";
+    SubscriptionIdentifier[SubscriptionIdentifier["Year"] = 3] = "Year";
+})(SubscriptionIdentifier = exports.SubscriptionIdentifier || (exports.SubscriptionIdentifier = {}));
 var LogInProviderType;
 (function (LogInProviderType) {
     LogInProviderType[LogInProviderType["Google"] = 1] = "Google";

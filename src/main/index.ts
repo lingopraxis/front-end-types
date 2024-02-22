@@ -422,6 +422,7 @@ export enum UserRole {
   Admin = 2,
   SuperAdmin = 4,
   Developer = 8,
+  Financier = 16,
 }
 
 export interface IMeetingAddress {
@@ -677,6 +678,24 @@ export interface IUpdateOrganization {
   imageId?: number | null;
 }
 
+export interface ISubscription {
+  /** @format int64 */
+  id?: number;
+  productId?: string;
+  enumIdentifier?: SubscriptionIdentifier;
+  name?: string;
+
+  /** @format int32 */
+  subscriptionPeriod?: number;
+  prices?: Record<string, number>;
+}
+
+export enum SubscriptionIdentifier {
+  Month = 1,
+  HalfYear = 2,
+  Year = 3,
+}
+
 export interface ISubscribeToPushNotificationsRequest {
   token: string;
 }
@@ -794,6 +813,10 @@ export enum LogInProviderType {
 export interface ILogInInfo {
   logInUrl: string;
   requestId: string;
+}
+
+export interface ICreateYookassaPaymentRequest {
+  productId: string;
 }
 
 export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingDate: string; userCreatorId: number };

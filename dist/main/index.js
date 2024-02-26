@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LogInProviderType = exports.SubscriptionIdentifier = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.SubscriptionIdentifier = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -170,3 +170,11 @@ var LogInProviderType;
     LogInProviderType[LogInProviderType["Google"] = 1] = "Google";
     LogInProviderType[LogInProviderType["Zoom"] = 2] = "Zoom";
 })(LogInProviderType = exports.LogInProviderType || (exports.LogInProviderType = {}));
+var YookassaStatus;
+(function (YookassaStatus) {
+    YookassaStatus[YookassaStatus["None"] = 0] = "None";
+    YookassaStatus[YookassaStatus["WaitingForCapture"] = 1] = "WaitingForCapture";
+    YookassaStatus[YookassaStatus["Succeeded"] = 2] = "Succeeded";
+    YookassaStatus[YookassaStatus["Canceled"] = 3] = "Canceled";
+    YookassaStatus[YookassaStatus["Pending"] = 4] = "Pending";
+})(YookassaStatus = exports.YookassaStatus || (exports.YookassaStatus = {}));

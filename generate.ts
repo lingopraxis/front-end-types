@@ -8,8 +8,8 @@ const typesInterfaces = new Set();
 generateApi({
   name: "index.ts",
   output: path.resolve(process.cwd(), "./src/main/"),
-  url: "http://localhost:5270/swagger/v1/swagger.json",
-  // url: "https://octopus-app-6e9q7.ondigitalocean.app/swagger/v1/swagger.json",
+  // url: "http://localhost:5270/swagger/v1/swagger.json",
+  url: "https://dev.api.lingopraxis.com/swagger/v1/swagger.json",
   enumNamesAsValues: false,
   generateClient: false,
   hooks: {

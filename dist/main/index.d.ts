@@ -674,8 +674,30 @@ export interface ILogInInfo {
     logInUrl: string;
     requestId: string;
 }
+export interface ICreateYookassaPaymentResponse {
+    link?: string;
+    /** @format int64 */
+    paymentId?: number;
+}
 export interface ICreateYookassaPaymentRequest {
     productId: string;
+}
+export interface IYookassaTransaction {
+    /** @format int64 */
+    id?: number;
+    yookassaPaymentId?: string;
+    /** @format int64 */
+    userId?: number;
+    productId?: string;
+    status?: YookassaStatus;
+    paid?: boolean;
+}
+export declare enum YookassaStatus {
+    None = 0,
+    WaitingForCapture = 1,
+    Succeeded = 2,
+    Canceled = 3,
+    Pending = 4
 }
 export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
     meetingDate: string;

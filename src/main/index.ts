@@ -816,10 +816,10 @@ export interface ILogInInfo {
 }
 
 export interface ICreateYookassaPaymentResponse {
-  link?: string;
+  link: string;
 
   /** @format int64 */
-  paymentId?: number;
+  paymentId: number;
 }
 
 export interface ICreateYookassaPaymentRequest {

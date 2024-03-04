@@ -177,4 +177,5 @@ var YookassaStatus;
     YookassaStatus[YookassaStatus["Succeeded"] = 2] = "Succeeded";
     YookassaStatus[YookassaStatus["Canceled"] = 3] = "Canceled";
     YookassaStatus[YookassaStatus["Pending"] = 4] = "Pending";
+    YookassaStatus[YookassaStatus["Refund"] = 5] = "Refund";
 })(YookassaStatus = exports.YookassaStatus || (exports.YookassaStatus = {}));

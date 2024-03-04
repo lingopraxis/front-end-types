@@ -118,6 +118,7 @@ export interface IBanner {
     id: number;
     name: string;
     platformsInUse: PlatformsInUse;
+    appVersion?: string;
     /** @format date-time */
     expirationDate?: string | null;
     bannerLocalized?: IBannerLocalized[];
@@ -136,6 +137,7 @@ export interface IUpdateBannerRequest {
     platformsInUse: PlatformsInUse;
     /** @format date-time */
     expirationDate: string;
+    appVersion: string;
 }
 export declare type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
 export interface IBlockedUser {
@@ -697,7 +699,8 @@ export declare enum YookassaStatus {
     WaitingForCapture = 1,
     Succeeded = 2,
     Canceled = 3,
-    Pending = 4
+    Pending = 4,
+    Refund = 5
 }
 export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
     meetingDate: string;

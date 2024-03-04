@@ -136,6 +136,7 @@ export interface IBanner {
   id: number;
   name: string;
   platformsInUse: PlatformsInUse;
+  appVersion?: string;
 
   /** @format date-time */
   expirationDate?: string | null;
@@ -158,6 +159,7 @@ export interface IUpdateBannerRequest {
 
   /** @format date-time */
   expirationDate: string;
+  appVersion: string;
 }
 
 export type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
@@ -844,6 +846,7 @@ export enum YookassaStatus {
   Succeeded = 2,
   Canceled = 3,
   Pending = 4,
+  Refund = 5,
 }
 
 export type IMeetingCreatedPushNotification = IPushNotificationBase & { meetingDate: string; userCreatorId: number };

@@ -486,6 +486,7 @@ export enum UpdateAttendeesResult {
   Canceled = 5,
   TokenHasBeenExpiredOrRevoked = 6,
   CouldNotJoinToMeeting = 7,
+  NotEnoughCoins = 8,
 }
 
 export interface IJoinMeetingRequest {
@@ -518,6 +519,7 @@ export enum CreateMeetingResult {
   TokenHasBeenExpiredOrRevoked = 2,
   CouldNotCreateMeetLink = 3,
   HasMeetingSameTime = 4,
+  NotEnoughCoins = 5,
 }
 
 export interface ICreateMeetingRequest {
@@ -684,7 +686,7 @@ export interface ISubscription {
   /** @format int64 */
   id?: number;
   productId?: string;
-  enumIdentifier?: SubscriptionIdentifier;
+  periodIdentifier?: PeriodIdentifier;
   name?: string;
 
   /** @format int32 */
@@ -692,7 +694,8 @@ export interface ISubscription {
   prices?: Record<string, number>;
 }
 
-export enum SubscriptionIdentifier {
+export enum PeriodIdentifier {
+  None = 0,
   Month = 1,
   HalfYear = 2,
   Year = 3,

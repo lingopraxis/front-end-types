@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.SubscriptionIdentifier = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.PeriodIdentifier = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -116,6 +116,7 @@ var UpdateAttendeesResult;
     UpdateAttendeesResult[UpdateAttendeesResult["Canceled"] = 5] = "Canceled";
     UpdateAttendeesResult[UpdateAttendeesResult["TokenHasBeenExpiredOrRevoked"] = 6] = "TokenHasBeenExpiredOrRevoked";
     UpdateAttendeesResult[UpdateAttendeesResult["CouldNotJoinToMeeting"] = 7] = "CouldNotJoinToMeeting";
+    UpdateAttendeesResult[UpdateAttendeesResult["NotEnoughCoins"] = 8] = "NotEnoughCoins";
 })(UpdateAttendeesResult = exports.UpdateAttendeesResult || (exports.UpdateAttendeesResult = {}));
 var LeaveMeetingResult;
 (function (LeaveMeetingResult) {
@@ -131,6 +132,7 @@ var CreateMeetingResult;
     CreateMeetingResult[CreateMeetingResult["TokenHasBeenExpiredOrRevoked"] = 2] = "TokenHasBeenExpiredOrRevoked";
     CreateMeetingResult[CreateMeetingResult["CouldNotCreateMeetLink"] = 3] = "CouldNotCreateMeetLink";
     CreateMeetingResult[CreateMeetingResult["HasMeetingSameTime"] = 4] = "HasMeetingSameTime";
+    CreateMeetingResult[CreateMeetingResult["NotEnoughCoins"] = 5] = "NotEnoughCoins";
 })(CreateMeetingResult = exports.CreateMeetingResult || (exports.CreateMeetingResult = {}));
 var Sort;
 (function (Sort) {
@@ -159,12 +161,13 @@ var NotificationDays;
     NotificationDays[NotificationDays["Saturday"] = 64] = "Saturday";
     NotificationDays[NotificationDays["All"] = 127] = "All";
 })(NotificationDays = exports.NotificationDays || (exports.NotificationDays = {}));
-var SubscriptionIdentifier;
-(function (SubscriptionIdentifier) {
-    SubscriptionIdentifier[SubscriptionIdentifier["Month"] = 1] = "Month";
-    SubscriptionIdentifier[SubscriptionIdentifier["HalfYear"] = 2] = "HalfYear";
-    SubscriptionIdentifier[SubscriptionIdentifier["Year"] = 3] = "Year";
-})(SubscriptionIdentifier = exports.SubscriptionIdentifier || (exports.SubscriptionIdentifier = {}));
+var PeriodIdentifier;
+(function (PeriodIdentifier) {
+    PeriodIdentifier[PeriodIdentifier["None"] = 0] = "None";
+    PeriodIdentifier[PeriodIdentifier["Month"] = 1] = "Month";
+    PeriodIdentifier[PeriodIdentifier["HalfYear"] = 2] = "HalfYear";
+    PeriodIdentifier[PeriodIdentifier["Year"] = 3] = "Year";
+})(PeriodIdentifier = exports.PeriodIdentifier || (exports.PeriodIdentifier = {}));
 var LogInProviderType;
 (function (LogInProviderType) {
     LogInProviderType[LogInProviderType["Google"] = 1] = "Google";

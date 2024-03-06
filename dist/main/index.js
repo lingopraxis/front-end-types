@@ -164,9 +164,9 @@ var NotificationDays;
 var PeriodIdentifier;
 (function (PeriodIdentifier) {
     PeriodIdentifier[PeriodIdentifier["None"] = 0] = "None";
-    PeriodIdentifier[PeriodIdentifier["Month"] = 1] = "Month";
-    PeriodIdentifier[PeriodIdentifier["HalfYear"] = 2] = "HalfYear";
-    PeriodIdentifier[PeriodIdentifier["Year"] = 3] = "Year";
+    PeriodIdentifier[PeriodIdentifier["Day"] = 1] = "Day";
+    PeriodIdentifier[PeriodIdentifier["Week"] = 2] = "Week";
+    PeriodIdentifier[PeriodIdentifier["Month"] = 3] = "Month";
 })(PeriodIdentifier = exports.PeriodIdentifier || (exports.PeriodIdentifier = {}));
 var LogInProviderType;
 (function (LogInProviderType) {

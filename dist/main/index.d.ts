@@ -581,9 +581,9 @@ export interface ISubscription {
 }
 export declare enum PeriodIdentifier {
     None = 0,
-    Month = 1,
-    HalfYear = 2,
-    Year = 3
+    Day = 1,
+    Week = 2,
+    Month = 3
 }
 export interface ISubscribeToPushNotificationsRequest {
     token: string;

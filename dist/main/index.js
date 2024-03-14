@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.PeriodIdentifier = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentProvider = exports.PeriodIdentifier = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -72,6 +72,20 @@ var Gender;
     Gender[Gender["Male"] = 2] = "Male";
     Gender[Gender["Female"] = 3] = "Female";
 })(Gender = exports.Gender || (exports.Gender = {}));
+var PeriodIdentifier;
+(function (PeriodIdentifier) {
+    PeriodIdentifier[PeriodIdentifier["None"] = 0] = "None";
+    PeriodIdentifier[PeriodIdentifier["Day"] = 1] = "Day";
+    PeriodIdentifier[PeriodIdentifier["Week"] = 2] = "Week";
+    PeriodIdentifier[PeriodIdentifier["Month"] = 3] = "Month";
+})(PeriodIdentifier = exports.PeriodIdentifier || (exports.PeriodIdentifier = {}));
+var PaymentProvider;
+(function (PaymentProvider) {
+    PaymentProvider[PaymentProvider["None"] = 0] = "None";
+    PaymentProvider[PaymentProvider["ApplePay"] = 1] = "ApplePay";
+    PaymentProvider[PaymentProvider["GooglePay"] = 2] = "GooglePay";
+    PaymentProvider[PaymentProvider["YooKassa"] = 3] = "YooKassa";
+})(PaymentProvider = exports.PaymentProvider || (exports.PaymentProvider = {}));
 var PushNotificationTypes;
 (function (PushNotificationTypes) {
     PushNotificationTypes[PushNotificationTypes["None"] = 0] = "None";
@@ -161,13 +175,6 @@ var NotificationDays;
     NotificationDays[NotificationDays["Saturday"] = 64] = "Saturday";
     NotificationDays[NotificationDays["All"] = 127] = "All";
 })(NotificationDays = exports.NotificationDays || (exports.NotificationDays = {}));
-var PeriodIdentifier;
-(function (PeriodIdentifier) {
-    PeriodIdentifier[PeriodIdentifier["None"] = 0] = "None";
-    PeriodIdentifier[PeriodIdentifier["Day"] = 1] = "Day";
-    PeriodIdentifier[PeriodIdentifier["Week"] = 2] = "Week";
-    PeriodIdentifier[PeriodIdentifier["Month"] = 3] = "Month";
-})(PeriodIdentifier = exports.PeriodIdentifier || (exports.PeriodIdentifier = {}));
 var LogInProviderType;
 (function (LogInProviderType) {
     LogInProviderType[LogInProviderType["Google"] = 1] = "Google";

@@ -287,9 +287,8 @@ export interface IUser {
     id: number;
     /** @format int64 */
     telegramUserId?: number | null;
+    lastSubscription?: IUserSubscription;
     isPlusUser?: boolean;
-    /** @format date-time */
-    subscriptionExpiresAt?: string | null;
     gender?: Gender;
     countryName?: string;
     countryCode?: string;
@@ -311,6 +310,41 @@ export interface IUser {
     registeredAt?: string;
     aboutMe?: string;
     role?: UserRole;
+}
+export interface IUserSubscription {
+    /** @format int64 */
+    userId?: number;
+    subscription?: ISubscription;
+    paymentProvider?: PaymentProvider;
+    /** @format date-time */
+    expireAt?: string | null;
+    /** @format date-time */
+    cancellationDate?: string | null;
+    /** @format int64 */
+    providerPaymentId?: number;
+    autoWithdrawal?: boolean;
+}
+export interface ISubscription {
+    /** @format int64 */
+    id?: number;
+    productId?: string;
+    periodIdentifier?: PeriodIdentifier;
+    name?: string;
+    /** @format int32 */
+    subscriptionPeriod?: number;
+    prices?: Record<string, number>;
+}
+export declare enum PeriodIdentifier {
+    None = 0,
+    Day = 1,
+    Week = 2,
+    Month = 3
+}
+export declare enum PaymentProvider {
+    None = 0,
+    ApplePay = 1,
+    GooglePay = 2,
+    YooKassa = 3
 }
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
@@ -568,22 +602,6 @@ export interface IUpdateOrganization {
     type: OrganizationType;
     /** @format int64 */
     imageId?: number | null;
-}
-export interface ISubscription {
-    /** @format int64 */
-    id?: number;
-    productId?: string;
-    periodIdentifier?: PeriodIdentifier;
-    name?: string;
-    /** @format int32 */
-    subscriptionPeriod?: number;
-    prices?: Record<string, number>;
-}
-export declare enum PeriodIdentifier {
-    None = 0,
-    Day = 1,
-    Week = 2,
-    Month = 3
 }
 export interface ISubscribeToPushNotificationsRequest {
     token: string;

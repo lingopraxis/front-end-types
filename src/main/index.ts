@@ -321,6 +321,7 @@ export interface IParticipant {
   userId: number;
   gender?: Gender | null;
   username: string;
+  isPlusUser?: boolean;
   country: string;
   countryCode?: string;
   aboutMe?: string;

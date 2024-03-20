@@ -5,6 +5,7 @@ export declare enum AnalyticsType {
     DEEP_LINK = "deep_link"
 }
 export declare enum USER_EVENTS {
+    SIGNUP = 'signup',
     LOGIN = "login",
     LOG_OUT = "log_out",
     DELETE_ACCOUNT = "delete_account",

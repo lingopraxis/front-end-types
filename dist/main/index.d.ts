@@ -208,6 +208,10 @@ export interface ITimeZoneDetails {
 export interface ICreateFeedbackRequest {
     text: string;
 }
+export interface IVerifyGooglePayment {
+    purchaseToken?: string;
+    productId?: string;
+}
 export interface IImage {
     /** @format int64 */
     id?: number;

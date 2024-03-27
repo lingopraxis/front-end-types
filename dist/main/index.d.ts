@@ -294,6 +294,10 @@ export interface IUser {
     telegramUserId?: number | null;
     lastSubscription?: IUserSubscription;
     isPlusUser?: boolean;
+    /** @format int32 */
+    practiceLimits?: number;
+    /** @format date-time */
+    nextFreePractice?: string;
     gender?: Gender;
     countryName?: string;
     countryCode?: string;

@@ -10,6 +10,7 @@ var AnalyticsType;
 })(AnalyticsType = exports.AnalyticsType || (exports.AnalyticsType = {}));
 var USER_EVENTS;
 (function (USER_EVENTS) {
+    USER_EVENTS["SIGNUP"] = "signup";
     USER_EVENTS["LOGIN"] = "login";
     USER_EVENTS["LOG_OUT"] = "log_out";
     USER_EVENTS["DELETE_ACCOUNT"] = "delete_account";

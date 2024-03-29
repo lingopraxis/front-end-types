@@ -22,7 +22,8 @@ export declare enum ApplicationErrorCode {
     BlockUserError = 1017,
     UnblockUserError = 1018,
     AccountAlreadyInUse = 1019,
-    TooManyRequests = 1020
+    TooManyRequests = 1020,
+    NoFreeMeetingsLeft = 1021
 }
 export interface IVerifyAppleSubscription {
     /** @format int64 */
@@ -294,10 +295,6 @@ export interface IUser {
     telegramUserId?: number | null;
     lastSubscription?: IUserSubscription;
     isPlusUser?: boolean;
-    /** @format int32 */
-    practiceLimits?: number;
-    /** @format date-time */
-    nextFreePractice?: string;
     gender?: Gender;
     countryName?: string;
     countryCode?: string;

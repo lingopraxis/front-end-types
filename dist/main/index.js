@@ -23,6 +23,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["UnblockUserError"] = 1018] = "UnblockUserError";
     ApplicationErrorCode[ApplicationErrorCode["AccountAlreadyInUse"] = 1019] = "AccountAlreadyInUse";
     ApplicationErrorCode[ApplicationErrorCode["TooManyRequests"] = 1020] = "TooManyRequests";
+    ApplicationErrorCode[ApplicationErrorCode["NoFreeMeetingsLeft"] = 1021] = "NoFreeMeetingsLeft";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {

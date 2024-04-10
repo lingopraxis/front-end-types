@@ -297,6 +297,8 @@ export interface IUser {
     isPlusUser?: boolean;
     /** @format int32 */
     practiceLimits?: number;
+    /** @format int32 */
+    joinMeetingLimits?: number;
     /** @format date-time */
     nextFreePractice?: string;
     gender?: Gender;

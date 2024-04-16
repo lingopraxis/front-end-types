@@ -53,7 +53,6 @@ export declare enum USER_EVENTS {
     WALKTHROUGH_CREATE_MEETING_APPEARED = "walkthru_create_meet_appeared",
     WALKTHROUGH_CREATE_MEETING_ENDED = "walkthru_create_meet_ended",
     RESTART_ENDED_WALKTHROUGH_CREATE_MEETING = "restart_ended_walkthru_create_meet",
-    CLICK_COPY_OFFLINE_MEET_INFO = "click_copy_offline_meet_info",
     BLOCK_USER = "block_user",
     UNBLOCK_USER = "unblock_user"
 }
@@ -73,6 +72,7 @@ export declare enum MEETING_EVENTS {
     CLICK_COPY_GOOGLE_MEET_LINK = "click_copy_google_meet_link",
     CLICK_COPY_ZOOM_MEET_LINK = "click_copy_zoom_meet_link",
     CLICK_COPY_CUSTOM_MEET_LINK = "click_copy_custom_meet_link",
+    CLICK_COPY_OFFLINE_MEET_INFO = "click_copy_offline_meet_info",
     OPEN_MEET_PARTICIPANT_INFO = "open_meet_participant_info"
 }
 export declare enum PUSH_NOTIFICATION_EVENTS {

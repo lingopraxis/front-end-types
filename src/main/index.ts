@@ -353,10 +353,10 @@ export interface IUser {
   isPlusUser?: boolean;
 
   /** @format int32 */
-  practiceLimits?: number;
+  coins?: number;
 
   /** @format int32 */
-  joinMeetingLimits?: number;
+  practiceLimits?: number;
 
   /** @format date-time */
   nextFreePractice?: string;
@@ -425,6 +425,7 @@ export enum PaymentProvider {
   ApplePay = 1,
   GooglePay = 2,
   YooKassa = 3,
+  Gift = 4,
 }
 
 export interface IUserGoogleInfo {

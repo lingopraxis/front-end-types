@@ -296,9 +296,9 @@ export interface IUser {
     lastSubscription?: IUserSubscription;
     isPlusUser?: boolean;
     /** @format int32 */
-    practiceLimits?: number;
+    coins?: number;
     /** @format int32 */
-    joinMeetingLimits?: number;
+    practiceLimits?: number;
     /** @format date-time */
     nextFreePractice?: string;
     gender?: Gender;
@@ -356,7 +356,8 @@ export declare enum PaymentProvider {
     None = 0,
     ApplePay = 1,
     GooglePay = 2,
-    YooKassa = 3
+    YooKassa = 3,
+    Gift = 4
 }
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;

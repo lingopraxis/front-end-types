@@ -86,6 +86,7 @@ var PaymentProvider;
     PaymentProvider[PaymentProvider["ApplePay"] = 1] = "ApplePay";
     PaymentProvider[PaymentProvider["GooglePay"] = 2] = "GooglePay";
     PaymentProvider[PaymentProvider["YooKassa"] = 3] = "YooKassa";
+    PaymentProvider[PaymentProvider["Gift"] = 4] = "Gift";
 })(PaymentProvider = exports.PaymentProvider || (exports.PaymentProvider = {}));
 var PushNotificationTypes;
 (function (PushNotificationTypes) {

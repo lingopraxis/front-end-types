@@ -402,8 +402,6 @@ export interface IUserSubscription {
 }
 
 export interface ISubscription {
-  /** @format int64 */
-  id?: number;
   productId?: string;
   periodIdentifier?: PeriodIdentifier;
   name?: string;

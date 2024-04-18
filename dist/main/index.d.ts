@@ -337,8 +337,6 @@ export interface IUserSubscription {
     autoWithdrawal?: boolean;
 }
 export interface ISubscription {
-    /** @format int64 */
-    id?: number;
     productId?: string;
     periodIdentifier?: PeriodIdentifier;
     name?: string;

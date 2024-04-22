@@ -320,6 +320,10 @@ export interface IMeeting {
   customMeetingInfo?: ICustomMeetingInfo;
   type: MeetingType;
   meetingLink?: string;
+
+  /** @format int32 */
+  duration?: number;
+  preferVideo?: boolean;
 }
 
 export interface IParticipant {
@@ -397,7 +401,7 @@ export interface IUserSubscription {
   cancellationDate?: string | null;
 
   /** @format int64 */
-  providerPaymentId?: number;
+  providerPaymentId?: number | null;
   autoWithdrawal?: boolean;
 }
 
@@ -593,6 +597,10 @@ export interface ICreateMeetingRequest {
   comment?: string;
   topicName: string;
   topicDescription?: string;
+
+  /** @format int32 */
+  duration?: number;
+  preferVideo?: boolean;
 }
 
 export interface IGetMeetingDatesRequest {
@@ -655,6 +663,10 @@ export interface IUpdateMeetingRequest {
 
   /** @format int32 */
   peopleNumber?: number;
+
+  /** @format int32 */
+  duration?: number;
+  preferVideo?: boolean;
   comment?: string;
   topicName?: string;
   topicDescription?: string;

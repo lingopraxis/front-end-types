@@ -497,6 +497,7 @@ export interface IMeetingAddress {
 
   /** @format double */
   longitude?: number;
+  address?: string;
 }
 
 export interface ICustomMeetingInfo {

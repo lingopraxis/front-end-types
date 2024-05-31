@@ -416,6 +416,7 @@ export interface IMeetingAddress {
     latitude?: number;
     /** @format double */
     longitude?: number;
+    address?: string;
 }
 export interface ICustomMeetingInfo {
     platform?: string;

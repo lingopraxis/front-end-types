@@ -24,6 +24,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["AccountAlreadyInUse"] = 1019] = "AccountAlreadyInUse";
     ApplicationErrorCode[ApplicationErrorCode["TooManyRequests"] = 1020] = "TooManyRequests";
     ApplicationErrorCode[ApplicationErrorCode["ParticipationLimit"] = 1021] = "ParticipationLimit";
+    ApplicationErrorCode[ApplicationErrorCode["DuplicateTagName"] = 1022] = "DuplicateTagName";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -87,6 +88,7 @@ var PaymentProvider;
     PaymentProvider[PaymentProvider["GooglePay"] = 2] = "GooglePay";
     PaymentProvider[PaymentProvider["YooKassa"] = 3] = "YooKassa";
     PaymentProvider[PaymentProvider["Gift"] = 4] = "Gift";
+    PaymentProvider[PaymentProvider["Robokassa"] = 5] = "Robokassa";
 })(PaymentProvider = exports.PaymentProvider || (exports.PaymentProvider = {}));
 var PushNotificationTypes;
 (function (PushNotificationTypes) {

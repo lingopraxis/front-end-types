@@ -23,11 +23,13 @@ export declare enum ApplicationErrorCode {
     UnblockUserError = 1018,
     AccountAlreadyInUse = 1019,
     TooManyRequests = 1020,
-    ParticipationLimit = 1021
+    ParticipationLimit = 1021,
+    DuplicateTagName = 1022
 }
 export interface IVerifyAppleSubscription {
     /** @format int64 */
     originalTransactionId: number;
+    productId?: string;
 }
 export interface IProblemDetails {
     type?: string | null;
@@ -311,6 +313,9 @@ export interface IUser {
     interfaceLanguage: ILanguage;
     timeZoneId?: string;
     city?: string;
+    isBanned?: boolean;
+    /** @format date-time */
+    createdAt?: string;
     languageLevel?: LanguageLevel;
     userGoogleInfo?: IUserGoogleInfo;
     userZoomInfo?: IUserZoomInfo;
@@ -358,7 +363,8 @@ export declare enum PaymentProvider {
     ApplePay = 1,
     GooglePay = 2,
     YooKassa = 3,
-    Gift = 4
+    Gift = 4,
+    Robokassa = 5
 }
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
@@ -643,6 +649,29 @@ export interface ICustomMessage {
     title: string;
     message: string;
 }
+export interface ICreateRobokassaPaymentResponse {
+    link: string;
+    /** @format int64 */
+    paymentId: number;
+}
+export interface ICreateRobokassaPaymentRequest {
+    productId: string;
+}
+export interface ITag {
+    /** @format int64 */
+    id: number;
+    name: string;
+}
+export interface ISearchTagsRequest {
+    name?: string;
+}
+export interface ICreateTagResponse {
+    /** @format int64 */
+    id: number;
+}
+export interface ICreateTagRequest {
+    name?: string;
+}
 export interface ITopic {
     /** @format int64 */
     id: number;
@@ -650,11 +679,6 @@ export interface ITopic {
     description?: string;
     questions?: string[];
     tags?: ITag[];
-}
-export interface ITag {
-    /** @format int64 */
-    id: number;
-    name: string;
 }
 export interface IAddQuestionsToTopicRequest {
     questions: string[];

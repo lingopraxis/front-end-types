@@ -89,6 +89,7 @@ var PaymentProvider;
     PaymentProvider[PaymentProvider["YooKassa"] = 3] = "YooKassa";
     PaymentProvider[PaymentProvider["Gift"] = 4] = "Gift";
     PaymentProvider[PaymentProvider["Robokassa"] = 5] = "Robokassa";
+    PaymentProvider[PaymentProvider["Telegram"] = 6] = "Telegram";
 })(PaymentProvider = exports.PaymentProvider || (exports.PaymentProvider = {}));
 var PushNotificationTypes;
 (function (PushNotificationTypes) {

@@ -435,6 +435,7 @@ export enum PaymentProvider {
   YooKassa = 3,
   Gift = 4,
   Robokassa = 5,
+  Telegram = 6,
 }
 
 export interface IUserGoogleInfo {
@@ -811,6 +812,17 @@ export interface ICreateTagResponse {
 
 export interface ICreateTagRequest {
   name?: string;
+}
+
+export interface ICreateTelegramPaymentResponse {
+  link: string;
+
+  /** @format int64 */
+  paymentId: number;
+}
+
+export interface ICreateTelegramPaymentRequest {
+  productId: string;
 }
 
 export interface ITopic {

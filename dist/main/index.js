@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentProvider = exports.PeriodIdentifier = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -91,6 +91,12 @@ var PaymentProvider;
     PaymentProvider[PaymentProvider["Robokassa"] = 5] = "Robokassa";
     PaymentProvider[PaymentProvider["Telegram"] = 6] = "Telegram";
 })(PaymentProvider = exports.PaymentProvider || (exports.PaymentProvider = {}));
+var PaymentType;
+(function (PaymentType) {
+    PaymentType[PaymentType["None"] = 0] = "None";
+    PaymentType[PaymentType["Purchase"] = 1] = "Purchase";
+    PaymentType[PaymentType["Trial"] = 2] = "Trial";
+})(PaymentType = exports.PaymentType || (exports.PaymentType = {}));
 var PushNotificationTypes;
 (function (PushNotificationTypes) {
     PushNotificationTypes[PushNotificationTypes["None"] = 0] = "None";

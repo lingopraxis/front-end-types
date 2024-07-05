@@ -137,10 +137,10 @@ export interface IUpdateBannerRequest {
     /** @format int64 */
     id: number;
     name: string;
-    platformsInUse: PlatformsInUse;
+    platformsInUse?: PlatformsInUse;
     /** @format date-time */
-    expirationDate: string;
-    appVersion: string;
+    expirationDate?: string | null;
+    appVersion?: string;
 }
 export declare type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
 export interface IBlockedUser {
@@ -287,6 +287,7 @@ export interface IParticipant {
     /** @format date-time */
     createdAt?: string;
     blocked?: boolean;
+    isPaid?: boolean;
 }
 export declare enum Gender {
     NotSet = 1,
@@ -302,6 +303,7 @@ export interface IUser {
     isPlusUser?: boolean;
     /** @format int32 */
     coins?: number;
+    userMeetingPackages?: IUserMeetingPackage[];
     /** @format int32 */
     practiceLimits?: number;
     /** @format date-time */
@@ -366,6 +368,19 @@ export declare enum PaymentProvider {
     Gift = 4,
     Robokassa = 5,
     Telegram = 6
+}
+export interface IUserMeetingPackage {
+    /** @format int32 */
+    amount: number;
+    paymentType: PaymentType;
+    provider: PaymentProvider;
+    /** @format date-time */
+    createdAt: string;
+}
+export declare enum PaymentType {
+    None = 0,
+    Purchase = 1,
+    Trial = 2
 }
 export interface IUserGoogleInfo {
     authorizedWithGoogle: boolean;
@@ -630,6 +645,13 @@ export interface IUpdateOrganization {
     type: OrganizationType;
     /** @format int64 */
     imageId?: number | null;
+}
+export interface IMeetingPackage {
+    productId: string;
+    name: string;
+    /** @format int32 */
+    amount: number;
+    prices: Record<string, number>;
 }
 export interface ISubscribeToPushNotificationsRequest {
     token: string;

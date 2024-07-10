@@ -26,7 +26,7 @@ export enum ApplicationErrorCode {
   TooManyRequests = 1020,
   ParticipationLimit = 1021,
   DuplicateTagName = 1022,
-CheckLimitHasBeenReached = 1023,
+  CheckLimitHasBeenReached = 1023,
 }
 
 export interface IVerifyAppleSubscription {
@@ -359,9 +359,6 @@ export interface IUser {
   telegramUserId?: number | null;
   lastSubscription?: IUserSubscription;
   isPlusUser?: boolean;
-
-  /** @format int32 */
-  coins?: number;
   userMeetingPackages?: IUserMeetingPackage[];
 
   /** @format int32 */
@@ -395,7 +392,7 @@ export interface IUser {
   registeredAt?: string;
   aboutMe?: string;
   role?: UserRole;
-referralCode?: string;
+  referralCode?: string;
 }
 
 export interface IUserSubscription {

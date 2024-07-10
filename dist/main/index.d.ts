@@ -302,8 +302,6 @@ export interface IUser {
     telegramUserId?: number | null;
     lastSubscription?: IUserSubscription;
     isPlusUser?: boolean;
-    /** @format int32 */
-    coins?: number;
     userMeetingPackages?: IUserMeetingPackage[];
     /** @format int32 */
     practiceLimits?: number;
@@ -333,7 +331,7 @@ export interface IUser {
     registeredAt?: string;
     aboutMe?: string;
     role?: UserRole;
-referralCode?: string;
+    referralCode?: string;
 }
 export interface IUserSubscription {
     /** @format int64 */

@@ -24,7 +24,8 @@ export declare enum ApplicationErrorCode {
     AccountAlreadyInUse = 1019,
     TooManyRequests = 1020,
     ParticipationLimit = 1021,
-    DuplicateTagName = 1022
+    DuplicateTagName = 1022,
+    CheckLimitHasBeenReached = 1023
 }
 export interface IVerifyAppleSubscription {
     /** @format int64 */
@@ -332,6 +333,7 @@ export interface IUser {
     registeredAt?: string;
     aboutMe?: string;
     role?: UserRole;
+referralCode?: string;
 }
 export interface IUserSubscription {
     /** @format int64 */

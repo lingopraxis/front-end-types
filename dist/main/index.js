@@ -25,6 +25,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["TooManyRequests"] = 1020] = "TooManyRequests";
     ApplicationErrorCode[ApplicationErrorCode["ParticipationLimit"] = 1021] = "ParticipationLimit";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateTagName"] = 1022] = "DuplicateTagName";
+    ApplicationErrorCode[ApplicationErrorCode["CheckLimitHasBeenReached"] = 1023] = "CheckLimitHasBeenReached";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {

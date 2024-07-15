@@ -60,6 +60,10 @@ var USER_EVENTS;
     USER_EVENTS["RESTART_ENDED_WALKTHROUGH_CREATE_MEETING"] = "restart_ended_walkthru_create_meet";
     USER_EVENTS["BLOCK_USER"] = "block_user";
     USER_EVENTS["UNBLOCK_USER"] = "unblock_user";
+    USER_EVENTS["PURCHASE"] = "purchase";
+    USER_EVENTS["PURCHASE_MEETING_PACK"] = "purchase_meeting_pack";
+    USER_EVENTS["COPY_REF_CODE"] = "copy_ref_code";
+    USER_EVENTS["SHARE_REF_CODE"] = "share_ref_code";
 })(USER_EVENTS = exports.USER_EVENTS || (exports.USER_EVENTS = {}));
 var MEETING_EVENTS;
 (function (MEETING_EVENTS) {
@@ -95,4 +99,5 @@ var PUSH_NOTIFICATION_EVENTS;
 var DEEP_LINK_EVENTS;
 (function (DEEP_LINK_EVENTS) {
     DEEP_LINK_EVENTS["OPEN_MEET"] = "open_meet";
+    DEEP_LINK_EVENTS["OPEN_APP_WITH_REF_CODE"] = "open_app_with_ref_code";
 })(DEEP_LINK_EVENTS = exports.DEEP_LINK_EVENTS || (exports.DEEP_LINK_EVENTS = {}));

@@ -54,7 +54,11 @@ export declare enum USER_EVENTS {
     WALKTHROUGH_CREATE_MEETING_ENDED = "walkthru_create_meet_ended",
     RESTART_ENDED_WALKTHROUGH_CREATE_MEETING = "restart_ended_walkthru_create_meet",
     BLOCK_USER = "block_user",
-    UNBLOCK_USER = "unblock_user"
+    UNBLOCK_USER = "unblock_user",
+    PURCHASE = "purchase",
+    PURCHASE_MEETING_PACK = "purchase_meeting_pack",
+    COPY_REF_CODE = "copy_ref_code",
+    SHARE_REF_CODE = "share_ref_code"
 }
 export declare enum MEETING_EVENTS {
     CREATE_MEETING = "create_meeting",
@@ -86,5 +90,6 @@ export declare enum PUSH_NOTIFICATION_EVENTS {
     CLICK_USER_CUSTOM_NOTIFICATION = "click_custom"
 }
 export declare enum DEEP_LINK_EVENTS {
-    OPEN_MEET = "open_meet"
+    OPEN_MEET = "open_meet",
+    OPEN_APP_WITH_REF_CODE = "open_app_with_ref_code"
 }

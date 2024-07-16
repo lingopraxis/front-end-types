@@ -27,11 +27,6 @@ export declare enum ApplicationErrorCode {
     DuplicateTagName = 1022,
     CheckLimitHasBeenReached = 1023
 }
-export interface IVerifyAppleSubscription {
-    /** @format int64 */
-    originalTransactionId: number;
-    productId?: string;
-}
 export interface IProblemDetails {
     type?: string | null;
     title?: string | null;
@@ -39,6 +34,11 @@ export interface IProblemDetails {
     status?: number | null;
     detail?: string | null;
     instance?: string | null;
+}
+export interface IVerifyAppleSubscription {
+    /** @format int64 */
+    originalTransactionId: number;
+    productId?: string;
 }
 export interface IRecoverSubscriptions {
     originalTransactionIds: number[];
@@ -56,6 +56,7 @@ export interface ISocialSignUpRequest {
     provider?: SocialLoginProvider;
     deviceType?: DeviceType;
     organization?: ICreateOrganization;
+    referralCode?: string;
 }
 export declare enum LanguageLevel {
     None = 0,

@@ -63,7 +63,6 @@ export interface ISocialSignUpRequest {
   provider?: SocialLoginProvider;
   deviceType?: DeviceType;
   organization?: ICreateOrganization;
-  referralCode?: string;
 }
 
 export enum LanguageLevel {
@@ -122,6 +121,21 @@ export interface ISocialSignInRequest {
 
 export interface IRefreshTokenRequest {
   refreshToken: string;
+}
+
+export interface IApplyReferralCodeResponse {
+  status?: ReferralProgramStatus;
+}
+
+export enum ReferralProgramStatus {
+  Succeeded = 1,
+  AlreadyUsed = 2,
+  NotFound = 3,
+  InProgress = 4,
+}
+
+export interface IApplyReferralCodeRequest {
+  referralCode: string;
 }
 
 export interface IBannerLocalized {

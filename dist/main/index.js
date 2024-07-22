@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.Gender = exports.PlatformsInUse = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.Gender = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -61,6 +61,13 @@ var OrganizationType;
     OrganizationType[OrganizationType["CulturalCenter"] = 4] = "CulturalCenter";
     OrganizationType[OrganizationType["Other"] = 5] = "Other";
 })(OrganizationType = exports.OrganizationType || (exports.OrganizationType = {}));
+var ReferralProgramStatus;
+(function (ReferralProgramStatus) {
+    ReferralProgramStatus[ReferralProgramStatus["Succeeded"] = 1] = "Succeeded";
+    ReferralProgramStatus[ReferralProgramStatus["AlreadyUsed"] = 2] = "AlreadyUsed";
+    ReferralProgramStatus[ReferralProgramStatus["NotFound"] = 3] = "NotFound";
+    ReferralProgramStatus[ReferralProgramStatus["InProgress"] = 4] = "InProgress";
+})(ReferralProgramStatus = exports.ReferralProgramStatus || (exports.ReferralProgramStatus = {}));
 var PlatformsInUse;
 (function (PlatformsInUse) {
     PlatformsInUse[PlatformsInUse["None"] = 0] = "None";

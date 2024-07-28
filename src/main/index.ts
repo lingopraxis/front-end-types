@@ -63,6 +63,8 @@ export interface ISocialSignUpRequest {
   provider?: SocialLoginProvider;
   deviceType?: DeviceType;
   organization?: ICreateOrganization;
+  ageGroup?: AgeGroup;
+  gender?: Gender;
 }
 
 export enum LanguageLevel {
@@ -104,6 +106,23 @@ export enum OrganizationType {
   EducationalInstitution = 3,
   CulturalCenter = 4,
   Other = 5,
+}
+
+export enum AgeGroup {
+  None = 0,
+  Under18 = 1,
+  Between18And24 = 2,
+  Between25And34 = 3,
+  Between35And44 = 4,
+  Between45And54 = 5,
+  Between55And64 = 6,
+  Over65 = 7,
+}
+
+export enum Gender {
+  NotSet = 1,
+  Male = 2,
+  Female = 3,
 }
 
 export interface ISecurityTokens {
@@ -360,12 +379,6 @@ export interface IParticipant {
   isPaid?: boolean;
 }
 
-export enum Gender {
-  NotSet = 1,
-  Male = 2,
-  Female = 3,
-}
-
 export interface IUser {
   /** @format int64 */
   id: number;
@@ -408,6 +421,8 @@ export interface IUser {
   aboutMe?: string;
   role?: UserRole;
   referralCode?: string;
+  ageGroup?: AgeGroup;
+  image?: IImage;
 }
 
 export interface IUserSubscription {
@@ -513,7 +528,6 @@ export interface IOrganization {
   id?: number;
   name?: string;
   description?: string;
-  image?: IImage;
   links?: string[];
   type?: OrganizationType;
 }
@@ -786,9 +800,6 @@ export interface IUpdateOrganization {
   description?: string;
   links?: string[];
   type: OrganizationType;
-
-  /** @format int64 */
-  imageId?: number | null;
 }
 
 export interface IMeetingPackage {
@@ -942,6 +953,9 @@ export interface IUpdateUserRequest {
 
   /** @format double */
   longitude?: number | null;
+
+  /** @format int64 */
+  imageId?: number | null;
 }
 
 export enum LogInProviderType {

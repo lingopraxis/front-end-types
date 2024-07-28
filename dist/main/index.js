@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.Gender = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -61,6 +61,23 @@ var OrganizationType;
     OrganizationType[OrganizationType["CulturalCenter"] = 4] = "CulturalCenter";
     OrganizationType[OrganizationType["Other"] = 5] = "Other";
 })(OrganizationType = exports.OrganizationType || (exports.OrganizationType = {}));
+var AgeGroup;
+(function (AgeGroup) {
+    AgeGroup[AgeGroup["None"] = 0] = "None";
+    AgeGroup[AgeGroup["Under18"] = 1] = "Under18";
+    AgeGroup[AgeGroup["Between18And24"] = 2] = "Between18And24";
+    AgeGroup[AgeGroup["Between25And34"] = 3] = "Between25And34";
+    AgeGroup[AgeGroup["Between35And44"] = 4] = "Between35And44";
+    AgeGroup[AgeGroup["Between45And54"] = 5] = "Between45And54";
+    AgeGroup[AgeGroup["Between55And64"] = 6] = "Between55And64";
+    AgeGroup[AgeGroup["Over65"] = 7] = "Over65";
+})(AgeGroup = exports.AgeGroup || (exports.AgeGroup = {}));
+var Gender;
+(function (Gender) {
+    Gender[Gender["NotSet"] = 1] = "NotSet";
+    Gender[Gender["Male"] = 2] = "Male";
+    Gender[Gender["Female"] = 3] = "Female";
+})(Gender = exports.Gender || (exports.Gender = {}));
 var ReferralProgramStatus;
 (function (ReferralProgramStatus) {
     ReferralProgramStatus[ReferralProgramStatus["Succeeded"] = 1] = "Succeeded";
@@ -76,12 +93,6 @@ var PlatformsInUse;
     PlatformsInUse[PlatformsInUse["Android"] = 4] = "Android";
     PlatformsInUse[PlatformsInUse["Website"] = 8] = "Website";
 })(PlatformsInUse = exports.PlatformsInUse || (exports.PlatformsInUse = {}));
-var Gender;
-(function (Gender) {
-    Gender[Gender["NotSet"] = 1] = "NotSet";
-    Gender[Gender["Male"] = 2] = "Male";
-    Gender[Gender["Female"] = 3] = "Female";
-})(Gender = exports.Gender || (exports.Gender = {}));
 var PeriodIdentifier;
 (function (PeriodIdentifier) {
     PeriodIdentifier[PeriodIdentifier["None"] = 0] = "None";

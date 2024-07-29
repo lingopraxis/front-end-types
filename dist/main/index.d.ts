@@ -58,6 +58,8 @@ export interface ISocialSignUpRequest {
     organization?: ICreateOrganization;
     ageGroup?: AgeGroup;
     gender?: Gender;
+    /** @format binary */
+    image?: File;
 }
 export declare enum LanguageLevel {
     None = 0,

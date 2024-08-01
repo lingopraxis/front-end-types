@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
@@ -26,6 +26,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["ParticipationLimit"] = 1021] = "ParticipationLimit";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateTagName"] = 1022] = "DuplicateTagName";
     ApplicationErrorCode[ApplicationErrorCode["CheckLimitHasBeenReached"] = 1023] = "CheckLimitHasBeenReached";
+    ApplicationErrorCode[ApplicationErrorCode["DuplicateBot"] = 1024] = "DuplicateBot";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -205,6 +206,13 @@ var NotificationDays;
     NotificationDays[NotificationDays["Saturday"] = 64] = "Saturday";
     NotificationDays[NotificationDays["All"] = 127] = "All";
 })(NotificationDays = exports.NotificationDays || (exports.NotificationDays = {}));
+var BotStatus;
+(function (BotStatus) {
+    BotStatus[BotStatus["Activated"] = 0] = "Activated";
+    BotStatus[BotStatus["DeactivatedByUser"] = 1] = "DeactivatedByUser";
+    BotStatus[BotStatus["DeactivatedSetWeebHookFailure"] = 2] = "DeactivatedSetWeebHookFailure";
+    BotStatus[BotStatus["DeactivatedSendMessageFailure"] = 3] = "DeactivatedSendMessageFailure";
+})(BotStatus = exports.BotStatus || (exports.BotStatus = {}));
 var LogInProviderType;
 (function (LogInProviderType) {
     LogInProviderType[LogInProviderType["Google"] = 1] = "Google";

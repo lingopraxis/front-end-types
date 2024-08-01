@@ -27,6 +27,7 @@ export enum ApplicationErrorCode {
   ParticipationLimit = 1021,
   DuplicateTagName = 1022,
   CheckLimitHasBeenReached = 1023,
+  DuplicateBot = 1024,
 }
 
 export interface IProblemDetails {
@@ -66,8 +67,8 @@ export interface ISocialSignUpRequest {
   ageGroup?: AgeGroup;
   gender?: Gender;
 
-  /** @format binary */
-  image?: File;
+  /** @format int64 */
+  imageId?: number | null;
 }
 
 export enum LanguageLevel {
@@ -910,6 +911,53 @@ export interface ICreateTopicResponse {
 export interface ICreateTopicRequest {
   name: string;
   questions: string[];
+}
+
+export interface ITelegramBotInfo {
+  nickname: string;
+  name?: string;
+  token: string;
+  description?: string;
+  shortDescription?: string;
+  botStatus?: BotStatus;
+
+  /** @format int64 */
+  numberOfUsers?: number;
+}
+
+export enum BotStatus {
+  Activated = 0,
+  DeactivatedByUser = 1,
+  DeactivatedSetWeebHookFailure = 2,
+  DeactivatedSendMessageFailure = 3,
+}
+
+export interface IAddBotResponse {
+  isSuccessful?: boolean;
+}
+
+export interface IAddBotRequest {
+  nickname: string;
+  name?: string;
+  token: string;
+  shortDescription?: string;
+  description?: string;
+}
+
+export interface IUpdateBotResponse {
+  isSuccessful?: boolean;
+  botStatus?: BotStatus;
+}
+
+export interface IUpdateBotRequest {
+  nickname: string;
+  name: string;
+  shortDescription?: string;
+  description?: string;
+}
+
+export interface IDeleteBotCommand {
+  id: string;
 }
 
 export interface IStatistic {

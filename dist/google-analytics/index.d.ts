@@ -2,7 +2,8 @@ export declare enum AnalyticsType {
     USER = "user",
     MEETING = "meeting",
     PUSH_NOTIFICATION = "push_notification",
-    DEEP_LINK = "deep_link"
+    DEEP_LINK = "deep_link",
+    SIGN_UP = "sign_up"
 }
 export declare enum USER_EVENTS {
     SIGNUP = "signup",
@@ -92,4 +93,20 @@ export declare enum PUSH_NOTIFICATION_EVENTS {
 export declare enum DEEP_LINK_EVENTS {
     OPEN_MEET = "open_meet",
     OPEN_APP_WITH_REF_CODE = "open_app_with_ref_code"
+}
+export declare enum SIGN_UP_EVENTS {
+    SELECT_GENDER = "select_gender",
+    SELECT_AGE = "select_age",
+    SELECT_LANGUAGE = "select_language",
+    SELECT_LANGUAGE_LEVEL = "select_language_level",
+    SELECT_PRACTICE_SCHEDULE = "select_practice_schedule",
+    SKIP_PRACTICE_SCHEDULE = "skip_practice_schedule",
+    ENABLE_NOTIFICATIONS = "enable_notifications",
+    SKIP_NOTIFICATIONS = "skip_notifications",
+    INSERT_USERNAME = "insert_username",
+    CHOOSE_IMAGE = "choose_image",
+    SELECT_IMAGE = "select_image",
+    SKIP_IMAGE = "skip_image",
+    CLICK_SIGN_UP = "click_sign_up",
+    ERROR = "error"
 }

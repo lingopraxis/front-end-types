@@ -138,6 +138,7 @@ var UserRole;
     UserRole[UserRole["SuperAdmin"] = 4] = "SuperAdmin";
     UserRole[UserRole["Developer"] = 8] = "Developer";
     UserRole[UserRole["Financier"] = 16] = "Financier";
+    UserRole[UserRole["TelegramCommunity"] = 32] = "TelegramCommunity";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
 var MeetingType;
 (function (MeetingType) {

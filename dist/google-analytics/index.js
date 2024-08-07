@@ -1,12 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DEEP_LINK_EVENTS = exports.PUSH_NOTIFICATION_EVENTS = exports.MEETING_EVENTS = exports.USER_EVENTS = exports.AnalyticsType = void 0;
+exports.SIGN_UP_EVENTS = exports.DEEP_LINK_EVENTS = exports.PUSH_NOTIFICATION_EVENTS = exports.MEETING_EVENTS = exports.USER_EVENTS = exports.AnalyticsType = void 0;
 var AnalyticsType;
 (function (AnalyticsType) {
     AnalyticsType["USER"] = "user";
     AnalyticsType["MEETING"] = "meeting";
     AnalyticsType["PUSH_NOTIFICATION"] = "push_notification";
     AnalyticsType["DEEP_LINK"] = "deep_link";
+    AnalyticsType["SIGN_UP"] = "sign_up";
 })(AnalyticsType = exports.AnalyticsType || (exports.AnalyticsType = {}));
 var USER_EVENTS;
 (function (USER_EVENTS) {
@@ -101,3 +102,20 @@ var DEEP_LINK_EVENTS;
     DEEP_LINK_EVENTS["OPEN_MEET"] = "open_meet";
     DEEP_LINK_EVENTS["OPEN_APP_WITH_REF_CODE"] = "open_app_with_ref_code";
 })(DEEP_LINK_EVENTS = exports.DEEP_LINK_EVENTS || (exports.DEEP_LINK_EVENTS = {}));
+var SIGN_UP_EVENTS;
+(function (SIGN_UP_EVENTS) {
+    SIGN_UP_EVENTS["SELECT_GENDER"] = "select_gender";
+    SIGN_UP_EVENTS["SELECT_AGE"] = "select_age";
+    SIGN_UP_EVENTS["SELECT_LANGUAGE"] = "select_language";
+    SIGN_UP_EVENTS["SELECT_LANGUAGE_LEVEL"] = "select_language_level";
+    SIGN_UP_EVENTS["SELECT_PRACTICE_SCHEDULE"] = "select_practice_schedule";
+    SIGN_UP_EVENTS["SKIP_PRACTICE_SCHEDULE"] = "skip_practice_schedule";
+    SIGN_UP_EVENTS["ENABLE_NOTIFICATIONS"] = "enable_notifications";
+    SIGN_UP_EVENTS["SKIP_NOTIFICATIONS"] = "skip_notifications";
+    SIGN_UP_EVENTS["INSERT_USERNAME"] = "insert_username";
+    SIGN_UP_EVENTS["CHOOSE_IMAGE"] = "choose_image";
+    SIGN_UP_EVENTS["SELECT_IMAGE"] = "select_image";
+    SIGN_UP_EVENTS["SKIP_IMAGE"] = "skip_image";
+    SIGN_UP_EVENTS["CLICK_SIGN_UP"] = "click_sign_up";
+    SIGN_UP_EVENTS["ERROR"] = "error";
+})(SIGN_UP_EVENTS = exports.SIGN_UP_EVENTS || (exports.SIGN_UP_EVENTS = {}));

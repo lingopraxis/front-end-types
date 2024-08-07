@@ -234,6 +234,12 @@ export interface IBroadcastMessageDto {
   practiceLanguageId?: string;
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
+  button?: IButton;
+}
+
+export interface IButton {
+  message?: string;
+  link?: string;
 }
 
 export interface ICountForBroadcastResponse {
@@ -275,6 +281,7 @@ export interface IApiCreateBroadcastMessageDto {
   practiceLanguageId?: string;
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
+  button?: IButton;
 }
 
 export type IUpdateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & { id?: number };
@@ -543,6 +550,7 @@ export enum UserRole {
   SuperAdmin = 4,
   Developer = 8,
   Financier = 16,
+  TelegramCommunity = 32,
 }
 
 export interface IMeetingAddress {
@@ -923,6 +931,7 @@ export interface ITelegramBotInfo {
 
   /** @format int64 */
   numberOfUsers?: number;
+  image?: IImage;
 }
 
 export enum BotStatus {
@@ -942,6 +951,9 @@ export interface IAddBotRequest {
   token: string;
   shortDescription?: string;
   description?: string;
+
+  /** @format int64 */
+  imageId?: number | null;
 }
 
 export interface IUpdateBotResponse {
@@ -954,6 +966,9 @@ export interface IUpdateBotRequest {
   name: string;
   shortDescription?: string;
   description?: string;
+
+  /** @format int64 */
+  imageId?: number | null;
 }
 
 export interface IDeleteBotCommand {

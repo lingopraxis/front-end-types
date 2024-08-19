@@ -334,6 +334,8 @@ export interface IUser {
     /** @format int64 */
     telegramUserId?: number | null;
     lastSubscription?: IUserSubscription;
+    /** @format date-time */
+    trialExpirationDate?: string | null;
     isPlusUser?: boolean;
     userMeetingPackages?: IUserMeetingPackage[];
     /** @format int32 */
@@ -402,7 +404,8 @@ export declare enum PaymentProvider {
     YooKassa = 3,
     Gift = 4,
     Robokassa = 5,
-    Telegram = 6
+    Telegram = 6,
+    Trial = 7
 }
 export interface IUserMeetingPackage {
     /** @format int32 */
@@ -463,7 +466,8 @@ export declare enum UserRole {
     SuperAdmin = 4,
     Developer = 8,
     Financier = 16,
-    TelegramCommunity = 32
+    TelegramCommunity = 32,
+    ProductAnalyst = 64
 }
 export interface IMeetingAddress {
     /** @format int32 */

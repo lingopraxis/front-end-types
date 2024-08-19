@@ -397,6 +397,9 @@ export interface IUser {
   /** @format int64 */
   telegramUserId?: number | null;
   lastSubscription?: IUserSubscription;
+
+  /** @format date-time */
+  trialExpirationDate?: string | null;
   isPlusUser?: boolean;
   userMeetingPackages?: IUserMeetingPackage[];
 
@@ -478,6 +481,7 @@ export enum PaymentProvider {
   Gift = 4,
   Robokassa = 5,
   Telegram = 6,
+  Trial = 7,
 }
 
 export interface IUserMeetingPackage {
@@ -551,6 +555,7 @@ export enum UserRole {
   Developer = 8,
   Financier = 16,
   TelegramCommunity = 32,
+  ProductAnalyst = 64,
 }
 
 export interface IMeetingAddress {

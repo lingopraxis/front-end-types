@@ -110,6 +110,7 @@ var PaymentProvider;
     PaymentProvider[PaymentProvider["Gift"] = 4] = "Gift";
     PaymentProvider[PaymentProvider["Robokassa"] = 5] = "Robokassa";
     PaymentProvider[PaymentProvider["Telegram"] = 6] = "Telegram";
+    PaymentProvider[PaymentProvider["Trial"] = 7] = "Trial";
 })(PaymentProvider = exports.PaymentProvider || (exports.PaymentProvider = {}));
 var PaymentType;
 (function (PaymentType) {
@@ -139,6 +140,7 @@ var UserRole;
     UserRole[UserRole["Developer"] = 8] = "Developer";
     UserRole[UserRole["Financier"] = 16] = "Financier";
     UserRole[UserRole["TelegramCommunity"] = 32] = "TelegramCommunity";
+    UserRole[UserRole["ProductAnalyst"] = 64] = "ProductAnalyst";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
 var MeetingType;
 (function (MeetingType) {

@@ -783,6 +783,13 @@ export declare enum BotStatus {
     DeactivatedSetWeebHookFailure = 2,
     DeactivatedSendMessageFailure = 3
 }
+export interface ITelegramBotDemo {
+    nickname: string;
+    name?: string;
+    description?: string;
+    shortDescription?: string;
+    image?: IImage;
+}
 export interface IAddBotResponse {
     isSuccessful?: boolean;
 }
@@ -808,7 +815,7 @@ export interface IUpdateBotRequest {
     imageId?: number | null;
 }
 export interface IDeleteBotCommand {
-    id: string;
+    nickname: string;
 }
 export interface IStatistic {
     statisticByLanguages?: IStatisticByLanguage[];

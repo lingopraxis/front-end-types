@@ -937,6 +937,14 @@ export interface ITelegramBotInfo {
   /** @format int64 */
   numberOfUsers?: number;
   image?: IImage;
+  productPrices?: Record<string, number>;
+
+  /** @format int32 */
+  welcomeMeetingsBonus?: number;
+
+  /** @format int32 */
+  weeklyFreeMeetings?: number;
+  forGlobalCommunity?: boolean;
 }
 
 export enum BotStatus {
@@ -967,6 +975,14 @@ export interface IAddBotRequest {
 
   /** @format int64 */
   imageId?: number | null;
+  productPrices?: Record<string, number>;
+
+  /** @format int32 */
+  welcomeMeetingsBonus?: number;
+
+  /** @format int32 */
+  weeklyFreeMeetings?: number;
+  forGlobalCommunity?: boolean;
 }
 
 export interface IUpdateBotResponse {
@@ -982,6 +998,14 @@ export interface IUpdateBotRequest {
 
   /** @format int64 */
   imageId?: number | null;
+  productPrices?: Record<string, number>;
+
+  /** @format int32 */
+  welcomeMeetingsBonus?: number;
+
+  /** @format int32 */
+  weeklyFreeMeetings?: number;
+  forGlobalCommunity?: boolean;
 }
 
 export interface IDeleteBotCommand {

@@ -776,7 +776,8 @@ export interface ITelegramBotInfo {
     /** @format int64 */
     numberOfUsers?: number;
     image?: IImage;
-    productPrices?: Record<string, number>;
+    meetingPackagePrices?: Record<string, number>;
+    subscriptionPrices?: Record<string, number>;
     /** @format int32 */
     welcomeMeetingsBonus?: number;
     /** @format int32 */
@@ -807,7 +808,8 @@ export interface IAddBotRequest {
     description?: string;
     /** @format int64 */
     imageId?: number | null;
-    productPrices?: Record<string, number>;
+    meetingPackagePrices?: Record<string, number>;
+    subscriptionPrices?: Record<string, number>;
     /** @format int32 */
     welcomeMeetingsBonus?: number;
     /** @format int32 */
@@ -825,7 +827,8 @@ export interface IUpdateBotRequest {
     description?: string;
     /** @format int64 */
     imageId?: number | null;
-    productPrices?: Record<string, number>;
+    meetingPackagePrices?: Record<string, number>;
+    subscriptionPrices?: Record<string, number>;
     /** @format int32 */
     welcomeMeetingsBonus?: number;
     /** @format int32 */

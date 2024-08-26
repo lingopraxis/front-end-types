@@ -773,7 +773,7 @@ export interface ITelegramBotInfo {
     description?: string;
     shortDescription?: string;
     botStatus?: BotStatus;
-    /** @format int64 */
+    /** @format int32 */
     numberOfUsers?: number;
     image?: IImage;
     meetingPackagePrices?: Record<string, number>;
@@ -783,6 +783,8 @@ export interface ITelegramBotInfo {
     /** @format int32 */
     weeklyFreeMeetings?: number;
     forGlobalCommunity?: boolean;
+    /** @format double */
+    income?: number;
 }
 export declare enum BotStatus {
     Activated = 0,

@@ -183,6 +183,7 @@ export interface IBanner {
   /** @format date-time */
   expirationDate?: string | null;
   bannerLocalized?: IBannerLocalized[];
+  callToAction?: string;
 }
 
 export enum PlatformsInUse {
@@ -202,6 +203,7 @@ export interface IUpdateBannerRequest {
   /** @format date-time */
   expirationDate?: string | null;
   appVersion?: string;
+  callToAction?: string;
 }
 
 export type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
@@ -964,6 +966,13 @@ export interface ITelegramBotDemo {
   description?: string;
   shortDescription?: string;
   image?: IImage;
+
+  /** @format int32 */
+  welcomeMeetingsBonus?: number;
+
+  /** @format int32 */
+  weeklyFreeMeetings?: number;
+  forGlobalCommunity?: boolean;
 }
 
 export interface IAddBotResponse {

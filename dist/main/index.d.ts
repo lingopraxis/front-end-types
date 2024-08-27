@@ -158,6 +158,7 @@ export interface IBanner {
     /** @format date-time */
     expirationDate?: string | null;
     bannerLocalized?: IBannerLocalized[];
+    callToAction?: string;
 }
 export declare enum PlatformsInUse {
     None = 0,
@@ -174,6 +175,7 @@ export interface IUpdateBannerRequest {
     /** @format date-time */
     expirationDate?: string | null;
     appVersion?: string;
+    callToAction?: string;
 }
 export declare type IUpdateBannerLocalizedRequest = IBannerLocalized & object;
 export interface IBlockedUser {
@@ -798,6 +800,11 @@ export interface ITelegramBotDemo {
     description?: string;
     shortDescription?: string;
     image?: IImage;
+    /** @format int32 */
+    welcomeMeetingsBonus?: number;
+    /** @format int32 */
+    weeklyFreeMeetings?: number;
+    forGlobalCommunity?: boolean;
 }
 export interface IAddBotResponse {
     isSuccessful?: boolean;

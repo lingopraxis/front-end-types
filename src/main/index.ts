@@ -305,6 +305,7 @@ export interface IVerifyGooglePayment {
 export interface IImage {
   /** @format int64 */
   id?: number;
+  name?: string;
   linkPreview?: string;
   linkHero?: string;
   linkOriginal?: string;

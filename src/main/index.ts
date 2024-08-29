@@ -952,6 +952,7 @@ export interface ITelegramBotInfo {
 
   /** @format double */
   income?: number;
+  notifyAboutPayments?: boolean;
 }
 
 export enum BotStatus {
@@ -998,6 +999,7 @@ export interface IAddBotRequest {
   /** @format int32 */
   weeklyFreeMeetings?: number;
   forGlobalCommunity?: boolean;
+  notifyAboutPayments?: boolean;
 }
 
 export interface IUpdateBotResponse {
@@ -1022,6 +1024,7 @@ export interface IUpdateBotRequest {
   /** @format int32 */
   weeklyFreeMeetings?: number;
   forGlobalCommunity?: boolean;
+  notifyAboutPayments?: boolean;
 }
 
 export interface IDeleteBotCommand {

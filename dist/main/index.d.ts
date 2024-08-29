@@ -788,6 +788,7 @@ export interface ITelegramBotInfo {
     forGlobalCommunity?: boolean;
     /** @format double */
     income?: number;
+    notifyAboutPayments?: boolean;
 }
 export declare enum BotStatus {
     Activated = 0,
@@ -825,6 +826,7 @@ export interface IAddBotRequest {
     /** @format int32 */
     weeklyFreeMeetings?: number;
     forGlobalCommunity?: boolean;
+    notifyAboutPayments?: boolean;
 }
 export interface IUpdateBotResponse {
     isSuccessful?: boolean;
@@ -844,6 +846,7 @@ export interface IUpdateBotRequest {
     /** @format int32 */
     weeklyFreeMeetings?: number;
     forGlobalCommunity?: boolean;
+    notifyAboutPayments?: boolean;
 }
 export interface IDeleteBotCommand {
     nickname: string;

@@ -391,7 +391,6 @@ export interface IParticipant {
   createdAt?: string;
   blocked?: boolean;
   isPaid?: boolean;
-  isKicked?: boolean;
 }
 
 export interface IUser {

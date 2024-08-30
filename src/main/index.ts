@@ -391,6 +391,7 @@ export interface IParticipant {
   createdAt?: string;
   blocked?: boolean;
   isPaid?: boolean;
+  isKicked?: boolean;
 }
 
 export interface IUser {
@@ -746,6 +747,14 @@ export interface IUpdateMeetingRequest {
   topicName?: string;
   topicDescription?: string;
   customMeetingInfo?: ICustomMeetingInfo;
+}
+
+export interface IKickUserRequest {
+  /** @format int64 */
+  userIdToKick?: number;
+
+  /** @format int64 */
+  meetingId?: number;
 }
 
 export interface INotificationPreference {

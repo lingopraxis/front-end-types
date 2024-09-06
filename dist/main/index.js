@@ -110,7 +110,6 @@ var PaymentProvider;
     PaymentProvider[PaymentProvider["Gift"] = 4] = "Gift";
     PaymentProvider[PaymentProvider["Robokassa"] = 5] = "Robokassa";
     PaymentProvider[PaymentProvider["Telegram"] = 6] = "Telegram";
-    PaymentProvider[PaymentProvider["Trial"] = 7] = "Trial";
 })(PaymentProvider = exports.PaymentProvider || (exports.PaymentProvider = {}));
 var PaymentType;
 (function (PaymentType) {

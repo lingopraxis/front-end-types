@@ -221,10 +221,7 @@ export interface IBroadcastMessageDto {
   /** @format int64 */
   id: number;
   name: string;
-  englishTitle: string;
-  russianTitle: string;
-  englishText: string;
-  russianText: string;
+  messagesLocalized: Record<string, IBroadcastMessageLocalized>;
   isSent?: boolean;
   isReady?: boolean;
 
@@ -237,6 +234,12 @@ export interface IBroadcastMessageDto {
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
   button?: IButton;
+  countryCode?: string;
+}
+
+export interface IBroadcastMessageLocalized {
+  title: string;
+  text: string;
 }
 
 export interface IButton {
@@ -258,6 +261,7 @@ export interface IGetCountOfUsersByFilter {
   practiceLanguageId?: string;
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
+  countryCode?: string;
 }
 
 export interface ICreateBroadcastMessageResponse {
@@ -269,10 +273,7 @@ export type ICreateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & obj
 
 export interface IApiCreateBroadcastMessageDto {
   name: string;
-  englishTitle: string;
-  russianTitle: string;
-  englishText: string;
-  russianText: string;
+  messagesLocalized: Record<string, IBroadcastMessageLocalized>;
   isReady?: boolean;
 
   /** @format date-time */
@@ -284,6 +285,7 @@ export interface IApiCreateBroadcastMessageDto {
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
   button?: IButton;
+  countryCode?: string;
 }
 
 export type IUpdateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & { id?: number };
@@ -484,7 +486,6 @@ export enum PaymentProvider {
   Gift = 4,
   Robokassa = 5,
   Telegram = 6,
-  Trial = 7,
 }
 
 export interface IUserMeetingPackage {

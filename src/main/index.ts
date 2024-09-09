@@ -393,6 +393,7 @@ export interface IParticipant {
   createdAt?: string;
   blocked?: boolean;
   isPaid?: boolean;
+  image?: IImage;
 }
 
 export interface IUser {

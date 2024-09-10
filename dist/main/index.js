@@ -128,7 +128,8 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["MeetingStartsSoon"] = 32] = "MeetingStartsSoon";
     PushNotificationTypes[PushNotificationTypes["CustomNotificationCreated"] = 64] = "CustomNotificationCreated";
     PushNotificationTypes[PushNotificationTypes["MeetingUpdated"] = 128] = "MeetingUpdated";
-    PushNotificationTypes[PushNotificationTypes["All"] = 255] = "All";
+    PushNotificationTypes[PushNotificationTypes["MeetingCompleted"] = 256] = "MeetingCompleted";
+    PushNotificationTypes[PushNotificationTypes["All"] = 511] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var UserRole;
 (function (UserRole) {

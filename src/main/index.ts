@@ -393,6 +393,9 @@ export interface IParticipant {
   createdAt?: string;
   blocked?: boolean;
   isPaid?: boolean;
+
+  /** @format int32 */
+  commendations?: number;
   image?: IImage;
 }
 
@@ -540,7 +543,8 @@ export enum PushNotificationTypes {
   MeetingStartsSoon = 32,
   CustomNotificationCreated = 64,
   MeetingUpdated = 128,
-  All = 255,
+  MeetingCompleted = 256,
+  All = 511,
 }
 
 export interface IOrganization {
@@ -756,6 +760,16 @@ export interface IKickUserRequest {
 
   /** @format int64 */
   meetingId?: number;
+}
+
+export interface ISendMeetingReview {
+  /** @format int64 */
+  meetingId: number;
+
+  /** @format int32 */
+  grade?: number;
+  review?: string;
+  likeUserIds?: number[];
 }
 
 export interface INotificationPreference {

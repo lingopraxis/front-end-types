@@ -59,7 +59,8 @@ export declare enum USER_EVENTS {
     PURCHASE = "purchase",
     PURCHASE_MEETING_PACK = "purchase_meeting_pack",
     COPY_REF_CODE = "copy_ref_code",
-    SHARE_REF_CODE = "share_ref_code"
+    SHARE_REF_CODE = "share_ref_code",
+    WRITE_A_MESSAGE = "write_a_message"
 }
 export declare enum MEETING_EVENTS {
     CREATE_MEETING = "create_meeting",

@@ -65,6 +65,7 @@ var USER_EVENTS;
     USER_EVENTS["PURCHASE_MEETING_PACK"] = "purchase_meeting_pack";
     USER_EVENTS["COPY_REF_CODE"] = "copy_ref_code";
     USER_EVENTS["SHARE_REF_CODE"] = "share_ref_code";
+    USER_EVENTS["WRITE_A_MESSAGE"] = "write_a_message";
 })(USER_EVENTS = exports.USER_EVENTS || (exports.USER_EVENTS = {}));
 var MEETING_EVENTS;
 (function (MEETING_EVENTS) {

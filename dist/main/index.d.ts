@@ -631,9 +631,9 @@ export interface IUpdateMeetingRequest {
 }
 export interface IKickUserRequest {
     /** @format int64 */
-    userIdToKick?: number;
+    userIdToKick: number;
     /** @format int64 */
-    meetingId?: number;
+    meetingId: number;
 }
 export interface ISendMeetingReview {
     /** @format int64 */

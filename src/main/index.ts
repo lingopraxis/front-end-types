@@ -184,6 +184,7 @@ export interface IBanner {
   expirationDate?: string | null;
   bannerLocalized?: IBannerLocalized[];
   callToAction?: string;
+  countryCode?: string;
 }
 
 export enum PlatformsInUse {
@@ -204,6 +205,7 @@ export interface IUpdateBannerRequest {
   expirationDate?: string | null;
   appVersion?: string;
   callToAction?: string;
+  countryCode?: string;
 }
 
 export type IUpdateBannerLocalizedRequest = IBannerLocalized & object;

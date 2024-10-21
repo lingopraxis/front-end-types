@@ -165,6 +165,7 @@ var UpdateAttendeesResult;
     UpdateAttendeesResult[UpdateAttendeesResult["TokenHasBeenExpiredOrRevoked"] = 6] = "TokenHasBeenExpiredOrRevoked";
     UpdateAttendeesResult[UpdateAttendeesResult["CouldNotJoinToMeeting"] = 7] = "CouldNotJoinToMeeting";
     UpdateAttendeesResult[UpdateAttendeesResult["NotEnoughCoins"] = 8] = "NotEnoughCoins";
+    UpdateAttendeesResult[UpdateAttendeesResult["AvailableOnlyForPremiumUser"] = 9] = "AvailableOnlyForPremiumUser";
 })(UpdateAttendeesResult = exports.UpdateAttendeesResult || (exports.UpdateAttendeesResult = {}));
 var LeaveMeetingResult;
 (function (LeaveMeetingResult) {
@@ -181,6 +182,7 @@ var CreateMeetingResult;
     CreateMeetingResult[CreateMeetingResult["CouldNotCreateMeetLink"] = 3] = "CouldNotCreateMeetLink";
     CreateMeetingResult[CreateMeetingResult["HasMeetingSameTime"] = 4] = "HasMeetingSameTime";
     CreateMeetingResult[CreateMeetingResult["NotEnoughCoins"] = 5] = "NotEnoughCoins";
+    CreateMeetingResult[CreateMeetingResult["AvailableOnlyForPremiumUser"] = 6] = "AvailableOnlyForPremiumUser";
 })(CreateMeetingResult = exports.CreateMeetingResult || (exports.CreateMeetingResult = {}));
 var Sort;
 (function (Sort) {

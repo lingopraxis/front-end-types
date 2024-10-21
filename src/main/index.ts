@@ -40,6 +40,14 @@ export interface IProblemDetails {
   instance?: string | null;
 }
 
+export interface IReferralCodeUsingResponse {
+  /** @format date */
+  dateTime?: string;
+
+  /** @format int32 */
+  count?: number;
+}
+
 export interface IVerifyAppleSubscription {
   /** @format int64 */
   originalTransactionId: number;
@@ -379,6 +387,7 @@ export interface IMeeting {
   /** @format int32 */
   duration?: number;
   preferVideo?: boolean;
+  forPremiumUsersOnly?: boolean;
 }
 
 export interface IParticipant {
@@ -630,6 +639,7 @@ export enum UpdateAttendeesResult {
   TokenHasBeenExpiredOrRevoked = 6,
   CouldNotJoinToMeeting = 7,
   NotEnoughCoins = 8,
+  AvailableOnlyForPremiumUser = 9,
 }
 
 export interface IJoinMeetingRequest {
@@ -663,6 +673,7 @@ export enum CreateMeetingResult {
   CouldNotCreateMeetLink = 3,
   HasMeetingSameTime = 4,
   NotEnoughCoins = 5,
+  AvailableOnlyForPremiumUser = 6,
 }
 
 export interface ICreateMeetingRequest {
@@ -684,6 +695,7 @@ export interface ICreateMeetingRequest {
   /** @format int32 */
   duration?: number;
   preferVideo?: boolean;
+  forPremiumUsersOnly?: boolean;
 }
 
 export interface IGetMeetingDatesRequest {

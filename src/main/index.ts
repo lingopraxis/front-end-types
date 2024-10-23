@@ -388,6 +388,9 @@ export interface IMeeting {
   duration?: number;
   preferVideo?: boolean;
   forPremiumUsersOnly?: boolean;
+
+  /** @format double */
+  priceUsd?: number | null;
 }
 
 export interface IParticipant {
@@ -408,6 +411,12 @@ export interface IParticipant {
   /** @format int32 */
   commendations?: number;
   image?: IImage;
+  reviewed?: boolean;
+
+  /** @format int32 */
+  grade?: number;
+  review?: string;
+  ratedUserIds?: number[];
 }
 
 export interface IUser {

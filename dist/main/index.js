@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.YookassaStatus = exports.LogInProviderType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
+    ApplicationErrorCode[ApplicationErrorCode["None"] = 0] = "None";
     ApplicationErrorCode[ApplicationErrorCode["BadRequest"] = 1000] = "BadRequest";
     ApplicationErrorCode[ApplicationErrorCode["Unauthorized"] = 1002] = "Unauthorized";
     ApplicationErrorCode[ApplicationErrorCode["Forbidden"] = 1003] = "Forbidden";

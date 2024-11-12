@@ -3,6 +3,7 @@ export interface IApplicationError {
     message: string;
 }
 export declare enum ApplicationErrorCode {
+    None = 0,
     BadRequest = 1000,
     Unauthorized = 1002,
     Forbidden = 1003,
@@ -392,6 +393,9 @@ export interface IUser {
     referralCode?: string;
     ageGroup?: AgeGroup;
     image?: IImage;
+    mailingEnabled?: boolean;
+    /** @format int64 */
+    commendations?: number;
 }
 export interface IUserSubscription {
     /** @format int64 */

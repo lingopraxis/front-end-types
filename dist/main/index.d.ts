@@ -394,7 +394,7 @@ export interface IUser {
     ageGroup?: AgeGroup;
     image?: IImage;
     mailingEnabled?: boolean;
-    /** @format int64 */
+    /** @format int32 */
     commendations?: number;
 }
 export interface IUserSubscription {
@@ -901,6 +901,8 @@ export interface IStatistic {
     /** @format int32 */
     topicOfferCount?: number;
     isPlusUser?: boolean;
+    /** @format int32 */
+    commendations?: number;
 }
 export interface IStatisticByLanguage {
     languageId?: string;

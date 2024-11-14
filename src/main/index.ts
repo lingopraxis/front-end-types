@@ -469,7 +469,7 @@ export interface IUser {
   image?: IImage;
   mailingEnabled?: boolean;
 
-  /** @format int64 */
+  /** @format int32 */
   commendations?: number;
 }
 
@@ -1095,6 +1095,9 @@ export interface IStatistic {
   /** @format int32 */
   topicOfferCount?: number;
   isPlusUser?: boolean;
+
+  /** @format int32 */
+  commendations?: number;
 }
 
 export interface IStatisticByLanguage {

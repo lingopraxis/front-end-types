@@ -130,7 +130,8 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["CustomNotificationCreated"] = 64] = "CustomNotificationCreated";
     PushNotificationTypes[PushNotificationTypes["MeetingUpdated"] = 128] = "MeetingUpdated";
     PushNotificationTypes[PushNotificationTypes["MeetingCompleted"] = 256] = "MeetingCompleted";
-    PushNotificationTypes[PushNotificationTypes["All"] = 511] = "All";
+    PushNotificationTypes[PushNotificationTypes["AvailableSeats"] = 512] = "AvailableSeats";
+    PushNotificationTypes[PushNotificationTypes["All"] = 1023] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var UserRole;
 (function (UserRole) {

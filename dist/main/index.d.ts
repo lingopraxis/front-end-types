@@ -476,7 +476,8 @@ export declare enum PushNotificationTypes {
     CustomNotificationCreated = 64,
     MeetingUpdated = 128,
     MeetingCompleted = 256,
-    All = 511
+    AvailableSeats = 512,
+    All = 1023
 }
 export interface IOrganization {
     /** @format int64 */
@@ -966,7 +967,8 @@ export declare enum YookassaStatus {
     Pending = 4,
     Refund = 5
 }
-export declare type IMeetingCreatedPushNotification = IPushNotificationBase & {
+export declare type IMeetingCreatedPushNotification = IPushNotificationPreferencesBase & object;
+export declare type IPushNotificationPreferencesBase = IPushNotificationBase & {
     meetingDate: string;
     userCreatorId: number;
 };

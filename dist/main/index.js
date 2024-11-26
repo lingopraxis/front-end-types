@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.EmailType = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["None"] = 0] = "None";
@@ -95,6 +95,10 @@ var PlatformsInUse;
     PlatformsInUse[PlatformsInUse["Android"] = 4] = "Android";
     PlatformsInUse[PlatformsInUse["Website"] = 8] = "Website";
 })(PlatformsInUse = exports.PlatformsInUse || (exports.PlatformsInUse = {}));
+var EmailType;
+(function (EmailType) {
+    EmailType[EmailType["UserSignedUp"] = 0] = "UserSignedUp";
+})(EmailType = exports.EmailType || (exports.EmailType = {}));
 var PeriodIdentifier;
 (function (PeriodIdentifier) {
     PeriodIdentifier[PeriodIdentifier["None"] = 0] = "None";

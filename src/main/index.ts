@@ -471,6 +471,7 @@ export interface IUser {
 
   /** @format int32 */
   commendations?: number;
+  needToCompleteSignup?: boolean;
 }
 
 export interface IUserSubscription {

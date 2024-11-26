@@ -396,6 +396,7 @@ export interface IUser {
     mailingEnabled?: boolean;
     /** @format int32 */
     commendations?: number;
+    needToCompleteSignup?: boolean;
 }
 export interface IUserSubscription {
     /** @format int64 */

@@ -155,6 +155,7 @@ var MeetingType;
     MeetingType[MeetingType["Offline"] = 2] = "Offline";
     MeetingType[MeetingType["Zoom"] = 4] = "Zoom";
     MeetingType[MeetingType["Custom"] = 8] = "Custom";
+    MeetingType[MeetingType["Livekit"] = 16] = "Livekit";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
 var MeetingSort;
 (function (MeetingSort) {

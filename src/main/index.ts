@@ -306,8 +306,76 @@ export interface ITimeZoneDetails {
   offset?: string;
 }
 
+export interface ITestCommand {
+  /** @format int64 */
+  telegramUserId?: number;
+}
+
 export interface ICreateFeedbackRequest {
   text: string;
+}
+
+export interface IFile {
+  utF8NoBOM?: IEncoding;
+}
+
+export interface IEncoding {
+  default?: IEncoding;
+  preamble?: IReadOnlySpanOfByte;
+  bodyName?: string;
+  encodingName?: string;
+  headerName?: string;
+  webName?: string;
+
+  /** @format int32 */
+  windowsCodePage?: number;
+  isBrowserDisplay?: boolean;
+  isBrowserSave?: boolean;
+  isMailNewsDisplay?: boolean;
+  isMailNewsSave?: boolean;
+  isSingleByte?: boolean;
+  encoderFallback?: IEncoderFallback;
+  decoderFallback?: IDecoderFallback;
+  isReadOnly?: boolean;
+  ascii?: IEncoding;
+  latin1?: IEncoding;
+
+  /** @format int32 */
+  codePage?: number;
+  isUTF8CodePage?: boolean;
+  unicode?: IEncoding;
+  bigEndianUnicode?: IEncoding;
+  utF7?: IEncoding;
+  utF8?: IEncoding;
+  utF32?: IEncoding;
+  bigEndianUTF32?: IEncoding;
+}
+
+export interface IReadOnlySpanOfByte {
+  item?: IByte;
+
+  /** @format int32 */
+  length?: number;
+  isEmpty?: boolean;
+  empty?: IReadOnlySpanOfByte;
+}
+
+export type IByte = object;
+
+export interface IEncoderFallback {
+  replacementFallback?: IEncoderFallback;
+  exceptionFallback?: IEncoderFallback;
+
+  /** @format int32 */
+  maxCharCount?: number;
+}
+
+export interface IDecoderFallback {
+  replacementFallback?: IDecoderFallback;
+  exceptionFallback?: IDecoderFallback;
+
+  /** @format int32 */
+  maxCharCount?: number;
 }
 
 export interface IVerifyGooglePayment {
@@ -327,6 +395,14 @@ export interface IImage {
 export interface ILanguage {
   id: string;
   name: string;
+}
+
+export interface ISendGmailCommand {
+  emailType?: EmailType;
+}
+
+export enum EmailType {
+  UserSignedUp = 0,
 }
 
 export interface IChatMessage {
@@ -619,6 +695,7 @@ export enum MeetingType {
   Offline = 2,
   Zoom = 4,
   Custom = 8,
+  Livekit = 16,
 }
 
 export interface IGetMeetingsRequest {
@@ -697,7 +774,7 @@ export interface ICreateMeetingRequest {
   languageLevel: LanguageLevel;
 
   /** @format date-time */
-  meetingAt: string;
+  meetingAt?: string;
 
   /** @format int32 */
   peopleNumber: number;
@@ -800,6 +877,83 @@ export interface ISendMeetingReview {
   grade?: number;
   review?: string;
   likeUserIds?: number[];
+}
+
+export type IMultipartFormDataContent = IHttpContent[];
+
+export interface IHttpContent {
+  headers?: IHttpContentHeaders;
+  isBuffered?: boolean;
+  allowDuplex?: boolean;
+}
+
+export type IHttpContentHeaders = IKeyValuePairOfStringAndIEnumerableOfString[] & {
+  allow?: string[];
+  contentDisposition?: IContentDispositionHeaderValue | null;
+  contentEncoding?: string[];
+  contentLanguage?: string[];
+  contentLength?: number | null;
+  contentLocation?: string | null;
+  contentMD5?: string | null;
+  contentRange?: IContentRangeHeaderValue | null;
+  contentType?: IMediaTypeHeaderValue | null;
+  expires?: string | null;
+  lastModified?: string | null;
+};
+
+export interface IContentDispositionHeaderValue {
+  dispositionType?: string;
+  parameters?: INameValueHeaderValue[];
+  name?: string | null;
+  fileName?: string | null;
+  fileNameStar?: string | null;
+
+  /** @format date-time */
+  creationDate?: string | null;
+
+  /** @format date-time */
+  modificationDate?: string | null;
+
+  /** @format date-time */
+  readDate?: string | null;
+
+  /** @format int64 */
+  size?: number | null;
+}
+
+export interface INameValueHeaderValue {
+  name?: string;
+  value?: string | null;
+}
+
+export interface IContentRangeHeaderValue {
+  unit?: string;
+
+  /** @format int64 */
+  from?: number | null;
+
+  /** @format int64 */
+  to?: number | null;
+
+  /** @format int64 */
+  length?: number | null;
+  hasLength?: boolean;
+  hasRange?: boolean;
+}
+
+export interface IMediaTypeHeaderValue {
+  charSet?: string | null;
+  parameters?: INameValueHeaderValue[];
+  mediaType?: string | null;
+}
+
+export interface IKeyValuePairOfStringAndIEnumerableOfString {
+  key?: string;
+  value?: string[];
+}
+
+export interface IJoinMeetingToken {
+  roomName: string;
 }
 
 export interface INotificationPreference {

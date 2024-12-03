@@ -28,6 +28,7 @@ var ApplicationErrorCode;
     ApplicationErrorCode[ApplicationErrorCode["DuplicateTagName"] = 1022] = "DuplicateTagName";
     ApplicationErrorCode[ApplicationErrorCode["CheckLimitHasBeenReached"] = 1023] = "CheckLimitHasBeenReached";
     ApplicationErrorCode[ApplicationErrorCode["DuplicateBot"] = 1024] = "DuplicateBot";
+    ApplicationErrorCode[ApplicationErrorCode["NotEnoughRights"] = 1025] = "NotEnoughRights";
 })(ApplicationErrorCode = exports.ApplicationErrorCode || (exports.ApplicationErrorCode = {}));
 var LanguageLevel;
 (function (LanguageLevel) {
@@ -94,6 +95,7 @@ var PlatformsInUse;
     PlatformsInUse[PlatformsInUse["Ios"] = 2] = "Ios";
     PlatformsInUse[PlatformsInUse["Android"] = 4] = "Android";
     PlatformsInUse[PlatformsInUse["Website"] = 8] = "Website";
+    PlatformsInUse[PlatformsInUse["VkWebApp"] = 16] = "VkWebApp";
 })(PlatformsInUse = exports.PlatformsInUse || (exports.PlatformsInUse = {}));
 var EmailType;
 (function (EmailType) {
@@ -147,6 +149,7 @@ var UserRole;
     UserRole[UserRole["Financier"] = 16] = "Financier";
     UserRole[UserRole["TelegramCommunity"] = 32] = "TelegramCommunity";
     UserRole[UserRole["ProductAnalyst"] = 64] = "ProductAnalyst";
+    UserRole[UserRole["InfluencerManager"] = 128] = "InfluencerManager";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
 var MeetingType;
 (function (MeetingType) {

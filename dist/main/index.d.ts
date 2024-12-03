@@ -27,7 +27,8 @@ export declare enum ApplicationErrorCode {
     ParticipationLimit = 1021,
     DuplicateTagName = 1022,
     CheckLimitHasBeenReached = 1023,
-    DuplicateBot = 1024
+    DuplicateBot = 1024,
+    NotEnoughRights = 1025
 }
 export interface IProblemDetails {
     type?: string | null;
@@ -173,7 +174,8 @@ export declare enum PlatformsInUse {
     TelegramWebApp = 1,
     Ios = 2,
     Android = 4,
-    Website = 8
+    Website = 8,
+    VkWebApp = 16
 }
 export interface IUpdateBannerRequest {
     /** @format int64 */
@@ -558,7 +560,8 @@ export declare enum UserRole {
     Developer = 8,
     Financier = 16,
     TelegramCommunity = 32,
-    ProductAnalyst = 64
+    ProductAnalyst = 64,
+    InfluencerManager = 128
 }
 export interface IMeetingAddress {
     /** @format int32 */
@@ -979,7 +982,6 @@ export interface IAddBotResponse {
     isSuccessful?: boolean;
 }
 export interface IAddBotRequest {
-    nickname: string;
     name?: string;
     token: string;
     shortDescription?: string;

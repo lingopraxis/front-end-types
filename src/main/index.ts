@@ -29,6 +29,7 @@ export enum ApplicationErrorCode {
   DuplicateTagName = 1022,
   CheckLimitHasBeenReached = 1023,
   DuplicateBot = 1024,
+  NotEnoughRights = 1025,
 }
 
 export interface IProblemDetails {
@@ -202,6 +203,7 @@ export enum PlatformsInUse {
   Ios = 2,
   Android = 4,
   Website = 8,
+  VkWebApp = 16,
 }
 
 export interface IUpdateBannerRequest {
@@ -668,6 +670,7 @@ export enum UserRole {
   Financier = 16,
   TelegramCommunity = 32,
   ProductAnalyst = 64,
+  InfluencerManager = 128,
 }
 
 export interface IMeetingAddress {
@@ -1190,7 +1193,6 @@ export interface IAddBotResponse {
 }
 
 export interface IAddBotRequest {
-  nickname: string;
   name?: string;
   token: string;
   shortDescription?: string;

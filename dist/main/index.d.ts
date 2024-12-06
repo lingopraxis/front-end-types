@@ -336,37 +336,8 @@ export interface ILanguage {
     id: string;
     name: string;
 }
-export interface ISendGmailCommand {
-    emailType?: EmailType;
-}
-export declare enum EmailType {
-    UserSignedUp = 0
-}
-export interface IChatMessage {
-    /** @format int64 */
-    id: number;
-    username: string;
-    /** @format int64 */
-    userCreatorId: number;
-    text: string;
-    /** @format date-time */
-    createdAt: string;
-}
-export interface IGetMeetingChatMessagesQuery {
-    paginationParams?: IPaginationParams;
-    /** @format int64 */
-    meetingId?: number;
-}
-export interface IPaginationParams {
-    /** @format int32 */
-    offset: number;
-    /** @format int32 */
-    limit: number;
-}
-export interface ICreateMeetingChatMessageRequest {
-    /** @format int64 */
-    meetingId: number;
-    text: string;
+export interface IJoinMeetingToken {
+    roomName: string;
 }
 export interface IMeeting {
     /** @format int64 */
@@ -586,6 +557,43 @@ export declare enum MeetingType {
     Custom = 8,
     Livekit = 16
 }
+export interface IGetLiveMeetingsRequest {
+    languageId?: string;
+    languageLevel?: LanguageLevel | null;
+    page: IPaginationParams;
+}
+export interface IPaginationParams {
+    /** @format int32 */
+    offset: number;
+    /** @format int32 */
+    limit: number;
+}
+export interface ISendGmailCommand {
+    emailType?: EmailType;
+}
+export declare enum EmailType {
+    UserSignedUp = 0
+}
+export interface IChatMessage {
+    /** @format int64 */
+    id: number;
+    username: string;
+    /** @format int64 */
+    userCreatorId: number;
+    text: string;
+    /** @format date-time */
+    createdAt: string;
+}
+export interface IGetMeetingChatMessagesQuery {
+    paginationParams?: IPaginationParams;
+    /** @format int64 */
+    meetingId?: number;
+}
+export interface ICreateMeetingChatMessageRequest {
+    /** @format int64 */
+    meetingId: number;
+    text: string;
+}
 export interface IGetMeetingsRequest {
     languageId?: string;
     languageLevel?: LanguageLevel | null;
@@ -791,9 +799,6 @@ export interface IMediaTypeHeaderValue {
 export interface IKeyValuePairOfStringAndIEnumerableOfString {
     key?: string;
     value?: string[];
-}
-export interface IJoinMeetingToken {
-    roomName: string;
 }
 export interface INotificationPreference {
     /** @format int64 */

@@ -529,6 +529,7 @@ export interface IUserSubscription {
   /** @format int64 */
   providerPaymentId?: number | null;
   autoWithdrawal?: boolean;
+  isTrial?: boolean;
 }
 
 export interface ISubscription {

@@ -587,6 +587,7 @@ export interface ICreateLiveMeetingRequest {
     topicName: string;
     topicDescription?: string;
     forPremiumUsersOnly?: boolean;
+    preferVideo?: boolean;
 }
 export declare enum JoinLiveMeetingResponse {
     Success = 1,
@@ -615,11 +616,13 @@ export interface IGetMeetingChatMessagesQuery {
     paginationParams?: IPaginationParams;
     /** @format int64 */
     meetingId?: number;
+    isInstantMeeting?: boolean;
 }
 export interface ICreateMeetingChatMessageRequest {
     /** @format int64 */
     meetingId: number;
     text: string;
+    isInstantMeeting?: boolean;
 }
 export interface IGetMeetingsRequest {
     languageId?: string;

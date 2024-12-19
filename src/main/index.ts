@@ -678,6 +678,37 @@ export interface IPaginationParams {
   limit: number;
 }
 
+export interface ICreateLiveMeetingResponse {
+  /** @format int64 */
+  id?: number;
+  createMeetingResult: CreateLiveMeetingResult;
+}
+
+export enum CreateLiveMeetingResult {
+  Success = 1,
+  HasActiveLiveMeeting = 2,
+  AvailableOnlyForPremiumUser = 3,
+}
+
+export interface ICreateLiveMeetingRequest {
+  languageId: string;
+  languageLevel: LanguageLevel;
+
+  /** @format int32 */
+  peopleNumber: number;
+  topicName: string;
+  topicDescription?: string;
+  forPremiumUsersOnly?: boolean;
+}
+
+export enum JoinLiveMeetingResponse {
+  Success = 1,
+  AllSeatsAreTaken = 2,
+  Canceled = 3,
+  CouldNotJoinToMeeting = 4,
+  AvailableOnlyForPremiumUser = 5,
+}
+
 export interface ISendGmailCommand {
   emailType?: EmailType;
 }
@@ -788,7 +819,7 @@ export interface ICreateMeetingRequest {
   languageLevel: LanguageLevel;
 
   /** @format date-time */
-  meetingAt?: string;
+  meetingAt: string;
 
   /** @format int32 */
   peopleNumber: number;

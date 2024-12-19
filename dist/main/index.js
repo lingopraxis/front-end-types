@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.EmailType = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.EmailType = exports.JoinLiveMeetingResponse = exports.CreateLiveMeetingResult = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["None"] = 0] = "None";
@@ -156,6 +156,20 @@ var MeetingType;
     MeetingType[MeetingType["Custom"] = 8] = "Custom";
     MeetingType[MeetingType["Livekit"] = 16] = "Livekit";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
+var CreateLiveMeetingResult;
+(function (CreateLiveMeetingResult) {
+    CreateLiveMeetingResult[CreateLiveMeetingResult["Success"] = 1] = "Success";
+    CreateLiveMeetingResult[CreateLiveMeetingResult["HasActiveLiveMeeting"] = 2] = "HasActiveLiveMeeting";
+    CreateLiveMeetingResult[CreateLiveMeetingResult["AvailableOnlyForPremiumUser"] = 3] = "AvailableOnlyForPremiumUser";
+})(CreateLiveMeetingResult = exports.CreateLiveMeetingResult || (exports.CreateLiveMeetingResult = {}));
+var JoinLiveMeetingResponse;
+(function (JoinLiveMeetingResponse) {
+    JoinLiveMeetingResponse[JoinLiveMeetingResponse["Success"] = 1] = "Success";
+    JoinLiveMeetingResponse[JoinLiveMeetingResponse["AllSeatsAreTaken"] = 2] = "AllSeatsAreTaken";
+    JoinLiveMeetingResponse[JoinLiveMeetingResponse["Canceled"] = 3] = "Canceled";
+    JoinLiveMeetingResponse[JoinLiveMeetingResponse["CouldNotJoinToMeeting"] = 4] = "CouldNotJoinToMeeting";
+    JoinLiveMeetingResponse[JoinLiveMeetingResponse["AvailableOnlyForPremiumUser"] = 5] = "AvailableOnlyForPremiumUser";
+})(JoinLiveMeetingResponse = exports.JoinLiveMeetingResponse || (exports.JoinLiveMeetingResponse = {}));
 var EmailType;
 (function (EmailType) {
     EmailType[EmailType["UserSignedUp"] = 0] = "UserSignedUp";

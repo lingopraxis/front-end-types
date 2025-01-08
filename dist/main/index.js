@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.EmailType = exports.JoinLiveMeetingResponse = exports.CreateLiveMeetingResult = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.TelegramCommunityType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.EmailType = exports.JoinLiveMeetingResponse = exports.CreateLiveMeetingResult = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["None"] = 0] = "None";
@@ -242,6 +242,12 @@ var BotStatus;
     BotStatus[BotStatus["DeactivatedSetWeebHookFailure"] = 2] = "DeactivatedSetWeebHookFailure";
     BotStatus[BotStatus["DeactivatedSendMessageFailure"] = 3] = "DeactivatedSendMessageFailure";
 })(BotStatus = exports.BotStatus || (exports.BotStatus = {}));
+var TelegramCommunityType;
+(function (TelegramCommunityType) {
+    TelegramCommunityType[TelegramCommunityType["Channel"] = 0] = "Channel";
+    TelegramCommunityType[TelegramCommunityType["Group"] = 1] = "Group";
+    TelegramCommunityType[TelegramCommunityType["SuperGroup"] = 2] = "SuperGroup";
+})(TelegramCommunityType = exports.TelegramCommunityType || (exports.TelegramCommunityType = {}));
 var LogInProviderType;
 (function (LogInProviderType) {
     LogInProviderType[LogInProviderType["Google"] = 1] = "Google";

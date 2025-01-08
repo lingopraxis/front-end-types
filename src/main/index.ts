@@ -1286,6 +1286,49 @@ export interface IDeleteBotCommand {
   nickname: string;
 }
 
+export interface ITelegramCommunityItem {
+  /** @format int64 */
+  id?: number;
+  name?: string;
+  type?: TelegramCommunityType;
+  image?: IImage;
+  interfaceLanguageId?: string;
+
+  /** @format int64 */
+  userCreatorTelegramId?: number | null;
+  languagePreferences?: ILanguagePreference[];
+  communityBots?: ICommunityBot[];
+}
+
+export enum TelegramCommunityType {
+  Channel = 0,
+  Group = 1,
+  SuperGroup = 2,
+}
+
+export interface ILanguagePreference {
+  language: ILanguage;
+  languageLevel: LanguageLevel;
+}
+
+export interface ICommunityBot {
+  nickname: string;
+  name?: string;
+  image?: IImage;
+  forGlobalCommunity?: boolean;
+}
+
+export interface IUpdateChannelRequest {
+  /** @format int64 */
+  id: number;
+  name: string;
+
+  /** @format int64 */
+  imageId?: number | null;
+  interfaceLanguageId: string;
+  languagePreferences: ILanguagePreference[];
+}
+
 export interface IStatistic {
   statisticByLanguages?: IStatisticByLanguage[];
 

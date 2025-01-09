@@ -143,9 +143,8 @@ var UserRole;
     UserRole[UserRole["SuperAdmin"] = 4] = "SuperAdmin";
     UserRole[UserRole["Developer"] = 8] = "Developer";
     UserRole[UserRole["Financier"] = 16] = "Financier";
-    UserRole[UserRole["TelegramCommunity"] = 32] = "TelegramCommunity";
-    UserRole[UserRole["ProductAnalyst"] = 64] = "ProductAnalyst";
-    UserRole[UserRole["InfluencerManager"] = 128] = "InfluencerManager";
+    UserRole[UserRole["ProductAnalyst"] = 32] = "ProductAnalyst";
+    UserRole[UserRole["InfluencerManager"] = 64] = "InfluencerManager";
 })(UserRole = exports.UserRole || (exports.UserRole = {}));
 var MeetingType;
 (function (MeetingType) {

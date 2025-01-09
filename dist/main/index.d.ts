@@ -261,10 +261,6 @@ export interface ITimeZoneDetails {
     timeZoneName?: string;
     offset?: string;
 }
-export interface ITestCommand {
-    /** @format int64 */
-    telegramUserId?: number;
-}
 export interface ICreateFeedbackRequest {
     text: string;
 }
@@ -531,9 +527,8 @@ export declare enum UserRole {
     SuperAdmin = 4,
     Developer = 8,
     Financier = 16,
-    TelegramCommunity = 32,
-    ProductAnalyst = 64,
-    InfluencerManager = 128
+    ProductAnalyst = 32,
+    InfluencerManager = 64
 }
 export interface IMeetingAddress {
     /** @format int32 */

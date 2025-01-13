@@ -1025,6 +1025,9 @@ export interface IPushNotificationSchedulePreference {
   /** @format time */
   notifyTo?: string;
   notificationDays?: NotificationDays;
+
+  /** @format int32 */
+  newMeetingMaxCount?: number;
 }
 
 export enum NotificationDays {
@@ -1049,6 +1052,9 @@ export interface IUpdateNotificationSchedulePreference {
   /** @format time */
   notifyTo: string;
   notificationDays: NotificationDays;
+
+  /** @format int32 */
+  newMeetingMaxCount?: number;
 }
 
 export interface IGenerateQuestionsRequest {

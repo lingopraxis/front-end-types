@@ -133,7 +133,8 @@ var PushNotificationTypes;
     PushNotificationTypes[PushNotificationTypes["MeetingUpdated"] = 128] = "MeetingUpdated";
     PushNotificationTypes[PushNotificationTypes["MeetingCompleted"] = 256] = "MeetingCompleted";
     PushNotificationTypes[PushNotificationTypes["AvailableSeats"] = 512] = "AvailableSeats";
-    PushNotificationTypes[PushNotificationTypes["All"] = 1023] = "All";
+    PushNotificationTypes[PushNotificationTypes["UserIsInactive"] = 1024] = "UserIsInactive";
+    PushNotificationTypes[PushNotificationTypes["All"] = 2047] = "All";
 })(PushNotificationTypes = exports.PushNotificationTypes || (exports.PushNotificationTypes = {}));
 var UserRole;
 (function (UserRole) {
@@ -172,6 +173,7 @@ var JoinLiveMeetingResponse;
 var EmailType;
 (function (EmailType) {
     EmailType[EmailType["UserSignedUp"] = 0] = "UserSignedUp";
+    EmailType[EmailType["InactiveUser"] = 1] = "InactiveUser";
 })(EmailType = exports.EmailType || (exports.EmailType = {}));
 var MeetingSort;
 (function (MeetingSort) {
@@ -246,6 +248,7 @@ var TelegramCommunityType;
     TelegramCommunityType[TelegramCommunityType["Channel"] = 0] = "Channel";
     TelegramCommunityType[TelegramCommunityType["Group"] = 1] = "Group";
     TelegramCommunityType[TelegramCommunityType["SuperGroup"] = 2] = "SuperGroup";
+    TelegramCommunityType[TelegramCommunityType["System"] = 3] = "System";
 })(TelegramCommunityType = exports.TelegramCommunityType || (exports.TelegramCommunityType = {}));
 var LogInProviderType;
 (function (LogInProviderType) {

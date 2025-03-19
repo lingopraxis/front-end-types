@@ -510,7 +510,8 @@ export declare enum PushNotificationTypes {
     MeetingUpdated = 128,
     MeetingCompleted = 256,
     AvailableSeats = 512,
-    All = 1023
+    UserIsInactive = 1024,
+    All = 2047
 }
 export interface IOrganization {
     /** @format int64 */
@@ -595,17 +596,19 @@ export interface ISendGmailCommand {
     emailType?: EmailType;
 }
 export declare enum EmailType {
-    UserSignedUp = 0
+    UserSignedUp = 0,
+    InactiveUser = 1
 }
 export interface IChatMessage {
     /** @format int64 */
-    id: number;
-    username: string;
+    id?: number;
+    username?: string;
     /** @format int64 */
-    userCreatorId: number;
-    text: string;
+    userCreatorId?: number;
+    text?: string;
     /** @format date-time */
-    createdAt: string;
+    createdAt?: string;
+    isInstantMeeting?: boolean;
 }
 export interface IGetMeetingChatMessagesQuery {
     paginationParams?: IPaginationParams;
@@ -1073,7 +1076,8 @@ export interface ITelegramCommunityItem {
 export declare enum TelegramCommunityType {
     Channel = 0,
     Group = 1,
-    SuperGroup = 2
+    SuperGroup = 2,
+    System = 3
 }
 export interface ILanguagePreference {
     language: ILanguage;

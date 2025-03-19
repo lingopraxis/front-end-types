@@ -721,6 +721,9 @@ export interface IChatMessage {
 
   /** @format int64 */
   userCreatorId?: number;
+
+  /** @format int64 */
+  meetingId?: number;
   text?: string;
 
   /** @format date-time */

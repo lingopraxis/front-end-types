@@ -605,6 +605,8 @@ export interface IChatMessage {
     username?: string;
     /** @format int64 */
     userCreatorId?: number;
+    /** @format int64 */
+    meetingId?: number;
     text?: string;
     /** @format date-time */
     createdAt?: string;

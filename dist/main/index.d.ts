@@ -999,6 +999,8 @@ export interface ITelegramBotInfo {
     income?: number;
     notifyAboutPayments?: boolean;
     hardPaywal?: boolean;
+    telegramStarsEnabled?: boolean;
+    yooMoneyEnabled?: boolean;
 }
 export declare enum BotStatus {
     Activated = 0,
@@ -1018,6 +1020,8 @@ export interface ITelegramBotDemo {
     weeklyFreeMeetings?: number;
     forGlobalCommunity?: boolean;
     hardPaywal?: boolean;
+    telegramStarsEnabled?: boolean;
+    yooMoneyEnabled?: boolean;
 }
 export interface IAddBotResponse {
     isSuccessful?: boolean;
@@ -1038,6 +1042,8 @@ export interface IAddBotRequest {
     forGlobalCommunity?: boolean;
     notifyAboutPayments?: boolean;
     hardPaywal?: boolean;
+    telegramStarsEnabled?: boolean;
+    yooMoneyEnabled?: boolean;
 }
 export interface IUpdateBotResponse {
     isSuccessful?: boolean;
@@ -1059,6 +1065,8 @@ export interface IUpdateBotRequest {
     forGlobalCommunity?: boolean;
     notifyAboutPayments?: boolean;
     hardPaywal?: boolean;
+    telegramStarsEnabled?: boolean;
+    yooMoneyEnabled?: boolean;
 }
 export interface IDeleteBotCommand {
     nickname: string;

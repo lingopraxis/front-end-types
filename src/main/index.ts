@@ -1212,6 +1212,8 @@ export interface ITelegramBotInfo {
   income?: number;
   notifyAboutPayments?: boolean;
   hardPaywal?: boolean;
+  telegramStarsEnabled?: boolean;
+  yooMoneyEnabled?: boolean;
 }
 
 export enum BotStatus {
@@ -1235,6 +1237,8 @@ export interface ITelegramBotDemo {
   weeklyFreeMeetings?: number;
   forGlobalCommunity?: boolean;
   hardPaywal?: boolean;
+  telegramStarsEnabled?: boolean;
+  yooMoneyEnabled?: boolean;
 }
 
 export interface IAddBotResponse {
@@ -1260,6 +1264,8 @@ export interface IAddBotRequest {
   forGlobalCommunity?: boolean;
   notifyAboutPayments?: boolean;
   hardPaywal?: boolean;
+  telegramStarsEnabled?: boolean;
+  yooMoneyEnabled?: boolean;
 }
 
 export interface IUpdateBotResponse {
@@ -1286,6 +1292,8 @@ export interface IUpdateBotRequest {
   forGlobalCommunity?: boolean;
   notifyAboutPayments?: boolean;
   hardPaywal?: boolean;
+  telegramStarsEnabled?: boolean;
+  yooMoneyEnabled?: boolean;
 }
 
 export interface IDeleteBotCommand {

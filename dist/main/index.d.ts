@@ -213,6 +213,7 @@ export interface IBroadcastMessageDto {
     button?: IButton;
     countryCode?: string;
     webapp?: string;
+    image?: IImage;
 }
 export interface IBroadcastMessageLocalized {
     title: string;
@@ -221,6 +222,14 @@ export interface IBroadcastMessageLocalized {
 export interface IButton {
     message?: string;
     link?: string;
+}
+export interface IImage {
+    /** @format int64 */
+    id?: number;
+    name?: string;
+    linkPreview?: string;
+    linkHero?: string;
+    linkOriginal?: string;
 }
 export interface ICountForBroadcastResponse {
     /** @format int32 */
@@ -256,6 +265,8 @@ export interface IApiCreateBroadcastMessageDto {
     button?: IButton;
     countryCode?: string;
     webapp?: string;
+    /** @format int64 */
+    imageId?: number | null;
 }
 export declare type IUpdateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & {
     id?: number;
@@ -322,14 +333,6 @@ export interface IDecoderFallback {
 export interface IVerifyGooglePayment {
     purchaseToken?: string;
     productId?: string;
-}
-export interface IImage {
-    /** @format int64 */
-    id?: number;
-    name?: string;
-    linkPreview?: string;
-    linkHero?: string;
-    linkOriginal?: string;
 }
 export interface ILanguage {
     id: string;

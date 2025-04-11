@@ -248,6 +248,7 @@ export interface IBroadcastMessageDto {
   platformsInUse?: PlatformsInUse;
   button?: IButton;
   countryCode?: string;
+  webapp?: string;
 }
 
 export interface IBroadcastMessageLocalized {
@@ -275,6 +276,7 @@ export interface IGetCountOfUsersByFilter {
   practiceLanguageLevel?: LanguageLevel;
   platformsInUse?: PlatformsInUse;
   countryCode?: string;
+  webapp?: string;
 }
 
 export interface ICreateBroadcastMessageResponse {
@@ -299,6 +301,7 @@ export interface IApiCreateBroadcastMessageDto {
   platformsInUse?: PlatformsInUse;
   button?: IButton;
   countryCode?: string;
+  webapp?: string;
 }
 
 export type IUpdateBroadcastMessageRequest = IApiCreateBroadcastMessageDto & { id?: number };

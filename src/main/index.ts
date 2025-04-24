@@ -788,6 +788,7 @@ export enum UpdateAttendeesResult {
   CouldNotJoinToMeeting = 7,
   NotEnoughCoins = 8,
   AvailableOnlyForPremiumUser = 9,
+  TooFarAwayFromThePlace = 10,
 }
 
 export interface IJoinMeetingRequest {

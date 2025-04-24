@@ -191,6 +191,7 @@ var UpdateAttendeesResult;
     UpdateAttendeesResult[UpdateAttendeesResult["CouldNotJoinToMeeting"] = 7] = "CouldNotJoinToMeeting";
     UpdateAttendeesResult[UpdateAttendeesResult["NotEnoughCoins"] = 8] = "NotEnoughCoins";
     UpdateAttendeesResult[UpdateAttendeesResult["AvailableOnlyForPremiumUser"] = 9] = "AvailableOnlyForPremiumUser";
+    UpdateAttendeesResult[UpdateAttendeesResult["TooFarAwayFromThePlace"] = 10] = "TooFarAwayFromThePlace";
 })(UpdateAttendeesResult = exports.UpdateAttendeesResult || (exports.UpdateAttendeesResult = {}));
 var LeaveMeetingResult;
 (function (LeaveMeetingResult) {

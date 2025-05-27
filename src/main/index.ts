@@ -43,11 +43,23 @@ export interface IProblemDetails {
 }
 
 export interface IReferralCodeUsingResponse {
+  code?: string;
+  users?: IReferralCodeUsersStat[];
+  purchases?: IReferralCodePurchasesStat[];
+}
+
+export interface IReferralCodeUsersStat {
   /** @format date */
   dateTime?: string;
 
   /** @format int32 */
   count?: number;
+}
+
+export interface IReferralCodePurchasesStat {
+  /** @format date */
+  dateTime?: string;
+  purchases?: Record<string, number>;
 }
 
 export interface IVerifyAppleSubscription {
@@ -454,6 +466,7 @@ export interface IParticipant {
   /** @format int32 */
   commendations?: number;
   image?: IImage;
+  isAccepted?: boolean;
   reviewed?: boolean;
 
   /** @format int32 */
@@ -615,7 +628,8 @@ export enum PushNotificationTypes {
   MeetingCompleted = 256,
   AvailableSeats = 512,
   UserIsInactive = 1024,
-  All = 2047,
+  AcceptParticipation = 2048,
+  All = 4095,
 }
 
 export interface IOrganization {
@@ -1247,6 +1261,7 @@ export interface ITelegramBotDemo {
   hardPaywal?: boolean;
   telegramStarsEnabled?: boolean;
   yooMoneyEnabled?: boolean;
+  isExternalBot?: boolean;
 }
 
 export interface IAddBotResponse {

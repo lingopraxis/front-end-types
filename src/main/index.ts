@@ -1245,7 +1245,7 @@ export enum BotStatus {
   DeactivatedSendMessageFailure = 3,
 }
 
-export interface ITelegramBotDemo {
+export interface ICurrentBotInfo {
   nickname: string;
   name?: string;
   description?: string;

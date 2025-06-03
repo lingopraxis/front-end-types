@@ -369,6 +369,7 @@ export interface IMeeting {
     address?: IMeetingAddress;
     customMeetingInfo?: ICustomMeetingInfo;
     type: MeetingType;
+    practiceType?: PracticeType;
     meetingLink?: string;
     /** @format int32 */
     duration?: number;
@@ -572,6 +573,10 @@ export declare enum MeetingType {
     Custom = 8,
     Livekit = 16
 }
+export declare enum PracticeType {
+    SpeakingPrectice = 0,
+    Discussion = 1
+}
 export interface IGetLiveMeetingsRequest {
     languageId?: string;
     languageLevel?: LanguageLevel | null;
@@ -711,6 +716,7 @@ export interface ICreateMeetingRequest {
     /** @format int32 */
     peopleNumber: number;
     type: MeetingType;
+    practiceType?: PracticeType;
     address?: IMeetingAddress;
     customMeetingInfo?: ICustomMeetingInfo;
     comment?: string;
@@ -776,6 +782,7 @@ export interface IUpdateMeetingRequest {
     topicName?: string;
     topicDescription?: string;
     customMeetingInfo?: ICustomMeetingInfo;
+    practiceType?: PracticeType;
 }
 export interface IKickUserRequest {
     /** @format int64 */

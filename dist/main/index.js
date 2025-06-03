@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.YookassaStatus = exports.LogInProviderType = exports.TelegramCommunityType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.EmailType = exports.JoinLiveMeetingResponse = exports.CreateLiveMeetingResult = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
+exports.YookassaStatus = exports.LogInProviderType = exports.TelegramCommunityType = exports.BotStatus = exports.NotificationDays = exports.UpdateMeetingResult = exports.Sort = exports.CreateMeetingResult = exports.LeaveMeetingResult = exports.UpdateAttendeesResult = exports.MeetingSort = exports.EmailType = exports.JoinLiveMeetingResponse = exports.CreateLiveMeetingResult = exports.PracticeType = exports.MeetingType = exports.UserRole = exports.PushNotificationTypes = exports.PaymentType = exports.PaymentProvider = exports.PeriodIdentifier = exports.PlatformsInUse = exports.ReferralProgramStatus = exports.Gender = exports.AgeGroup = exports.OrganizationType = exports.DeviceType = exports.SocialLoginProvider = exports.LanguageLevel = exports.ApplicationErrorCode = void 0;
 var ApplicationErrorCode;
 (function (ApplicationErrorCode) {
     ApplicationErrorCode[ApplicationErrorCode["None"] = 0] = "None";
@@ -157,6 +157,11 @@ var MeetingType;
     MeetingType[MeetingType["Custom"] = 8] = "Custom";
     MeetingType[MeetingType["Livekit"] = 16] = "Livekit";
 })(MeetingType = exports.MeetingType || (exports.MeetingType = {}));
+var PracticeType;
+(function (PracticeType) {
+    PracticeType[PracticeType["SpeakingPrectice"] = 0] = "SpeakingPrectice";
+    PracticeType[PracticeType["Discussion"] = 1] = "Discussion";
+})(PracticeType = exports.PracticeType || (exports.PracticeType = {}));
 var CreateLiveMeetingResult;
 (function (CreateLiveMeetingResult) {
     CreateLiveMeetingResult[CreateLiveMeetingResult["Success"] = 1] = "Success";
